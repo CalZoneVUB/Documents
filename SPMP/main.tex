@@ -1,0 +1,56 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{sansmath}
+\usepackage{amsmath}
+\usepackage[dutch]{babel}
+\usepackage{vub}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\tikzset{
+  basic/.style  = {draw, text width=2cm, font=\sffamily, rectangle},
+  root/.style   = {basic, rounded corners=2pt, thin, align=center},
+  level 2/.style = {basic, rounded corners=6pt, thin,align=center, text width=8em},
+  level 3/.style = {basic, thin, align=left, text width=6.5em}
+}
+\raggedbottom
+\let\cleardoublepage\clearpage
+
+
+% VUB-voorblad configureren
+\author{Nicolas Carraggi, Youri Coppens, Christophe Gaethofs, Pieter Meiresone, Sam Van den Vonder, Fernando Suarez, Tim Witters}
+\title{Software Project Management Plan}
+\subtitle{Software Engineering} 
+\faculty{Faculteit Ingenieurswetenschappen \& Wetenschappen}
+\department{}
+\date{Academiejaar 2013-2014}
+
+% VUB huisstijl voor font en kleur == veel mooier dan het standaard (vergeet package bovenaan niet te activeren!!!!)
+\color{pantone418}
+\renewcommand{\familydefault}{\sfdefault}
+\sansmath
+
+\begin{document}
+\frontmatter
+\makeassignment
+\include{ChangeHistory}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+\include{Overview/Overview}
+\include{References}
+\include{Definitions}
+\include{ProjectOrganization/ProjectOrganization}
+\include{ManagerialProcess/ManagerialProcessPlans}
+\include{TechnicalProcessPlans/TechnicalProcessPlans}
+\include{SupportingProcessPlans/SupportingProcessPlans}
+%\include{AdditionalPlans}
+
+\end{document}
