@@ -1,0 +1,117 @@
+\chapter{Algemene beschrijving}
+
+\section{Gebruikers karakteristieken}
+De applicatie zal drie soorten gebruikers ondersteunen:
+
+\begin{enumerate} 
+    \item Studenten: Deze zijn “gewone” gebruikers. 
+    Ze moeten zich aanmelden om hun vakken te bezichtigen en hebben dan de mogelijkheid om hun vakken pakket aan te passen.
+    \item Professoren/assistenten: Deze kunnen hetzelfde als studenten, maar hebben hier bovenop ook nog de mogelijkheid om berichten naar     groepen van studenten te sturen en vakken te verplaatsen van tijdstip of lokaal.
+    \item Administrators: is verantwoordelijk voor het onderhouden van de database en de server.
+\end{enumerate}
+
+\section{Product perspectief}
+
+\subsection{Software Interfaces}
+“CalZone” zal zich verbinden met de Wilma server om daaruit data te weergeven. 
+De communicatie zal zowel gewoon data uitlezen toestaan als data modificatie.
+De database zal beheert worden door de database manager.
+
+\subsection{User interfaces}
+De user interface zal zowel in het Engels als in het Nederlands beschikbaar zijn. 
+Elke gebruiker kiest bij het aanmaken van een account zijn voorkeur taal en deze zal worden opgeslagen, zodat bij het inloggen altijd de juiste taal gebruikt wordt.
+
+Als een user voor de eerste keer “Calzone” gebruikt zal deze zich moeten registreren. 
+Als eerst zal hij dan naar een pagina gestuurd worden waar persoonlijke data ingevoerd kan worden (naam, voornaam, e-mail, rolnummer, telefoon, adres, etc.). 
+De gebruiker kiest dan zijn richting en jaar en zal daardoor automatisch ingeschreven zijn voor de bijhorende vakken (deze kan de gebruiker dan zelf aanpassen). 
+
+Is de gebruiker al geregistreerd dan kan deze gewoon inloggen met zijn username en paswoord.  
+
+\subsection{Hardware Interfaces}
+
+\section{Product functies}
+Deze sectie hanteert de verschillende acties die de software moet ondersteunen voor een verschillende gebruiker.
+
+\subsection{Niet-aangemelde gebruiker}
+\begin{enumerate}
+    \item Profiel Aanmaken
+    \item Aanmelden
+    \item Wachtwoord vergeten
+    \item Lesrooster van een richting bekijken
+    \item Lesrooster van specifiek vak bekijken
+    \item Lesrooster van een lokaal bekijken
+\end{enumerate}
+
+\subsection{Aangemelde student}
+\begin{enumerate}
+    \item Ingeschreven vakken bekijken
+    \item Ingeschreven vakken aanpassen
+    \item Gepersonaliseerd lesrooster bekijken
+    \item Taal aanpassen
+    \item Afmelden
+    \item Profiel gegevens aanpassen
+    \item Notificaties van last-minute veranderingen krijgen
+\end{enumerate}
+
+\subsection{Aangemelde assistent}
+\begin{enumerate}
+    \item Gepersonaliseerde Lesrooster bekijken (Les geven)
+    \item Taal aanpassen
+    \item Afmelden
+    \item Profiel gegevens aanpassen
+    \item Last-minute tijdstip vak aanpassen 
+    \item Beschikbaarheids formulier aanmaken
+    \item Beschikbaarheids formulier aanpassen
+\end{enumerate}
+
+\subsection{Aangemelde professor}
+\begin{enumerate}
+    \item Taal aanpassen
+    \item Last-minute tijdstip les aanpassen 
+    \item Locatie les aanpassen
+    \item Details les aanpassen
+    \item Schema van lesgever bekijken
+    \item Detail formulier nieuw vak indienen
+    \item Aanpassen detail formulier eigen vak
+    \item Beschikbaarheids formulier aanmaken
+    \begin{enumerate}
+        \item Aantal betrokken lesgevers aanpassen (assistenten)
+        \item Onderverdeling HOC / WPO in aantal uren
+        \item Nodige faciliteiten HOC / WPO (Projector, Computers ...)
+        \item Lesgever HOC en WPO
+        \item Opmerking voor programmabeheerder
+    \end{enumerate}
+    \item Beschikbaarheids formulier aanpassen
+    \item Afmelden
+    \item Aanpassen planning vak
+    \item Planning markeren als voorstel
+\end{enumerate}
+
+\subsection{Aangemelde programmabeheerder}
+\begin{enumerate}
+    \item Vakken toevoegen op basis van ingediend detail formulier
+    \item Vakken verwijderen van lesprogramma
+    \item Aanpassen detail formulier specifiek vak
+    \item Lokaal detail formulier toevoegen
+    \begin{enumerate}
+        \item Beschikbare faciliteiten (Projector, Computers ...)
+        \item Vrije uren
+        \item Aantal zitplaatsen
+        \item Opmerkingen
+    \end{enumerate}
+    \item Lokaal detail formulier verwijderen
+    \item Lokaal detail formulier aanpassen
+    \item Lesprogramma aanmaken voor een richting
+    \item Bekijken lesserooster als specifiek gebruiker
+    \item Bevriezen van een voorstel
+    \item Bevriezen volledige planning
+\end{enumerate}
+
+\subsection{Scheduler}
+\begin{enumerate}
+    \item Uitvoeren van een full scheduling
+    \item Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid) 
+    \item Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken
+    \item Aanpassen berekend rooster
+    \item Conflictdetectie
+\end{enumerate}
