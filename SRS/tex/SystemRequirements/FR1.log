@@ -1,11 +1,18 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.11.10)  10 NOV 2013 23:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.7)  11 NOV 2013 18:46
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **FR1.tex
-(./FR1.tex
+(C:\Users\Youri\workspace\se-project\doc\SRS\tex\SystemRequirements\FR1.tex
 LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
 ! Undefined control sequence.
 l.1 \subsection
                {Niet-aangemelde gebruiker - FR1}
@@ -68,7 +75,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.3 \begin{table}
-                 [h]
+                 [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -81,12 +88,12 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.3 \begin{table}[
-                  h]
+                  H]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 4.
@@ -317,7 +324,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.28 \noindent
-              \begin{table}[h]
+              \begin{table}[H]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -329,13 +336,13 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.28 \noindent\begin{table}
-                           [h]
+                           [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no R in font nullfont!
@@ -489,7 +496,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.42 \noindent
-              \begin{table}[h]
+              \begin{table}[H]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -501,13 +508,13 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.42 \noindent\begin{table}
-                           [h]
+                           [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no R in font nullfont!
@@ -830,7 +837,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.58 \noindent
-              \begin{table}[h]
+              \begin{table}[H]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -842,13 +849,13 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.58 \noindent\begin{table}
-                           [h]
+                           [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no R in font nullfont!
@@ -1067,7 +1074,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.73 \noindent
-              \begin{table}[h]
+              \begin{table}[H]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1079,13 +1086,13 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.73 \noindent\begin{table}
-                           [h]
+                           [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no R in font nullfont!
@@ -1322,7 +1329,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.90 \noindent
-              \begin{table}[h]
+              \begin{table}[H]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1334,13 +1341,13 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.90 \noindent\begin{table}
-                           [h]
+                           [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no R in font nullfont!
@@ -1635,7 +1642,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 ! Undefined control sequence.
 <write> \newlabel{tab:FR1.1}{{}{\thepage 
                                          }}
@@ -1716,11 +1723,11 @@ and I'll forget about whatever was undefined.
 
  
 Here is how much of TeX's memory you used:
- 24 strings out of 493307
- 274 string characters out of 6139904
- 59685 words of memory out of 5000000
- 3576 multiletter control sequences out of 15000+600000
- 3948 words of font info for 15 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 19i,9n,16p,195b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26 strings out of 493921
+ 425 string characters out of 3144876
+ 57031 words of memory out of 3000000
+ 3415 multiletter control sequences out of 15000+200000
+ 3948 words of font info for 15 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 19i,9n,16p,195b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
