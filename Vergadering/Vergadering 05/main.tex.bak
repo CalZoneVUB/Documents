@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 \usepackage[dutch]{babel}
@@ -16,16 +16,6 @@
 \sansmath
 
 \begin{document}
-\frontmatter
-
 \include{title}
-\include{ChangeHistory}
-%\tableofcontents
-%\listoffigures
-%\listoftables
-\mainmatter
-\include{Vergadering.01.D15.09.2013}
-\include{Vergadering.02.D22.09.2013}
-\include{Vergadering.03.D29.09.2013}
 \include{Vergadering.05.D12.11.2013}
 \end{document}
