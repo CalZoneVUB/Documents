@@ -1,119 +1,74 @@
-\subsection{Aangemelde student - FR2}
+\subsection{Scedular - FR2}
 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.1 \\ \hline
-                \textbf{TITEL:} & Ingeschreven vakken bekijken\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & Uitvoeren van een full scheduling\\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde student kan ten alle tijden de lijst van vakken zien waarvoor deze is ingeschreven. 
-                                        De student drukt hiervoor op een knop getiteld “Ingeschreven Vakken” en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.\\
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De Scheduler moet in staat zijn om lesroosters op te kunnen stellen, hierbij word er rekening gehouden met verschillende constraint: locatie, tijstip, studenten, professoren en assitenten. \\
             \end{tabular}\\
-            \caption{FR2.1}
-            \label{tab:FR2.1}
+            \caption{FR2.1 - Uitvoeren van een full scheduling}
+            \label{tab:FR2.1 - Uitvoeren van een full scheduling}
         \end{table}
-
-%\rule{\textwidth}{.4pt}\\
 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.2 \\ \hline
-                \textbf{TITEL:} & Ingeschreven vakken aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)\\ \hline
+                \textbf{PRIORITEIT:} &  medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde student kan de vakken waarvoor deze is ingeschreven aanpassen (zolang de VUB dit toelaat!). 
-                                        De student kan zich uitschrijven voor een vak door te klikken op de knop getiteld “Uitschrijven” die zich naast het vak bevind waarvoor deze zich wil uitschrijven. 
-                                        Er zal dan een window geopend worden die nog vraagt of de gebruiker zeker is, die uitgerust is met een “ja” en “nee” knop. 
-                                        Om zich in te schrijven voor een vak moet de student een vak opzoeken. 
-                                        Hiervoor moet eerst de richting opgegeven waar het vak toe behoort en dan kan de gebruiker in de lijst van vakken zoeken op naam en vaknummer en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.\\
+                \textbf{TOEGANG:} & Assistent, Professor, Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Gebruiker (van type toegang) kunnen bekijken hoe haalbaar hun schema is. Dit zal een score zijn die afhankelijk is van het aantal beschikbare uren van de persoon en het aantal uren dat deze persoon les zal moeten geven. (Vb: 12uur les te geven en 18u vrij zal een goede haalbaarheidsscore krijgen. 16u les en 10u vrij zal een score geven die overeenkomt met onmogelijk)\\
             \end{tabular}\\
-            \caption{FR2.2}
-            \label{tab:FR2.2}
+            \caption{FR2.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+            \label{tab:FR2.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
         \end{table}
-
-%\rule{\textwidth}{.4pt}\\
-
+        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.3 \\ \hline
-                \textbf{TITEL:} & Gepersonaliseerd lesrooster bekijken\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken\\ \hline
+                \textbf{PRIORITEIT:} &  hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde student kan zijn eigen lesrooster bekijken, deze bevat alleen de vakken waarvoor de student ingeschreven is. 
-                                        Het lesrooster geeft aan waar en om hoe laat een vak gegeven wordt en kan waarschuwingen geven bij mogelijke overlappingen.\\ 
+                \textbf{TOEGANG:} &  \\ \hline
+                \textbf{BESCHRIJVING:} & Het schema dat is opgesteld bevat alle informatie over elk vak dat nodig is om het vak te kunnen volgen.\\
             \end{tabular}\\
-            \caption{FR2.3}
-            \label{tab:FR2.3}
+            \caption{FR2.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+            \label{tab:FR2.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
         \end{table}
-
-%\rule{\textwidth}{.4pt}\\
-
+        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.4 \\ \hline
-                \textbf{TITEL:} & Taal aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  Laag \\ \hline
+                \textbf{TITEL:} & Aanpassen berekend rooster \\ \hline
+                \textbf{PRIORITEIT:} &  hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde student kan zijn taal van voorkeur aanpassen. 
-                                        Hiervoor drukt de gebruiker op de knop getiteld “Taal”, hierna zal er een keuze zijn aan talen waarin “CalZone” beschikbaar is.\\ 
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Het moet mogelijk zijn om een berekend lessenrooster aan te passen.\\
             \end{tabular}\\
-            \caption{FR2.4}
-            \label{tab:FR2.4}
+            \caption{FR2.4 - Aanpassen berekend rooster}
+            \label{tab:FR2.4 - Aanpassen berekend rooster}
         \end{table}
-
-%\rule{\textwidth}{.4pt}\\
-
+        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.5 \\ \hline
-                \textbf{TITEL:} & Afmelden\\ \hline
-                \textbf{PRIORITEIT:} &  Hoog \\ \hline
+                \textbf{TITEL:} & Conflictdetectie\\ \hline
+                \textbf{PRIORITEIT:} & hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Om af te melden moet een gebruiker simpelweg op de knop getiteld “Afmelden” drukken die de gebruiker terug naar de inlog pagina van het programma brengt.\\
+                \textbf{TOEGANG:} &  \\ \hline
+                \textbf{BESCHRIJVING:} & De Scheduler moet in staat zijn om conflicten te detecteren. Conflicten zijn: 
+                \begin{enumerate}
+                \item Twee of meer vakken op hetzelfde moment of hetzelfde lokaal
+                \item Een professor/assistent  die twee of meer vakken op hetzelfde tijdstip moet geven 
+                \item Studenten die twee of meer vakken op hetzelfde tijdstip moeten volgen
+                \end{enumerate}
+                Puntje 1 en 2 zijn harde conflicten die altijd opgelost moeten worden. Ook verplichte vakken voor studenten van een bepaalde richting mogen nooit samenvallen. Bij keuzevakken is dit wel toegelaten maar niet gewenst.\\
             \end{tabular}\\
-            \caption{FR2.5}
-            \label{tab:FR2.5}
+            \caption{FR2.5 - Conflictdetectie}
+            \label{tab:FR2.5 - Conflictdetectie}
         \end{table}
 
-%\rule{\textwidth}{.4pt}\\
-
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR2.6 \\ \hline
-                \textbf{TITEL:} & Profiel gegevens aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Een gebruiker kan zijn profielgegevens aanpassen door te drukken op de knop getiteld “Profiel”. 
-                                        En kan dan de volgende informatie aanpassen:
-                                        \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
-                                        \item Naam
-                                        \item Voornaam
-                                        \item Gebruikersnaam
-                                        \item Wachtwoord
-                                        \item Geboortedatum
-                                        \item E-mail
-                                        \item Rolnummer
-                                        \item Richting (= vaste lijst)
-                                        \end{itemize}\\
-            \end{tabular}\\
-            \caption{FR3.6}
-            \label{tab:FR2.6}
-        \end{table}
-
-
-
-%\rule{\textwidth}{.4pt}\\
-
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR2.7 \\ \hline
-                \textbf{TITEL:} & Notificaties van last-minute veranderingen krijgen\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{BESCHRIJVING:} & Mocht er een lesaanpassing plaats vinden (bijv.: een professor die de les van lokaal verandert) dan moeten studenten die dat vak volgen verwittigd worden. 
-                                        Zij zullen dan een bericht op hun e-mail adres ontvangen met daarin de nodige informatie over de lesaanpassing.\\
-            \end{tabular}\\
-            \caption{FR2.7}
-			\label{tab:FR2.7}
-        \end{table}
 \clearpage
