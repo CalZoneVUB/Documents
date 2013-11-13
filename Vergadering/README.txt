@@ -8,6 +8,7 @@ Gebruik van de agenda:
 
 3. Behoud de structuur van de subsecties in document
 	\subsection{Aanwezigheidslijst}
+	\subsection{Verantwoordelijkheden}
 	\subsection{Vooruitgang sinds vorige vergadering}
 	\subsection{Vergaderingspunten}
 	\subsection{Action items tegen volgende vergadering}
