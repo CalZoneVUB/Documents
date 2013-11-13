@@ -6,30 +6,22 @@
 \usepackage{sansmath}
 \usepackage{hyperref}
 \usepackage{float}
-\usepackage{tikz}
-\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
 \usepackage{multirow}
-\tikzset{
-  basic/.style  = {draw, text width=2cm, font=\sffamily, rectangle},
-  root/.style   = {basic, rounded corners=2pt, thin, align=center},
-  level 2/.style = {basic, rounded corners=6pt, thin,align=center, text width=8em},
-  level 3/.style = {basic, thin, align=left, text width=6.5em}
-}
 
+\restylefloat{table} % om om tabellen niet te laten herpositioneren
 \raggedbottom
 \let\cleardoublepage\clearpage
 
-% VUB huisstijl voor font en kleur == veel mooier dan het standaard (vergeet package bovenaan niet te activeren!!!!)
+% VUB huisstijl voor font en kleur
 \color{pantone418}
 \renewcommand{\familydefault}{\sfdefault}
 \sansmath
 
-
 \begin{document}
+
 \frontmatter
 \include{tex/title}
 \include{tex/ChangeHistory}
-
 \tableofcontents
 \listoffigures
 \listoftables
@@ -38,5 +30,6 @@
 \include{tex/Introduction}
 \include{tex/Description}
 \include{tex/SystemRequirements/SystemRequirements}
+
 
 \end{document}
