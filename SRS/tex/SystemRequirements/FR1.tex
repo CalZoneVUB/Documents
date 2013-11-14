@@ -37,6 +37,9 @@
 
 %TODO
 \textbf{Uitzonderingen:}
+\begin{itemize}
+\item Gegevens onvolledig ingevuld
+\end{itemize}
 
 %Aanmelden
 \noindent\begin{table}[H]
@@ -75,7 +78,7 @@
                 \textbf{TITEL:} & Wachtwoord vergeten \\ \hline
                 \textbf{PRIORITEIT:} &  Medium \\ \hline
                 \textbf{PREREQUISITIES:} & Gebruiker moet profiel bezitten\\ \hline
-                \textbf{TOEGANG:} &  Gast \\ \hline
+                \textbf{TOEGANG:} &  Niet-aangemelde gebruiker \\ \hline
                 \textbf{BESCHRIJVING:} & Mocht een gebruiker zijn wachtwoord vergeten, dan moet deze e-mail invoeren. 
                                         Hierna zal een e-mail met een reset link verstuurd worden naar het ingevoerde e-mail adress. 
                                         Als e-mail adress niet bestaat dient er een error bericht gegeven te worden aan de gebruiker\\
@@ -106,90 +109,127 @@
 %Ingeschreven vakken aanpassen
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR1.8 \\ \hline
+                \textbf{ID:} & FR1.4\\ \hline
                 \textbf{TITEL:} & Ingeschreven vakken aanpassen\\ \hline
                 \textbf{PRIORITEIT:} &  High \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Student \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde student kan de vakken waarvoor deze is ingeschreven aanpassen (zolang de VUB dit toelaat!). 
-                                        De student kan zich uitschrijven voor een vak door te klikken op de knop getiteld “Uitschrijven” die zich naast het vak bevind waarvoor deze zich wil uitschrijven. 
-                                        Er zal dan een window geopend worden die nog vraagt of de gebruiker zeker is, die uitgerust is met een “ja” en “nee” knop. 
-                                        Om zich in te schrijven voor een vak moet de student een vak opzoeken. 
-                                        Hiervoor moet eerst de richting opgegeven waar het vak toe behoort en dan kan de gebruiker in de lijst van vakken zoeken op naam en vaknummer en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.\\
+                \textbf{TOEGANG:} &  Aangemelde Student \\ \hline
+                \textbf{BESCHRIJVING:} & Een aangemelde student kan de vakken waarvoor deze is ingeschreven tijdelijk aanpassen. 
+                						Dit betekent dat de aangemelde student zich kan uitschrijven voor vakken waar hij op ingeschreven is en  zich kan inschrijven voor vakken waarvoor hij nog niet is ingeschreven.\\
             \end{tabular}\\
-            \caption{FR1.8 - Ingeschreven vakken aanpassen}
-            \label{tab:FR1.8 - Ingeschreven vakken aanpassen}
+            \caption{FR1.4 - Ingeschreven vakken aanpassen}
+            \label{tab:FR1.4 - Ingeschreven vakken aanpassen}
         \end{table}
         
+\textbf{Stappenplan:}
+\begin{itemize}
+\item Voor het inschrijven:
+	\begin{enumerate}
+	\item De aangemelde student (voortaan student geheten) ziet zijn persoonlijk lesrooster in zijn browser. Rechts hiervan ziet hij de optie om zich in te schrijven voor een vak.
+	\item De student klikt op deze optie en wordt doorverwezen naar een nieuw venster waar hij een veld ziet om een zoekterm in te vullen en 2 lijsten, respectievelijk met faculteiten en richtingen.
+	\item De student vult een zoekterm in. Deze zoekterm verwijst naar het vak waarvoor hij zich wil inschrijven. Vervolgens selecteert de student in de 2 lijsten in welke faculteit en richting hij het vak wil zoeken.
+	\item De student klikt op de knop met de naam "Zoek vak". Er verschijnt in hetzelfde venster een tabel met gevonden vakken die voldoen aan de zoekterm voor de faculteit en richting. In die tabel kan je minstens de naam en de titularis van het vak bezichtigen.
+	\item De student selecteert in de tabel het gewenste vak. Hierdoor verschijnt er een melding met de vraag of de student zeker is dat hij voor dit vak wil inschrijven.
+	\item De student klikt op "ja" en is nu ingeschreven voor het vak. Vanaf nu verschijnt het vak in zijn persoonlijk lesrooster en in de lijst van ingeschreven vakken.
+	\end{enumerate}
+	
+\item Voor het uitschrijven:
+	\begin{enumerate}
+	\item De aangemelde student (voortaan student geheten) ziet zijn persoonlijk lesrooster in zijn browser. Rechts hiervan ziet hij de optie om zich uit te schrijven voor een vak.
+	\item De student klikt op deze optie en wordt doorverwezen naar een nieuw venster waar hij een lijst van al zijn vakken ziet. Naast elk vak bevindt er zich een knop met de naam "Uitschrijven".
+	\item De student klikt op de knop naast het gewenste vak waarvoor hij wilt uitschrijven. Vervolgens verschijnt er een melding op het scherm met de vraag of hij zeker is of hij zich wilt uitschrijven voor dit vak.
+	\item De student klikt op "ja" en is nu uitgeschreven voor dit vak en wordt teruggestuurd naar zijn persoonlijk lesrooster. Voortaan verschijnt het betreffende vak niet meer in zijn persoonlijk lesrooster noch in zijn lijst van ingeschreven vakken. en dan kan de gebruiker in de lijst van vakken zoeken op naam en vaknummer en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.
+	\end{enumerate}
+\end{itemize}
+
+%TODO
+\textbf{Uitzonderingen:}
+\begin{itemize}
+\item De student wilt inschrijven voor een vak waar hij reeds voor is ingeschreven.
+\item De zoekopdracht van de student vindt geen vakken.
+
+\end{itemize}
+\
 %Taal Aanpassen
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR1.10 \\ \hline
+                \textbf{ID:} & FR1.5 \\ \hline
                 \textbf{TITEL:} & Taal aanpassen\\ \hline
                 \textbf{PRIORITEIT:} &  Laag \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Student, Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde gebruiker kan zijn taal van voorkeur aanpassen. 
-                                        Hiervoor drukt de gebruiker op de knop getiteld “Taal”, hierna zal er een keuze zijn aan talen waarin “CalZone” beschikbaar is.\\ 
+                \textbf{TOEGANG:} &  Aangemelde gebruiker \\ \hline
+                \textbf{BESCHRIJVING:} & Een aangemelde gebruiker kan zijn taal van voorkeur aanpassen zodat de applicatie wordt weergegeven in een andere taal.\\
             \end{tabular}\\
-            \caption{FR1.10 - Taal aanpassen}
-            \label{tab:FR1.10 - Taal aanpassen}
+            \caption{FR1.5 - Taal aanpassen}
+            \label{tab:FR1.5 - Taal aanpassen}
         \end{table}
+\textbf{Stappenplan:}
+\begin{itemize}
+\item Voor alle gebruikers, behalve de programmabeheerder:
+	\begin{enumerate}
+	\item De aangemelde gebruiker (voortaan gebruiker geheten) ziet zijn persoonlijk lessenrooster in zijn webrowser. Rechts ziet hij de optie om zijn taal aan te passen.
+	\item De gebruiker klikt op deze optie en wordt doorverwezen naar een scherm met een lijst van mogelijke talen. Deze lijst bevat minstens de taal Engels en Nederlands.
+	\item De gebruiker klikt op zijn gewenste taal en wordt doorverwezen naar zijn beginvenster en ziet de applicatie nu in de geselecteerde taal. Het systeem onthoudt deze wijziging zolang deze niet opnieuw door de gebruiker zelf wordt aangepast.
+	\end{enumerate}
+\item Voor de programmabeheerder:
+	\item De programmabeheerder ziet zijn beginvenster in zijn webbrowser. Rechts ziet hij de optie om de taal van de applicatie te wijzigen.
+	\item De programmabeheerder klikt op deze optie en wordt doorverwezen naar een nieuwe pagina. 
+	\item De programmabeheerder herhaalt stappen 2 en 3 van de andere gebruikers om zijn taal te wijzigen.
+\end{itemize}
+
+%TODO eventuele uitzonderingen
 
 %Afmelden
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR1.11 \\ \hline
+                \textbf{ID:} & FR1.6 \\ \hline
                 \textbf{TITEL:} & Afmelden\\ \hline
                 \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Student, Assistent, Professor, Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & Om af te melden moet een gebruiker simpelweg op de knop getiteld “Afmelden” drukken die de gebruiker terug naar de inlog pagina van het programma brengt. Geldig voor alle gebruikers\\
+                \textbf{TOEGANG:} &  Aangemelde gebruiker \\ \hline
+                \textbf{BESCHRIJVING:} & Een aangemelde gebruiker moet zijn sessie kunnen be\"{e}indigen door zich af te melden.\\
             \end{tabular}\\
-            \caption{FR1.11 - Afmelden}
-            \label{tab:FR1.11 - Afmelden}
+            \caption{FR1.6 - Afmelden}
+            \label{tab:FR1.6 - Afmelden}
         \end{table}
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De aangemelde gebruiker ziet zijn beginvenster in zijn webbrowser. Rechts ziet hij de optie om af te melden.
+\item De gebruiker klikt op deze optie en wordt uitgelogd. Hij krijgt de melding dat hij uitgelogd is en krijgt het beginscherm van de niet-aangemelde gebruiker te zien.
+\end{enumerate}
+ 
+%TODO Uitzonderingen moesten die er zijn? I assume not 
 
 %Profiel gegevens aanpassen
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR1.12 \\ \hline
-                \textbf{TITEL:} & Profiel gegevens aanpassen\\ \hline
+                \textbf{ID:} & FR1.7 \\ \hline
+                \textbf{TITEL:} & Profielgegevens aanpassen\\ \hline
                 \textbf{PRIORITEIT:} &  medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Student, Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een gebruiker kan zijn profielgegevens aanpassen door te drukken op de knop getiteld “Profiel”. Geldig voor alle gebruikers van het systeem. 
-                                        En kan dan de volgende informatie aanpassen:
+                \textbf{TOEGANG:} & Aangemelde gebruiker \\ \hline
+                \textbf{BESCHRIJVING:} & Een gebruiker kan zijn profielgegevens aanpassen. Meer bepaald kan hij de volgende informatie aanpassen:
                                         \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
                                         \item Naam
                                         \item Voornaam
                                         \item Gebruikersnaam
                                         \item Wachtwoord
                                         \item Geboortedatum
-                                        \item E-mail
-                                        \item Rolnummer
-                                        \item Richting (= vaste lijst)
                                         \end{itemize}\\
             \end{tabular}\\
-            \caption{FR1.12 - Profiel gegevens aanpassen}
-            \label{tab:FR1.12 - Profiel gegevens aanpassen}
+            \caption{FR1.7 - Profiel gegevens aanpassen}
+            \label{tab:FR1.7 - Profielgegevens aanpassen}
         \end{table} 
                
-        
-%Beschikbaarheids formulier aanmaken   
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR1.16 \\ \hline
-                \textbf{TITEL:} & Beschikbaarheidsformulier aanmaken\\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een gebruiker (van type toegang) heeft de optie om een formulier in te dienen waarin hij aangeeft wat zijn vrije momenten zijn om les te geven, de Scheduler houd hier dan rekening mee bij het opstellen van de lesroosters.\\ 
-            \end{tabular}\\
-            \caption{FR1.16 - Beschikbaarheidsformulier aanmaken}
-            \label{tab:FR1.16 - Beschikbaarheidsformulier aanmaken}
-        \end{table}
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De aangemelde gebruiker ziet zijn beginvenster in zijn webbrowser. rechts ziet hij de optie om zijn profielgegevens te bezichtigen.
+\item De gebruiker klikt deze optie aan en wordt doorverwezen naar een nieuwe pagina. Hierop ziet hij al zijn profielgegevens in tekstvelden. De gebruiker kan de gegevens opgesomd in de beschrijving hierboven wijzigen in de tekstvelden.
+\item De gebruiker wijzigt de gewenste velden aan en ziet een knop met de naam "Wijzigingen opslaan" om deze permanent te wijzigen.
+\item De gebruiker klikt op deze knop en de gegevens zijn permanent gewijzigd.
+\end{enumerate}
+
+%TODO eventuele uitzonderingen
 
 
-        
 \clearpage
