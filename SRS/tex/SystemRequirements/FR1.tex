@@ -24,6 +24,20 @@
     \label{tab:FR1.1 -Profiel aanmaken}
 \end{table}
 
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser.
+\item De gebruiker klikt op de aanwezige knop om een profiel aan te maken.
+\item De gebruiker krijgt een formulier te zien met invulbare velden voor zijn naam, voornaam, gebruikersnaam, wachtwoord, geboortedatum, email. Tevens vindt hij in het formulier 2 lijsten, respectievelijk voor zijn richting en gewenste taal te selecteren.
+\item De gebruiker vult al de gegevens en selecteert de juiste optie in elke lijst.
+\item Nadat de gebruiker deze gegevens volledig heeft ingevuld, klikt hij op de knop om de aanmaak van het profiel te beëindigen.
+\item De gebruiker krijgt een melding op het scherm te zien dat het aanmaken van het profiel voltooid is.
+\item Het systeem stuurt een email naar het opgegeven emailadres ter bevestiging.
+\end{enumerate}
+
+%TODO
+\textbf{Uitzonderingen:}
+
 %Aanmelden
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
@@ -37,6 +51,22 @@
             \caption{FR1.2 - Aanmelden}
             \label{tab:FR1.2 - Aanmelden}
         \end{table}
+        
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Hier ziet de gebruiker een formulier met 2 velden om zijn gebruikersnaam en wachtwoord in te typen met daaronder een knop om in te loggen
+\item De gebruiker vult zijn gebruikersnaam en wachtwoord in.
+\item De gebruiker klikt op de knop om in te loggen.
+\item De gebruiker is ingelogd en ziet nu zijn persoonlijk lessenrooster.
+\end{enumerate}
+
+%TODO
+\textbf{Uitzonderingen:}
+\begin{itemize}
+\item Ingevoerde gebruikersnaam is niet gevonden.
+\item Ingevoerd wachtwoord is verkeerd.
+\end{itemize}
+
 
 %Wachtwoord vergeten
 \noindent\begin{table}[H]
@@ -54,6 +84,25 @@
             \label{tab:FR1.3 - Wachtwoord vergeten}
         \end{table}
 
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Hier ziet de gebruiker een knop met de tekst "Wachtwoord vergeten?".
+\item De gebruiker klikt op deze knop. Er verschijnt een nieuw venster op het scherm, met de vraag om het mailadres van zijn profiel in te vullen in het formulier op hetzelfde scherm.
+\item Het systeem verstuurt een email naar het opgegeven mailadres met als inhoud een "resetlink", een speciale URL om het wachtwoord tijdelijk te kunnen wijzigen.
+\item De gebruiker opent de "resetlink" in de e-mail en krijgt een venster te zien in zijn webbrowser met een formulier om het nieuwe wachtwoord in te voeren en deze te bevestigen.
+\item De gebruiker vult het nieuwe wachtwoord in en bevestigd deze door ze op exact dezelfde schrijfwijze in te voeren in het tweede veld van het formulier.
+\item De gebruiker klikt op de knop met de naam "Wachtwoord wijzigen" om de wijziging door te voeren.
+\item De gebruiker krijgt een melding op het scherm dat het wachtwoord is gewijzigd en wordt terug naar het beginscherm van de applicatie geleid.
+\end{enumerate}
+
+%TODO
+\textbf{Uitzonderingen:}
+\begin{itemize}
+\item Mailadres bestaat niet.
+\item Wachtwoord voldoet niet aan de minimale vereisten.
+\item Wachtwoord is foutief bevestigd.
+\end{itemize}
+
 %Richting Bekijken    
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
@@ -67,6 +116,34 @@
             \caption{FR1.4 - Lesrooster van richting bekijken}
             \label{tab:FR1.4 - Lesrooster van richting bekijken}
         \end{table}
+
+%TODO staat er een knop voor "anonieme" sessie?
+\textbf{Stappenplan:}
+\begin{itemize}
+\item Voor de niet-aangemelde gebruiker: 
+	\begin{enumerate}
+		\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
+		\item De gebruiker klikt op deze optie en wordt doorverwezen naar een nieuwe pagina. Op deze nieuwe pagina ziet de gebruiker 2 opties om lesroosters te bezichtigen: per richting of per vak.
+		\item De gebruiker kiest de optie om per richting roosters te bezichtigen en wordt doorverwezen naar een nieuw venster om waar hij 3 lijsten ziet. Deze lijsten bevatten respectievelijk de faculteiten, richtingen per faculteit en de jaren per richting.
+		\item De gebruiker selecteert telkens de gewenste optie voor de 3 lijsten. Het is noodzakelijk dat de gebruiker dit in de juiste volgorde doet: eerst faculteit, vervolgens de richting en tenslotte het jaar. De volgende lijst in deze reeks is namelijk telkens gebaseerd op de vorige selectie(s).
+		\item Nadat de gebruiker de gewenste opties heeft geselecteerd, klikt hij op de knop "Toon rooster" om het rooster op te vragen.
+		\item Het gevraagde lesrooster verschijnt in hetzelfde venster naast de 3 lijsten.
+		\item De gebruiker kan telkens stap 4, 5 en 6 herhalen om andere roosters te tonen. Hierdoor verdwijnt de vorige opzoeking uit het scherm en komt de nieuwe in de plaats.
+	\end{enumerate}
+\item Voor de aangemelde gebruiker:
+	\begin{enumerate}
+	\item De aangemelde gebruiker (voortaan gebruiker geheten) ziet het venster met zijn persoonlijk lesrooster in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
+	\item De gebruiker doorloopt dezelfde stappen van het stappenplan van de niet-aangemelde gebruiker vanaf stap 2.
+	\end{enumerate}
+\end{itemize}
+
+%TODO
+\textbf{Uitzonderingen:}
+\begin{itemize}
+\item Lesrooster onbeschikbaar
+\end{itemize}
+
+%TODO Meerdere zoekopties voorleggen (naam, titularis...)
 
 %Specifiek vak bekijken      
 \noindent\begin{table}[H]
@@ -82,6 +159,31 @@
             \caption{FR1.5 - Lesrooster van specifiek vak bekijken}
             \label{tab:FR1.5 - Lesrooster van specifiek vak bekijken}
         \end{table}
+
+\textbf{Stappenplan:}
+\begin{itemize}
+\item Voor de niet-aangemelde gebruiker: 
+	\begin{enumerate}
+		\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
+		\item De gebruiker klikt op deze optie en wordt doorverwezen naar een nieuwe pagina. Op deze nieuwe pagina ziet de gebruiker 2 opties om lesroosters te bezichtigen: per richting of per vak.
+		\item De gebruiker kiest de optie om per vak roosters te bezichtigen en wordt doorverwezen naar een nieuw venster om waar hij een veld ziet om een zoekterm in te vullen.
+		\item De gebruiker vult een zoekterm in. Deze zoekterm verwijst naar het vak waarvan de gebruiker het rooster wil bezichtigen.
+		\item De gebruiker klikt op de knop met de naam "Zoek vak". Er verschijnt in hetzelfde venster een tabel met gevonden vakken die voldoen aan de zoekterm. In die tabel kan je de naam en de titularis van het vak bezichtigen alsook de richtingen waaraan het vak gedoceerd wordt.
+		\item De gebruiker selecteert in de tabel het gewenste vak. Hierdoor verdwijnt de tabel en verschijnt er in de plaats het lesrooster van het geselecteerde vak.
+		\item De gebruiker kan telkens stap 4 en 5 herhalen om andere roosters te tonen. Hierdoor verdwijnt de vorige opzoeking uit het scherm en komt de nieuwe in de plaats.
+	\end{enumerate}
+\item Voor de aangemelde gebruiker:
+	\begin{enumerate}
+	\item De aangemelde gebruiker (voortaan gebruiker geheten) ziet het venster met zijn persoonlijk lesrooster in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
+	\item De gebruiker doorloopt dezelfde stappen van het stappenplan van de niet-aangemelde gebruiker vanaf stap 2.
+	\end{enumerate}
+\end{itemize}
+
+%TODO
+\textbf{Uitzonderingen:}
+\begin{enumerate}
+\item Vak wordt niet gevonden
+\end{enumerate}
         
 %Lessenrooster Locaal bekijken
 \noindent\begin{table}[H]
