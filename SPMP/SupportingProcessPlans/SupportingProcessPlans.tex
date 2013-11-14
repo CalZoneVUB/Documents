@@ -52,7 +52,12 @@ Hoewel dit in eerste instantie meer werk met zich meebrengt, zal dit werk zich s
 De implementatie, onderhoud en controle van de website is de verantwoordelijkheid van de Webmaster en Configuration Manager. Beide taken zullen worden vervuld door Christophe Gaethofs. Bij eventuele conflicten of problemen op de website, dienen de leden deze hiervan dan ook zo snel mogelijk op de hoogte te brengen om deze problemen te kunnen oplossen.
 \\
 \\
+De communicatie op de website zal verlopen via een berichtenpagina, waarop leden mededelingen en berichten kunnen posten. Dit systeem werkt als een blog waarbij het gepubliceerde artikel, in deze context dan bericht, direct wordt weergegeven op de website. Dit bericht wordt, vanaf het adres van het lid dat deze publicatie maakte, ook als e-mail verstuurd naar de projectmailbox. Alle leden krijgen dit bericht dan in hun inbox, maar kunnen dit ook online bekijken. De communicatiepagina's stellen hen ook in staat online te reageren op deze berichten via Disqus (\url{http://disqus.com/}). Deze open source tool geeft een website de mogelijkheid om een reactieformulier aan een pagina toe te voegen en dit te beheren. Elke berichtpagina zal onder het bericht zo'n formulier bevatten. De geplaatste reacties worden niet via mail verstuurd.
+\\
+\\
 De website is gebouwd op het opensource CMS (Content Management System) SilverStripe (\url{http://www.silverstripe.org}) en maakt gebruikt van het Bootstrap JS (\url{http://getbootstrap.com/}) framework voor het thema en JavaScript functionaliteit. Voor de kalender is een eigen module ontworpen op basis van Bootstrap Calendar (\url{http://bootstrap-calendar.azurewebsites.net}), een opensource kalender voor Bootstrap JS.
+\\
+\\
 
 \subsubsection{Documenten en source code}
 Om alle fasen van het project ordelijk en gestructureerd te kunnen laten verlopen, zal er gebruikt gemaakt worden van publieke repositories, aangeboden door GitHub.
@@ -61,10 +66,13 @@ Om alle fasen van het project ordelijk en gestructureerd te kunnen laten verlope
 De configuratie hiervan dient in lijn te zijn met de opgegeven voorwaarden waardoor alle documenten en source code overeenkomstig zullen worden getagd/gebranchd (se2-iterN waarbij N staat voor het iteratienummer) in de repository.
 \\
 \\
-Voor de documentatie en de source code worden verschillende repositories worden aangemaakt. 
+Voor de documentatie en de source code worden verschillende repositories worden aangemaakt.
 \\
 \\
-De in de repository ondergebrachte documenten, worden in Latex geschrveHierdoor zijn de documenten voor alle leden beschikbaar, worden alle wijzigingen en versies bijgehouden en kan er simultaan in hetzelfde document worden gewerkt zonder conflicten.
+De in de repository ondergebrachte documenten, worden in Latex geschreven en bijgehouden in branches op de Git. Hierdoor zijn de stabiele documenten voor alle leden beschikbaar, worden alle wijzigingen en versies bijgehouden en kan er simultaan aan hetzelfde document worden gewerkt zonder conflicten.
+\\
+\\
+Om problemen bij het mergen van branches te vermijden en controle te houden op de gemaakte wijzigingen op de Git, zal voor het coderen gebruikt worden gemaakt van forks. Dit zijn clones van de eigenlijke team repository in de persoonlijke repositories van de leden. Hierin kan men verder werken zonder conflicten te veroorzaken. Als een lid  wijzigingen wil doorvoeren, dient deze een pull request uit te voeren naar de team repository. De Configuration Manager, Christophe Gaethofs, zal dan samen met de reserve Configuration Manager, Tim Witters, al deze pull requests behandelen en doorvoeren indien deze geen conflicten veroorzaken.
 \\
 \\
 Alle source code is terug te vinden in de Git, toegankelijk via de website.
