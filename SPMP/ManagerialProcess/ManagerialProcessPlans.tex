@@ -125,9 +125,105 @@ Een presentatie duurt een half uur per groep en wordt ingevuld door 2 sprekers. 
 
 \subsection{Metriek verzamelingsplan}
 Metrieken zullen verzameld worden met behulp van de Eclipse Metrics Plugin \cite{EclipseMetricsPlugin}. Verzamelde metrieken zullen op de webpagina van het team gevisualiseerd worden.
+\\
+\\
+Er zullen metrieken op methodenniveau en klassenniveau verzameld worden. Op methodenniveau verzamelen we volgende metrieken:
+\begin{enumerate}
+	\item 
+		Cyclomatic Complexity.
+		\\
+		\\ %TODO Nakijken.
+		Deze metriek geeft een indicatie van het aantal `lineaire' segementen in een methode (m.a.w. stukken code met geen branches). Dit kunnen we onder andere gebruiken om het aantal tests te bepalen om volledige dekking te krijgen. Het geeft ook een indicatie van de complexiteit van de methode.
+		
+	\item 
+		Aantal statements
+		\\
+		\\
+		Om de grootte van de methode te onderhouden, maken we gebruik van het aantal statements binnen een methode. Deze metriek is robuuster dan het aantal lijnen code vermits deze onafhankelijk is van de gebruikte programmeerstijl.
+	\item
+		Aantal levels.
+		\\
+		\\
+		Deze metriek geeft het maximaal aantal geneste lagen in een methode. Een hoog aantal levels geeft aan dat we te maken hebben met een complexe  methode. Deze methoden kunnen vereenvoudigd worden door het extraheren van verscheidene private methoden.
+	
+	\item
+		Aantal lokale variabelen in de scope.
+		\\
+		\\
+		Deze metriek geeft het maximaal aantal lokale variable dat zich in de scope bevindt gedurende elk mogelijk punt in de methode. Een groot aantal wijst op complexe methoden.
+	\item
+		Aantal parameters.
+		\\
+		\\
+		Deze metriek bevat het aantal parameters dat doorgegeven wordt aan een methode. Een te hoog aantal parameters wijst erop dat er te weinig gebruik gemaakt wordt van klassen.
+	
+	%TODO Feature Envy: vrij complex maar kan handig zijn
+
+\end{enumerate}
+Op klassenniveau verzamelen we volgende metrieken:
+\begin{enumerate}
+	\item 
+		Efferent Couplings.
+		\\
+		\\
+		In deze metriek wordt er gemeten hoeveel andere klassen de huidige klasse kent. Een hoog aantal koppelingen is nadelig voor de betrouwbaarheid van de code vermits het afhankelijk is van verscheidene types. Door de klasse op te delen in verscheidene deelklassen, kunnen we het aantal koppelingen naar omlaag brengen.
+	\item
+		Aantal velden.
+		\\
+		\\ %TODO wat zijn velden ?
+		Deze metriek meet het aantal velden in een klasse. Bij een groot aantal velden moet er nagegaan worden of er verscheidene velden kunnen gegroepeerd worden in deelklassen.
+	
+	\item
+		Complexiteit
+		\\
+		\\
+		Deze metriek wordt berekend door de som te nemen van de Cyclomatic Complexities van de verschillende methoden die zich in deze klasse bevinden. Deze stelt dus de complexiteit voor van de gehele klasse.
+		
+	\item 
+	{
+		Cohesie tussen de verschillende methodes.
+		\\
+		\\
+		De cohesie tussen de verschillende methoden in \'{e}\'{e}n enkele klasse is een belangrijk concept bij object georienteerd programmeren. De cohesie geeft aan of de klasse \'{e}\'{e}n of meerdere abstracties voorstelt. Indien \'{e}\'{e}n klasse meerdere abstracties voorstelt, moet deze opggesplitst worden in meerdere klassen waarbij elke klassen \'{e}\'{e}n abstractie voorstelt.
+		\\
+		\\
+		Wij zullen de Henderson-Sellers metriek gebruiken \cite{HendersonSellers}. Om deze te berekenen voeren we volgende variabelen in: 
+		$$ M = \{ m | \text{m is methode van de klasse} \} $$
+		$$ F = \{ f | \text{f is een veld van de klasse} \} $$
+		$$ r : F \rightarrow \mathbb{N} $$
+Hierbij berekent $r(f)$ het aantal methoden dat veld $f$ aanroept. Vervolgens defini\"{e}ren we ook $\bar{r}$ als het gemiddelde van $r(f)$ over $F$. De Henderson-Seller metriek wordt dan berekent als:
+		$$ HS = \frac{\bar{r} - |M|}{1 - |M|} $$
+		Hoe lager de waarde, hoe beter de cohese tussen de verschillende methoden.
+	} %TODO eventueel referentiewaarde en verklaren vanuit formule
+\end{enumerate}
 
 \section{Risico management plan} \label{sec:risicoManagementPlan}
-Op gebied van ervaring kijken we voornamelijk naar de verschillende programmeertalen die gebruikt zullen worden (zie sectie \ref{sec:languages}). Een overzicht van de aanwezige kwaliteiten is zichtbaar in tabel \ref{tab:skilllevel}. Wat opvalt is dat er van elks kwaliteiten aanwezig zijn, maar er zijn ook de nodige aandachtspunten. Zo is bijvoorbeeld de ervaring in Java en JavaScript beperkt.
+In deze paragraaf zullen de verschillende risico's verbonden aan dit project besproken worden. In paragraaf \ref{sec:riskPriority} zullen deze risico's gepriotiseerd worden. Om de risico's te kunnen prioritiseren zullen we gebruiken maken van 3 parameters:
+\begin{itemize}
+	\item 
+		De kans $p$ waarmee dit risico kan voorkomen. Hierbij is $ p \in \{1, 2, \ldots , 10\} $. Verder betekent $p = 1$ dat het risico niet kan voorkomen en $p = 10$ dat het risico met zekerheid voorkomt.
+	\item 
+		De impact $i$ op het project wanneer het risico werkelijkheid wordt. Hierbij is $ i \in \{1, 2, \ldots , 10\} $. Verder betekent $i = 1$ een impact op het project die minimaal is en $i = 10$ een impact die maximaal is.
+	\item 
+		De kost $c$ die het risico heeft op het project om het probleem op te lossen. Hierbij is $ c \in \{1, 2, \ldots , 10\} $. Hierbij betekent $c = 1$ een lage kostprijs, terwijl $c=10$ een hoge kostprijs betekent. Bij een hoge kostprijs zal de prioriteit van het risico lager gesteld worden, vermits het dan beter kan zijn om pas het risico weg te werken wanneer het voorkomt. Hiermee worden grote onnodige kosten vermeden.
+		
+\end{itemize}
+\subsection{Project risico's}
+\subsubsection{Niet-realistische Planning}
+%TODO link leggen met geschatte budget: zie COCOMO I & II -> waren niet realistisch
+Om de vooropgestelde deadlines (zie tabel \ref{tab:kalender}) te bereiken dient men voldoende tijd vrij te maken. Het zwaartepunt van het academiejaar van de verschillende groepsleden ligt bij de meeste groepsleden in het eerste semester. Het grootste risico in verband met planning ligt dus vooral bij de eerste iteratie. Dit kan het best vermeden worden door gebruik te maken van interne deadlines en de progressie op te volgen tijdens de wekelijkske teammeetings.
+\\
+\\
+We karakteriseren dit risico m.b.v. volgende parameters:
+\begin{align*}
+	p &= 8\\
+	i &= 8\\
+	c &= 2
+\end{align*}
+
+\subsection{Technische risico's}
+\subsubsection{Gebrek aan ervaring in de implementatie-technologie}
+Hiervoor wordt er gekeken naar de programmeertalen die gebruikt worden tijdens dit project (zie sectie \ref{sec:languages}). Een overzicht van de aanwezige kwaliteiten is zichtbaar in tabel \ref{tab:skilllevel}. Wat opvalt is dat er van elks kwaliteiten aanwezig zijn, maar er zijn ook de nodige aandachtspunten. Zo is bijvoorbeeld de ervaring in Java en JavaScript beperkt.
 
 \begin{table} [htbp]
 	\centering
@@ -145,5 +241,56 @@ Op gebied van ervaring kijken we voornamelijk naar de verschillende programmeert
     \end{tabular}
   	\label{tab:skilllevel}
 \end{table}
-Om de vooropgestelde deadlines (zie tabel \ref{tab:kalender}) te bereiken dient men voldoende tijd vrij te maken. Het zwaartepunt van het academiejaar van de verschillende groepsleden ligt bij de meeste groepsleden in het eerste semester. Het grootste risico in verband met planning ligt dus vooral bij de eerste iteratie.
+Omdat de implementatie-technologie opgelegd wordt, is het gebruik maken van andere frameworks, programmeertalen, ... geen optie. Hierdoor zullen we gebruik maken van workshops. Hiermee gaan we de ervaringen van de verschillende teamleden op elkaar overbrengen. Een workshop wordt georganiseerd door een teamlid die zijn kennis en ervaringen over een bepaalt framework, programmeertaal, ... uiteenzet gedurende 30 \`{a} 60 minuten. Volgende workshops zijn reeds gepland:
+\begin{itemize}
+	\item GitHub (door Christophe)
+	\item Java (door Pieter)
+\end{itemize}
+Doordat we gebruik maken van korte workshops, zou de invloed van deze workshops op de planning minimaal zijn. We karakteriseren dit risico m.b.v. volgende parameters:
+\begin{align*}
+	p &= 8\\
+	i &= 8\\
+	c &= 4
+\end{align*}
+
+\subsubsection{Gebrekkige performantie}
+Het hoofddoel van dit project is het maken van een scheduler. Het is uiteraard gewenst dat het schedulen vlot verloopt. Vanwege de complexiteit van dit onderwerp zal er ook de nodige aandacht besteedt moeten worden aan de performantie van de scheduler.
+\\
+\\
+Dit zal gemonitored worden met behulp van benchmarks. Indien er tekortkomingen ontdekt worden, zullen de nodige optimalisaties moeten doorgevoerd worden aan de scheduler. We karakteriseren dit risico m.b.v. volgende parameters:
+\begin{align*}
+	p &= 7\\
+	i &= 2\\
+	c &= 7
+\end{align*}
+
+
+\subsection{Bedrijfsrisico's}
+\subsubsection{Ontwikkelen van de verkeerde functionaliteit}
+Het ontwikkelen van verkeerde functionaliteit is steeds een re\"{e}el risico. Doordat we gebruik maken van een iteratief development process, waarbij we bij elke iteratie werkende code opleveren, krijgen we geregeld feedback van de klant. Hierdoor kunnen we de requirements, indien nodig, bijsturen. Vermits we bij de start van elke iteratie een gedetailleerde planning opstellen, kunnen eventuele wijzigingen vlot verwerkt worden. We karakteriseren dit risico m.b.v. volgende parameters:
+\begin{align*}
+	p &= 6\\
+	i &= 7\\
+	c &= 4
+\end{align*}
+
+\subsection{Prioriteit van de verschillende risico's.} \label{sec:riskPriority}
+Op basis van de 3 parameters $p$, $i$ en $c$ berekenen we de prioriteit $P$ van het risico. %TODO referentie naar boek software engineering %TODO tabel invullen
+$$ P = (11 - p)*(11 - i)*c$$
+Vermits hoge waarden van $p$, $i$ en $c$ belangrijker zijn, zijn de risico's met de kleinste waarden van $P$ het belangrijkste. Een (gesorteerd) overzicht is weergegeven in tabel \ref{tab:riskPriorityTabel}.
+\begin{table} [H]
+	\centering
+	\caption{}
+	\begin{tabular} {l|ccc|c}
+		Risico & $p$ & $i$ & $c$ & $P$ \\
+		\hline
+		Niet-realistische planning 	& 8 	& 8 	& 2 	& 18 \\
+		Gebrek aan ervaring 		& 8 	& 8 	& 4 	& 36 \\
+		Verkeerde functionaliteit 	& 6 	& 7 	& 4 	& 80 \\
+		Performantie 				& 7 	& 2 	& 7 	& 252\\
+
+	\end{tabular}
+	\label{tab:riskPriorityTabel}
+\end{table}
+
 %\section{Project closeout plan} niet.
