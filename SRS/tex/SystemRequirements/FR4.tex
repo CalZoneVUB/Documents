@@ -17,7 +17,7 @@
 \textbf{Stappenplan:}
 	\begin{enumerate}
 	\item Aangemelde student klikt op de knop aan de rechter kant om naar zijn gebruikersprofiel te gaan
-	\item Gebruiker klink aan de rechterkant op de knop 'Ingeschreven Vakken'
+	\item Gebruiker klikt aan de rechterkant op de knop 'Ingeschreven Vakken'
 	\item Gebruiker krijgt overzicht van alle ingeschreven vakken (Dit is een statische lijst)
 	\end{enumerate}
 
@@ -34,6 +34,13 @@
             \caption{FR4.2 - Notificaties van last-minute veranderingen}
 			\label{tab:FR4.2 - Notificaties van last-minute veranderingen}
         \end{table}      
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Een les uur of locatie word aangepast in het systeem. Als deze les de zelfde dag nog word gegeven zal er een last minute notificatie worden verzonden.
+	\item Het programma kijkt naar iedereen die deze les volgt en zend een email naar het geassocieerde vub adres.
+	\item Optioneel: Ingelogde gebruikers krijgen een browser notificatie dat er een aanpassing is gedaan aan het programma.  
+	\end{enumerate}
 
 %Last-minute tijdstip vak aanpassen
 \noindent\begin{table}[H]
@@ -42,13 +49,23 @@
                 \textbf{TITEL:} & Last-minute tijdstip vak aanpassen\\ \hline
                 \textbf{PRIORITEIT:} &  medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Assistent, Professor, Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & Een gebruiker van type Toegang heeft de optie om het tijdstip van een vak last-minute aan te passen. Enkel toegelaten als deze gebruiker de les zelf geeft of de programmabeheerder is.  De gebruiker drukt dan op de knop getiteld “Lesuur aanpassen” en wordt dan gevraagd om een nieuwe dag en een tijdstip uit te kiezen. 
+                \textbf{TOEGANG:} & Assistent, Professor \\ \hline
+                \textbf{BESCHRIJVING:} & Een gebruiker (van type toegang) heeft de optie om het tijdstip van een vak last-minute aan te passen. Enkel toegelaten als deze gebruiker de les zelf geeft of de programmabeheerder is.  De gebruiker drukt dan op de knop getiteld “Lesuur aanpassen” en wordt dan gevraagd om een nieuwe dag en een tijdstip uit te kiezen. 
                                         Hierna wordt dan een e-mail gestuurd naar alle studenten die dat vak volgen met het nieuwe tijdstip van het vak.\\ 
             \end{tabular}\\
             \caption{FR4.3 - Last-minute tijdstip vak aanpassen}
             \label{tab:FR4.3 - Last-minute tijdstip vak aanpassen}
         \end{table}
+       
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Gebruiker vertrekt op het home screen waar zijn persoonlijk rooster is weergegeven.
+	\item Gebruiker selecteer les dat hij wilt aanpassen
+	\item Met de juiste les geselecteerd klikt de gebruiker op 'Last-Minute aanpassing'. Dit gaat enkel 48 uur voor het starten van de les
+	\item Het is dan mogelijk om voor de gebruiker een nieuw uur te selecteren.
+	\item Gebruiker kan dan op 'toepassen' klikken waarop een conflictdetectie kan gebeuren.
+	\item Eventuele conflicten worden aangeduid waarop de gebruiker moet beslissen of hij al dan niet de aanpassing wilt doen
+	\end{enumerate}
         
 %Locatie Les aanpassen
 \noindent\begin{table}[H]
@@ -65,6 +82,18 @@
             \label{tab:FR4.5 - Locatie les aanpassen}
         \end{table}
         
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Gebruiker vertrekt op het home screen waar zijn persoonlijk rooster is weergegeven.
+	\item Gebruiker selecteer les dat hij wilt aanpassen
+	\item Met de juiste les geselecteerd klikt de gebruiker op 'Last-Minute aanpassing'. Dit gaat enkel 48 uur voor het starten van de les
+	\item Het is dan mogelijk om voor de gebruiker een nieuw lokaal te selecteren.
+	\item Gebruiker krijgt de optie om eerst gebouw te kiezen. Vervolgens de verdieping en dan het locaal. Dit om te voorkomen dat er lokalen worden geselecteerd die niet bestaan.
+	\item Gebruiker kan dan op 'toepassen' klikken waarop een conflictdetectie kan gebeuren.
+	\item Eventuele conflicten worden aangeduid waarop de gebruiker moet beslissen of hij al dan niet de aanpassing wilt doen 
+	\item Optioneel: Selecteer vak dat ervoor zorgt dat het enkel mogelijk is lokalen te selecteren waar geen lessen gegeven worden.
+	\end{enumerate}	        
+        
         
 %Details les aanpassen 
 \noindent\begin{table}[H]
@@ -74,11 +103,25 @@
                 \textbf{PRIORITEIT:} &  laag \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & Een professor kan de beschrijving en details van een vak aanpassen. Hiervoor zal er een knop getiteld “Vak details aanpassen” zijn waarna de professor vrij is in het aanpassen van de details. \\ 
+                \textbf{BESCHRIJVING:} & Een professor kan de beschrijving en details van een vak aanpassen. Hiervoor zal er een knop getiteld “Aanpassen” zijn, waarna de professor vrij is in het aanpassen van de details. \\ 
             \end{tabular}\\
             \caption{FR4.7 - Details vak aanpassen}
             \label{tab:FR4.7 - Details vak aanpassen}
         \end{table}	
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
+	\item De gebruiker kan dan op de knop 'Aanpassen' klikken ter hoogte van het gewenste vak.
+	\item Gebruiker krijgt dan de opties om het detailformulier aan te passen van het vak.
+	\item Gebruiker kan vervolgens op 'Opslaan' klikken.
+	\end{enumerate}
+
+\textbf{Opmerking:}
+	\begin{enumerate}
+	\item Vak details moeten worden aangepast voor runnen van een schedular. Als er aanpassingen moeten gebeuren nadien, zoals meer lessen HOC. Moet dit rechtstreeks en manueel verlopen via de programmabeheerder.
+	\end{enumerate}
         
 %Detail formulier nieuw vak indienen
 \noindent\begin{table}[H]
@@ -113,6 +156,17 @@
             \caption{FR4.8- Detail formulier nieuw vak indienen}
             \label{tab:FR4.8 - Detail formulier nieuw vak indienen}
         \end{table}
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
+	\item De gebruiker kan dan op de knop 'Toevoegen' klikken ter hoogte van het gewenste vak.
+	\item Gebruiker krijgt nu een formulier voor een nieuw vak aan te maken.
+	\item Na het invullen kan de gebruiker op 'Indienen' klikken.
+	\item Hierbij word eerst controle gedaan of de informatie voldoende ingevuld is. Als dit zo is gaan we naar de volgende stap. Als er error in het formulier zitten krijgt de gebruiker een error toegewezen om het veld dat voor problemen zorgt. Hij kan dit nu aanpassen en weer op 'Indienen' klikken.
+	\item Een ingediend detail formulier moet goedgekeurd worden door de programmabeheerder om zo in het systeem te komen.
+	\end{enumerate}
 
 %Goedkeuren detail formulier     
 \noindent\begin{table}[H]
@@ -127,38 +181,24 @@
             \caption{FR4.9 - Goedkeuren detail formulier  }
             \label{tab:FR4.9 - Goedkeuren detail formulier  }
         \end{table}
+ 
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
+	\item De gebruiker kan dan op de knop 'Wachtende Vakken' klikken.
+	\item Gebruiker krijgt nu een formulier voor een nieuw vak met de informatie die de professor heeft ingegeven.
+	\item Na het invullen kan de gebruiker op 'Goedkeuren' of 'Afkeuren' drukken
+		\begin{enumerate}
+		\item Als een formulier word afgekeurd word het verwijderd en krijgt de desbetreffende professor een notificatie in zijn mailbox.
+		\item Als een formulier word goedgekeurd word deze toegevoegd aan de database van vakken en krijgt de desbetreffende professor een notificatie in zijn mailbox.
+		\end{enumerate}
+	\end{enumerate}       
+         
         
-%Aanpassen detail formulier vak      
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR4.10 \\ \hline
-                \textbf{TITEL:} & Aanpassen detail formulier vak \\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
-                \textbf{PREREQUISITIES:} & Detailformulier vak moet al bestaan\\ \hline
-                \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & Zolang het nieuwe vak nog niet toegevoegd is door de Programmabeheerder kan de professor nog aanpassingen aanbrengen op het ingediende formulier. Ook is het mogelijk an bestaande detailformulieren aanpassingen te doen. Dit mag enkel gebeuren voordat het schema is gemaakt.\\ 
-            \end{tabular}\\
-            \caption{FR4.11 - Aanpassen detail formulier vak}
-            \label{tab:FR4.11 - Aanpassen detail formulier vak}
-        \end{table}
-
-%Aanpassen planning vak        
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.12 \\ \hline
-                \textbf{TITEL:} & Aanpassen planning vak\\ \hline
-                \textbf{PRIORITEIT:} &  Medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Het moet mogelijk  zijn een vak te verplaatsen in de algemene planning voor elke week. Dit kan gebeuren op een schema dat al vast ligt en eventueel al bezig is. Als een verplaatsing geen conflicten veroorzaakt gebeurd dit automatisch. Anders wordt een voorstel doorgeschoven aan de programmabeheerder om het goed te keuren.\\
-            \end{tabular}\\
-            \caption{FR4.12 - Aanpassen planning vak}
-            \label{tab:FR4.12 - Aanpassen planning vak}
-        \end{table}        
-        
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.13 \\ \hline
                 \textbf{TITEL:} & Planning markeren als voorstel\\ \hline
                 \textbf{PRIORITEIT:} &  medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
@@ -166,22 +206,49 @@
                 \textbf{BESCHRIJVING:} & Een professor kan een voorstel indienen aan de Scheduler. 
                                         Deze geeft dan in wanneer hij zijn vak het liefst zou geven en dan wordt dit doorgegeven aan de Scheduler die dan rekening probeert te houden met de ingegeven constraint. Dit staat los van de beschikbaarheid van de professor en lokalen.  \\
             \end{tabular}\\
-            \caption{FR4.13 - Planning markeren als voorstel}
-            \label{tab:FR4.13 - Planning markeren als voorstel}
+            \caption{FR4.10 - Planning markeren als voorstel}
+            \label{tab:FR4.10 - Planning markeren als voorstel}
         \end{table}
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
+	\item De gebruiker kan dan op de knop 'Toevoegen Voorstel' klikken ter hoogte van het gewenste vak.
+	\item Gebruiker krijgt nu een formulier voor een nieuw voorstel in te dienen. Dit gebeurd door selectie les per les toe te voegen gebruik makende van volgende parameters.
+		\begin{itemize}
+		\item Dag v/d week (Verplicht)
+		\item Begin uur (Verplicht)
+		\item Eind uur (Verplicht)
+		\item Lokaal (Optioneel)
+		\item Herhaling: Eenmalig, x Weken
+		\end{itemize}
+	\item Het is mogelijk om verschillende van deze lessen in te geven door steeds op 'Toevoegen' te klikken en het proces hierboven te herhalen.
+	\item Na het invullen van een of meerdere lessen kan de gebruiker op 'Indienen' klikken.
+	\item Entrys verwijderen kan ook door op 'Delete' te klikken. Corresponderende met het entry veld.
+	\item Hierbij word eerst controle gedaan of de informatie voldoende ingevuld is volgens het detailformulier van het vak. Bij een error kan de gebruiker deze nog proberen op te lossen en opnieuw op 'Indienen' klikken.
+	\item Een ingediend formulier kan de schedular gebruiken als het mogelijk is om aan het voorstel te voldoen.
+	\end{enumerate}	        
 
 %Vakken verwijderen van lesprogramma        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.14 \\ \hline
+                \textbf{ID:} & FR4.11 \\ \hline
                 \textbf{TITEL:} & Vakken verwijderen van lesprogramma\\ \hline
                 \textbf{PRIORITEIT:} &  hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & De Programmabeheerder kan ook vakken verwijderen uit lesprogramma’s \\ 
             \end{tabular}\\
-            \caption{FR4.14 - Vakken verwijderen van lesprogramma}
-            \label{tab:FR4.14 - Vakken verwijderen van lesprogramma}
-        \end{table}        
+            \caption{FR4.11 - Vakken verwijderen van lesprogramma}
+            \label{tab:FR4.11 - Vakken verwijderen van lesprogramma}
+        \end{table}    
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is. Bij de programmabeheerder zijn dit alle vakken in het systeem.
+	\item De gebruiker kan vervolgens klikken op de knop 'Verwijderden' corresponderend met het juiste vak.
+	\end{enumerate}	    
         
 \clearpage
