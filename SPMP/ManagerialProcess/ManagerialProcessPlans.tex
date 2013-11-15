@@ -1,6 +1,9 @@
 \chapter{Management process}
 \section{Project start plan} \label{sec:ProjectStartPlan}
-In deze sectie bespreken we de verwachte kost van het project. Voor de kostberekening maken we gebruik van  Voor de kostberekening maken we gebruik van het COCOMO I model \cite{CocomoI}. Ondanks dat het COCOMO I model reeds verouderd is t.o.v. COCOMO II \cite{CocomoII}, verkiezen we toch COCOMO I. De reden hiervoor is dat COCOMO II afhant van veel inputparameters. Vermits we hiervoor weinig tot geen ervaring hebben, verkiezen we COCOMO I dat slechts afhangt van 2 inputparameters. Bij COCOMO I zijn de vrije parameters het project type en aantal lijnen code. Als type project moeten we kiezen tussen ``simple'', ``semidetached'' en ``embedded''. We kiezen hierin voor het type ``semidetached''. Dit weerspiegelt goed de huidige situatie van ons team. De omvang van ons team is aan de grote kant en er zijn veel onbekende factoren in dit project (zie ook \ref{sec:risicoManagementPlan}). We berekenen dan de effort $E$ uitgedrukt in persoonsmaanden (pm) als
+Voor het project management zal er gebruikt worden van Microsoft Project \cite{MicrosoftProject}. Een licentie valt gratis te verkrijgen via Microsoft Dreamspark for VUB Students \cite{DreamsparkVUB}. M.b.v. Microsoft Project zullen er Gantt charts gegenereerd worden. Voor Work Breakdown Structures zal er gebruik worden gemaaakt van WBS Chart Pro \cite{WBSChartPro}. Hiervan is een demo-versie verkrijgbaar die voldoende functionaliteit biedt. WBS Chart Pro kan op basis van een Microsoft Project file onmiddelijk een WBS genereren.
+\\
+\\
+In deze paragraaf bespreken we de verwachte kost van het project. Voor de kostberekening maken we gebruik van  Voor de kostberekening maken we gebruik van het COCOMO I model \cite{CocomoI}. Ondanks dat het COCOMO I model reeds verouderd is t.o.v. COCOMO II \cite{CocomoII}, verkiezen we toch COCOMO I. De reden hiervoor is dat COCOMO II afhant van veel inputparameters. Vermits we hiervoor weinig tot geen ervaring hebben, verkiezen we COCOMO I dat slechts afhangt van 2 inputparameters. Bij COCOMO I zijn de vrije parameters het project type en aantal lijnen code. Als type project moeten we kiezen tussen ``simple'', ``semidetached'' en ``embedded''. We kiezen hierin voor het type ``semidetached''. Dit weerspiegelt goed de huidige situatie van ons team. De omvang van ons team is aan de grote kant en er zijn veel onbekende factoren in dit project (zie ook \ref{sec:risicoManagementPlan}). We berekenen dan de effort $E$ uitgedrukt in persoonsmaanden (pm) als
 \begin{equation*}
 	E = a*KLOC^b
 \end{equation*}
@@ -25,7 +28,7 @@ Op basis van de Gantt-chart die zal opgesteld worden in paragraaf \ref{sec:workp
 \end{equation*}
 \section{Werk plan} \label{sec:workplan}
 \subsection{Activiteiten}
-Het project bestaat uit volgende activiteiten\footnote{In volgende versies van het SPMP komen hier nog verscheidene activiteiten bij.}, weergegeven als een work breakdown structure in figuur \ref{fig:workbreakdownstructure}.
+Het project bestaat uit volgende activiteiten\footnote{In volgende versies van het SPMP komen hier nog verscheidene activiteiten bij.}, weergegeven als een work breakdown structure in figuur \ref{fig:workbreakdownstructure}. De activiteiten in de WBS komen overeen met de gegroepeerde requirements die in het SRS-document en website te vinden zijn.
 \begin{figure} [H]
     \centering
     \includegraphics[width = \textwidth]{ManagerialProcess/WBSChart.png}
@@ -45,33 +48,31 @@ In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven va
 \begin{table} [H]
 	\centering
 	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
-	\begin{tabular} {c|l|c|c}
+	\begin{tabular} {l|l|c|c}
 		Activiteit ID & Activiteit Naam & Tijdsduur (in dagen) & Afhankelijkheden \\
 		\hline
-		1 & System Engineering & 21 & \\
-		2 & Requirements Analysis & 14 & \\
-		2.1 & User Requirements & 7 & \\
-		2.2 & System Requirements & 7 & 2.1 \\
-		3 & Design & 14 & 2 \\
-		3.1 & Design Database & 5 & \\
-		3.2 & Design WEB & 4 & \\
-		3.3 & Design User Management & 5 & \\
-		4 & Coding & 14 & \\
-		4.1 & Coding Parsing VUB Data & 7 & 3.1, Release data dump \\
-		4.2 & Coding Layout WEB & 14 & 3.2 \\
-		4.3 & Coding User Management & 14 & 3.3 \\
-		5 & Testing & 7 & 4 \\
-		6 & User manuals & 3 & 4 \\
-		7 & Installation & 1 & 5,6 \\
-		8 & Presentation & 3 & 7	
+		1 	& System Engineering 		& 28 & \\
+		2 	& Requirements Analysis 	& 21 & \\
+		2.1 & User Requirements 		& 10 & \\
+		2.2 & System Requirements 		& 11 & 2.1 \\
+		3 	& Design 					& 5 & 2 \\
+		3.1 & Design User Management 	& 5 & \\
+		4 	& Coding 					& 21 & \\
+		4.1 & Infrastructure onderzoeken & 7 & 2\\
+		4.2 & User Management			& 14 & 3, 4.1  \\
+		4.2.1 & Frond End 		 		& 14 & \\
+		4.2.2 & Back End				& 14 & \\
+		5 	& Testing 					& 7 & 4.2 - 7 dagen \\
+		6 	& User manuals 				& 3 & 4 \\
+		7 	& Installation 				& 1 & 5,6 \\
+		8 	& Presentation 				& 3 & 7	
 	\end{tabular}
 	\label{tab:ActivityDependenciesIteratie1}
 \end{table}
 Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt chart voor iteratie 1 weergegeven in figuur \ref{fig:GantChartIT1}. Het kritisch pad is weergegeven in het rood. Hierbij is nog rekening met extra constraints:
 \begin{itemize}
-	\item Het project is gestart op 7 oktober 2013.
-	\item De activiteit ``Requirements Analysis'' kan niet vroeger beginnen dan 21 oktober 2013.
-	\item De activiteit ``Parsing VUB Data'' kan niet vroeger beginnen dan 18 november 2013 (zie tabel \ref{tab:kalender}).
+	\item Het project is gestart op 15 oktober 2013.
+	\item De activiteit ``Requirements Analysis'' kan niet vroeger beginnen dan 24 oktober 2013.
 	\item De activiteit ``Installation'' mag niet later eindigen dan 13 december 2013 (zie tabel \ref{tab:kalender}).
 	\item De activiteit ``Presentation'' mag niet later eindigen dan 18 december 2013 (zie tabel \ref{tab:kalender}).
 \end{itemize}
@@ -81,7 +82,7 @@ Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt c
 	\caption{Gantt chart voor iteratie 1.}
 	\label{fig:GantChartIT1}
 \end{figure}
-Het kritisch pad begint bij de activiteit ``Parsing VUB Data''.  Vermits de datadump van de VUB pas ter onze beschikking wordt gesteld op 18 november, kunnen we hier niet vroeger aan beginnen.
+Op figuur \ref{fig:GantChartIT1} is er te zien dat er nog enkele dagen marge zijn op het einde van iteratie 1. Het kritisch pad mag dus enkele dagen vertraging oplopen.
 %\subsection{Middelen}
 %This subclause of the SPMP shall provide a detailed itemization of the resources allocated to each major work activity in the project work breakdown structure. Resources shall include the numbers and required skill levels of personnel for each work activity. Resource allocation may include, as appropriate, personnel by skill level and factors such as computing resources, software tools, special testing and simulation facilities, and administrative support. A separate line item should be provided for each type of resource for each work activity. A summary of resource requirements for the various work activities should be collected from the work packages of the work breakdown structure and presented in tabular form.
 %Voor de design-activiteiten zal er gebruik worden gemaakt van een UML Designer \footnote{De specifieke tool die we gaan gebruiken is nog onder overleg.}. Het coderen zal gebeuren in Eclipse. 
