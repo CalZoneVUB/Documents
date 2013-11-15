@@ -1,10 +1,13 @@
 \chapter{Management process}
-\section{Project start plan}
-In deze sectie bespreken we de verwachte kost van het project. Voor de kostberekening maken we gebruik van het COCOMO I model. Als type project kiezen we tussen ``simple'', ``semidetached'' en ``embedded''. We kiezen hierin voor het type ``semidetached''. Dit weerspiegelt goed de huidige situatie van ons team. De omvang ons team is aan de grote kant en er zijn veel onbekende factoren in dit project (zie ook \ref{sec:risicoManagementPlan}). We gebruiken dan volgende formule:
+\section{Project start plan} \label{sec:ProjectStartPlan}
+Voor het project management zal er gebruikt worden van Microsoft Project \cite{MicrosoftProject}. Een licentie valt gratis te verkrijgen via Microsoft Dreamspark for VUB Students \cite{DreamsparkVUB}. M.b.v. Microsoft Project zullen er Gantt charts gegenereerd worden. Voor Work Breakdown Structures zal er gebruik worden gemaaakt van WBS Chart Pro \cite{WBSChartPro}. Hiervan is een demo-versie verkrijgbaar die voldoende functionaliteit biedt. WBS Chart Pro kan op basis van een Microsoft Project file onmiddelijk een WBS genereren.
+\\
+\\
+In deze paragraaf bespreken we de verwachte kost van het project. Voor de kostberekening maken we gebruik van  Voor de kostberekening maken we gebruik van het COCOMO I model \cite{CocomoI}. Ondanks dat het COCOMO I model reeds verouderd is t.o.v. COCOMO II \cite{CocomoII}, verkiezen we toch COCOMO I. De reden hiervoor is dat COCOMO II afhant van veel inputparameters. Vermits we hiervoor weinig tot geen ervaring hebben, verkiezen we COCOMO I dat slechts afhangt van 2 inputparameters. Bij COCOMO I zijn de vrije parameters het project type en aantal lijnen code. Als type project moeten we kiezen tussen ``simple'', ``semidetached'' en ``embedded''. We kiezen hierin voor het type ``semidetached''. Dit weerspiegelt goed de huidige situatie van ons team. De omvang van ons team is aan de grote kant en er zijn veel onbekende factoren in dit project (zie ook \ref{sec:risicoManagementPlan}). We berekenen dan de effort $E$ uitgedrukt in persoonsmaanden (pm) als
 \begin{equation*}
 	E = a*KLOC^b
 \end{equation*}
-Hierbij is $E$ de ``effort'' uitgedrukt in persoonsmaanden (pm). Voor ons is het echter interessanter om naar de werkuren te kijken. Volgens de COCOMO standaard bevat \'{e}\'{e}n werkmaand 152 uren.  De benodigde tijd ($T$) kan dan als volgt berekend worden:
+Hierbij zijn $a$ en $b$ constanten gegeven door het COCOMO I-model. Voor ons is het interessanter om naar de werkuren te kijken i.p.v. het aantal persoonsmaanden. Volgens de COCOMO standaard bevat \'{e}\'{e}n werkmaand 152 uren.  De benodigde tijd ($T$) is dan
 \begin{equation*}
 	T = 152\frac{u}{pm}*E
 \end{equation*}
@@ -16,10 +19,16 @@ Vermits ons team uit 7 personen bestaat, geeft dit per persoon een tijdsduur van
 \begin{equation*}
 	T_{persoon} \approx 859u
 \end{equation*}
-Het spreekt voor zich dat dit duidelijk een overschatting is. $859u$ 
+Het is evident dat een werklast van $859u$ per persoon niet haalbaar is. Dit hoge resultaat is waarschijnlijk het gevolg van de onbetrouwbare methode COCOMO I. Tegenwoordig zijn er meer tools beschikbaar (waaronder GitHub) die de productiviteit sterk verhogen. 
+\\
+\\
+Op basis van de Gantt-chart die zal opgesteld worden in paragraaf \ref{sec:workplan} bekomen we een meer realistische schatting van 
+\begin{equation*}
+	T_{persoon} \approx 300u
+\end{equation*}
 \section{Werk plan} \label{sec:workplan}
 \subsection{Activiteiten}
-Het project bestaat uit volgende activiteiten\footnote{In volgende versies van het SPMP komen hier nog verscheidene activiteiten bij.}, weergegeven als een work breakdown structure in figuur \ref{fig:workbreakdownstructure}.
+Het project bestaat uit volgende activiteiten\footnote{In volgende versies van het SPMP komen hier nog verscheidene activiteiten bij.}, weergegeven als een work breakdown structure in figuur \ref{fig:workbreakdownstructure}. De activiteiten in de WBS komen overeen met de gegroepeerde requirements die in het SRS-document en website te vinden zijn.
 \begin{figure} [H]
     \centering
     \includegraphics[width = \textwidth]{ManagerialProcess/WBSChart.png}
@@ -39,33 +48,31 @@ In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven va
 \begin{table} [H]
 	\centering
 	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
-	\begin{tabular} {c|l|c|c}
+	\begin{tabular} {l|l|c|c}
 		Activiteit ID & Activiteit Naam & Tijdsduur (in dagen) & Afhankelijkheden \\
 		\hline
-		1 & System Engineering & 21 & \\
-		2 & Requirements Analysis & 14 & \\
-		2.1 & User Requirements & 7 & \\
-		2.2 & System Requirements & 7 & 2.1 \\
-		3 & Design & 14 & 2 \\
-		3.1 & Design Database & 5 & \\
-		3.2 & Design WEB & 4 & \\
-		3.3 & Design User Management & 5 & \\
-		4 & Coding & 14 & \\
-		4.1 & Coding Parsing VUB Data & 7 & 3.1, Release data dump \\
-		4.2 & Coding Layout WEB & 14 & 3.2 \\
-		4.3 & Coding User Management & 14 & 3.3 \\
-		5 & Testing & 7 & 4 \\
-		6 & User manuals & 3 & 4 \\
-		7 & Installation & 1 & 5,6 \\
-		8 & Presentation & 3 & 7	
+		1 	& System Engineering 		& 28 & \\
+		2 	& Requirements Analysis 	& 21 & \\
+		2.1 & User Requirements 		& 10 & \\
+		2.2 & System Requirements 		& 11 & 2.1 \\
+		3 	& Design 					& 5 & 2 \\
+		3.1 & Design User Management 	& 5 & \\
+		4 	& Coding 					& 21 & \\
+		4.1 & Infrastructure onderzoeken & 7 & 2\\
+		4.2 & User Management			& 14 & 3, 4.1  \\
+		4.2.1 & Frond End 		 		& 14 & \\
+		4.2.2 & Back End				& 14 & \\
+		5 	& Testing 					& 7 & 4.2 - 7 dagen \\
+		6 	& User manuals 				& 3 & 4 \\
+		7 	& Installation 				& 1 & 5,6 \\
+		8 	& Presentation 				& 3 & 7	
 	\end{tabular}
 	\label{tab:ActivityDependenciesIteratie1}
 \end{table}
 Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt chart voor iteratie 1 weergegeven in figuur \ref{fig:GantChartIT1}. Het kritisch pad is weergegeven in het rood. Hierbij is nog rekening met extra constraints:
 \begin{itemize}
-	\item Het project is gestart op 7 oktober 2013.
-	\item De activiteit ``Requirements Analysis'' kan niet vroeger beginnen dan 21 oktober 2013.
-	\item De activiteit ``Parsing VUB Data'' kan niet vroeger beginnen dan 18 november 2013 (zie tabel \ref{tab:kalender}).
+	\item Het project is gestart op 15 oktober 2013.
+	\item De activiteit ``Requirements Analysis'' kan niet vroeger beginnen dan 24 oktober 2013.
 	\item De activiteit ``Installation'' mag niet later eindigen dan 13 december 2013 (zie tabel \ref{tab:kalender}).
 	\item De activiteit ``Presentation'' mag niet later eindigen dan 18 december 2013 (zie tabel \ref{tab:kalender}).
 \end{itemize}
@@ -75,7 +82,7 @@ Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt c
 	\caption{Gantt chart voor iteratie 1.}
 	\label{fig:GantChartIT1}
 \end{figure}
-Het kritisch pad begint bij de activiteit ```Parsing VUB Data''.  Vermits de datadump van de VUB pas ter onze beschikking wordt gesteld op 18 november, kunnen we hier niet vroeger aan beginnen.
+Op figuur \ref{fig:GantChartIT1} is er te zien dat er nog enkele dagen marge zijn op het einde van iteratie 1. Het kritisch pad mag dus enkele dagen vertraging oplopen.
 %\subsection{Middelen}
 %This subclause of the SPMP shall provide a detailed itemization of the resources allocated to each major work activity in the project work breakdown structure. Resources shall include the numbers and required skill levels of personnel for each work activity. Resource allocation may include, as appropriate, personnel by skill level and factors such as computing resources, software tools, special testing and simulation facilities, and administrative support. A separate line item should be provided for each type of resource for each work activity. A summary of resource requirements for the various work activities should be collected from the work packages of the work breakdown structure and presented in tabular form.
 %Voor de design-activiteiten zal er gebruik worden gemaakt van een UML Designer \footnote{De specifieke tool die we gaan gebruiken is nog onder overleg.}. Het coderen zal gebeuren in Eclipse. 
@@ -124,15 +131,12 @@ Een presentatie duurt een half uur per groep en wordt ingevuld door 2 sprekers. 
 \end{itemize}
 
 \subsection{Metriek verzamelingsplan}
-Metrieken zullen verzameld worden met behulp van de Eclipse Metrics Plugin \cite{EclipseMetricsPlugin}. Verzamelde metrieken zullen op de webpagina van het team gevisualiseerd worden.
-\\
-\\
-Er zullen metrieken op methodenniveau en klassenniveau verzameld worden. Op methodenniveau verzamelen we volgende metrieken:
+Metrieken zullen verzameld worden met behulp van de Eclipse Metrics Plugin \cite{EclipseMetricsPlugin}. Er zullen metrieken op methodenniveau en klassenniveau verzameld worden. Op methodenniveau verzamelen we volgende metrieken:
 \begin{enumerate}
 	\item 
 		Cyclomatic Complexity.
 		\\
-		\\ %TODO Nakijken.
+		\\
 		Deze metriek geeft een indicatie van het aantal `lineaire' segementen in een methode (m.a.w. stukken code met geen branches). Dit kunnen we onder andere gebruiken om het aantal tests te bepalen om volledige dekking te krijgen. Het geeft ook een indicatie van de complexiteit van de methode.
 		
 	\item 
@@ -157,7 +161,16 @@ Er zullen metrieken op methodenniveau en klassenniveau verzameld worden. Op meth
 		\\
 		Deze metriek bevat het aantal parameters dat doorgegeven wordt aan een methode. Een te hoog aantal parameters wijst erop dat er te weinig gebruik gemaakt wordt van klassen.
 	
-	%TODO Feature Envy: vrij complex maar kan handig zijn
+	\item 
+		Feature envy
+		\\
+		\\
+		Deze metriek geeft aan in welke mate de methode ge\"{i}terreseerd is in methoden en attributen van andere klassen. Wanneer deze metriek een hoge waarde heeft, is het beter de methode te verplaatsen naar de klasse waarvan het het meest gebruik maakt. Wanneer dit gedrag slechts deels door een methode wordt bepaald, is het aangewezen om dit deel van de methode te verplaatsen (indien mogelijk).
+		\\
+		\\
+		Voor de berekening gaan we als volgt te werk. Zij $m$ de methode waarvoor we de ``feature envy'' willen berekenen. We nemen dan $F_{c}$ de verzameling van features dat gebruikt worden door $m$ in klasse $c$. Verder is $c_{m}$ de klasse in welke de methode $m$ gedefinieerd is. We defini\"{e}ren dan de feature envy als:
+		$$ FE = \max_{c \neq c_{m}} (|F_{c}|) - |F_{c_{m}}| $$
+		Wanneer $FE > 0$ betekent dat de methode $m$ meer features gebruikt van een andere klasse. De klassenstructuur moet dan herzien worden. 
 
 \end{enumerate}
 Op klassenniveau verzamelen we volgende metrieken:
@@ -168,10 +181,10 @@ Op klassenniveau verzamelen we volgende metrieken:
 		\\
 		In deze metriek wordt er gemeten hoeveel andere klassen de huidige klasse kent. Een hoog aantal koppelingen is nadelig voor de betrouwbaarheid van de code vermits het afhankelijk is van verscheidene types. Door de klasse op te delen in verscheidene deelklassen, kunnen we het aantal koppelingen naar omlaag brengen.
 	\item
-		Aantal velden.
+		Aantal attributen.
 		\\
-		\\ %TODO wat zijn velden ?
-		Deze metriek meet het aantal velden in een klasse. Bij een groot aantal velden moet er nagegaan worden of er verscheidene velden kunnen gegroepeerd worden in deelklassen.
+		\\
+		Deze metriek meet het aantal attributen in een klasse. Bij een groot aantal attributen moet er nagegaan worden of er verscheidene attributen kunnen gegroepeerd worden in deelklassen.
 	
 	\item
 		Complexiteit
@@ -196,6 +209,10 @@ Hierbij berekent $r(f)$ het aantal methoden dat veld $f$ aanroept. Vervolgens de
 		Hoe lager de waarde, hoe beter de cohese tussen de verschillende methoden.
 	} %TODO eventueel referentiewaarde en verklaren vanuit formule
 \end{enumerate}
+De Eclipse Metrics Plugin verzamelt automatisch metrieken bij elk compile process (eens geconfigureerd). Deze worden dan geexporteerd naar een XML-file die vervolgens wordt ingelezen door de website.
+\\
+\\
+Verzamelde metrieken zullen op de webpagina van het team gevisualiseerd worden. De metrieken worden verzameld tijdens de activiteiten waar er gecodeerd wordt. Bij de start van het coderen zullen er wekelijks metrieken verzameld worden. In de laatste week van coderen worden er dagelijks metrieken verzameld, hierdoor kan er refactoring plaatsvinden die de kwaliteit van de code verhoogt.
 
 \section{Risico management plan} \label{sec:risicoManagementPlan}
 In deze paragraaf zullen de verschillende risico's verbonden aan dit project besproken worden. In paragraaf \ref{sec:riskPriority} zullen deze risico's gepriotiseerd worden. Om de risico's te kunnen prioritiseren zullen we gebruiken maken van 3 parameters:
@@ -210,14 +227,57 @@ In deze paragraaf zullen de verschillende risico's verbonden aan dit project bes
 \end{itemize}
 \subsection{Project risico's}
 \subsubsection{Niet-realistische Planning}
-%TODO link leggen met geschatte budget: zie COCOMO I & II -> waren niet realistisch
-Om de vooropgestelde deadlines (zie tabel \ref{tab:kalender}) te bereiken dient men voldoende tijd vrij te maken. Het zwaartepunt van het academiejaar van de verschillende groepsleden ligt bij de meeste groepsleden in het eerste semester. Het grootste risico in verband met planning ligt dus vooral bij de eerste iteratie. Dit kan het best vermeden worden door gebruik te maken van interne deadlines en de progressie op te volgen tijdens de wekelijkske teammeetings.
+In paragraaf \ref{sec:ProjectStartPlan} is de werkduur geschat met het COCOMO I-model. Hier werd reeds duidelijk dat de geschatte tijdsduur enorm hoog ligt. Dit zorgt voor een grote druk op de planning.
+\\
+\\
+Om de vooropgestelde deadlines (zie tabel \ref{tab:kalender}) te bereiken dient men dus voldoende tijd vrij te maken. Het zwaartepunt van het academiejaar van de verschillende groepsleden ligt bij de meeste groepsleden in het eerste semester. Het grootste risico in verband met planning ligt dus vooral bij de eerste iteratie. Dit kan het best vermeden worden door gebruik te maken van interne deadlines en de progressie op te volgen tijdens de wekelijkske teammeetings.
 \\
 \\
 We karakteriseren dit risico m.b.v. volgende parameters:
 \begin{align*}
 	p &= 8\\
 	i &= 8\\
+	c &= 2
+\end{align*}
+
+\subsubsection{Communicatieprobleem}
+Bij een team van zeven personen is communicatie essentieel. Indien er geen bijzondere maatregelen worden genomen, zal deze snel verkeerd lopen.
+\\
+\\
+Als oplossing hiervoor wordt er reeds een mailinglijst aangeleverd door VUB. Omdat wij deze niet overzichtelijk genoeg vinden, hebben wij zelf een communicatieplatform ontwikkeld op onze website. De werking verloopt als een blog waarbij de teamleaden een bericht kunnen plaatsen en vervolgens hierop kunnen reageren. Bij elk nieuw bericht worden de teamleden van een notificatie voorzien.
+\\
+\\
+De implementatie hiervan is niet triviaal en vraagt de nodige investering. Wij verwachten echter dat de ``return on investment'' groot zal zijn. Samengevat:
+\begin{align*}
+	p &= 10\\
+	i &= 8\\
+	c &= 8
+\end{align*}
+
+\subsubsection{Meningsverschillen}
+Bij het werken in teamverband is het onvermijdelijk dat er meningsverschillen optreden tussen verscheidene groepsleden. We maken een onderscheid tussen volgende menigsverschillen:
+\begin{itemize}
+	\item Functioneel: Meningsveschillen waarvan de uitkomst bepalend is voor de uiteindelijke werking van het programma.
+	\item Niet-functioneel: Meningsverschillen waarvan de uitkomst niet bepalend is voor de uiteindelijke werking van het programma. Bijvoorbeeld de communicatiemethode, meningsveschillen over interne deadlines, persoonlijke conflicten tussen teamleden, ...
+\end{itemize}
+Verder kunnen we ook nog onderscheid maken tussen kleine en grote meningsverschillen. Al deze types worden opgelost op een verschillende manier, weergegeven in tabel \ref{tab:meningsverschillen}. De `kost' voor het oplossen van het risico is dus minimaal.
+\begin{table} [H]
+	\centering
+	\caption{Oplossingen voor de verschillende meningsconflicten.}
+	\begin{tabular} {l|ll}
+					& Functioneel 								& Niet-functioneel \\
+			\hline
+			Groot 	& Meeting met team, vervolgens stemming		& Behandeld door de verantwoordelijke \\ 
+			& & van dit onderwerp \\
+			Klein 	& Project Manager							& Behandeld door de verantwoordelijke \\
+			& & van dit onderwerp
+	\end{tabular}
+	\label{tab:meningsverschillen}
+\end{table}
+We karakteriseren dit risico m.b.v. volgende parameters:
+\begin{align*}
+	p &= 10\\
+	i &= 3\\
 	c &= 2
 \end{align*}
 
@@ -264,6 +324,29 @@ Dit zal gemonitored worden met behulp van benchmarks. Indien er tekortkomingen o
 	c &= 7
 \end{align*}
 
+\subsubsection{Support voor meerdere browsers}
+Uit ervaring weten we dat Internet Explorer soms voor compatibiliteitsproblemen zorgt. Het is niet nodig om dit risico op voorhand te elimineren. Op voorhand alle compabiliteitsproblemen opzoeken bij verschillende browsers zou een immens werk zijn. Wanneer bij het testen duidelijk wordt dat er problemen optreden in een bepaalde browser, moet dit opgelost worden d.m.v. de benodigde documentatie op te zoeken op internet. We karakteriseren dit risico m.b.v. volgende parameters:
+\begin{align*}
+	p &= 7\\
+	i &= 4\\
+	c &= 10
+\end{align*}
+
+\subsubsection{Merge conflicten}
+Bij het werken met de GitHub repository zijn merge conflicten nooit verweg. Door het werken met forking en pull requests vermijden we echter deze conflicten en zorgen we voor een goed beheer van onze GitHub repository. Het implementeren van forking en pull requests vergt echter enig opzoekwerk waardoor de kost hoog ligt. Het beheer van de GitHub repository wordt verder besproken in het SCMP (zie paragraaf \ref{SoftwareConfigurationManagementPlan}.
+\begin{align*}
+	p &= 10\\
+	i &= 5\\
+	c &= 7
+\end{align*}
+
+\subsubsection{Bugs}
+Bugs zijn onvermijdelijk in een programma. De procedure voor bugs af te handelen wordt besproken in het problem resolution plan (zie paragraaf \ref{sec:ProblemResolutionPlan}). Dit risico wordt gekarakteriseerd met volgende parameters:
+\begin{align*}
+	p &= 10\\
+	i &= 7\\
+	c &= 3
+\end{align*}
 
 \subsection{Bedrijfsrisico's}
 \subsubsection{Ontwikkelen van de verkeerde functionaliteit}
@@ -275,20 +358,24 @@ Het ontwikkelen van verkeerde functionaliteit is steeds een re\"{e}el risico. Do
 \end{align*}
 
 \subsection{Prioriteit van de verschillende risico's.} \label{sec:riskPriority}
-Op basis van de 3 parameters $p$, $i$ en $c$ berekenen we de prioriteit $P$ van het risico. %TODO referentie naar boek software engineering %TODO tabel invullen
+Op basis van de 3 parameters $p$, $i$ en $c$ berekenen we de prioriteit $P$ van het risico \cite{SoftwareEngineeringAModernApproach}
 $$ P = (11 - p)*(11 - i)*c$$
-Vermits hoge waarden van $p$, $i$ en $c$ belangrijker zijn, zijn de risico's met de kleinste waarden van $P$ het belangrijkste. Een (gesorteerd) overzicht is weergegeven in tabel \ref{tab:riskPriorityTabel}.
+Vermits hoge waarden van $p$, $i$ en kleine $c$ belangrijker zijn, zijn de risico's met de kleinste waarden van $P$ het belangrijkste. Een (gesorteerd) overzicht is weergegeven in tabel \ref{tab:riskPriorityTabel}.
 \begin{table} [H]
 	\centering
-	\caption{}
+	\caption{Prioriteit van de verschillende risico's.}
 	\begin{tabular} {l|ccc|c}
 		Risico & $p$ & $i$ & $c$ & $P$ \\
 		\hline
+		Bugs						& 10	& 7 	& 3		& 12 \\
+		Meningsverschillen 			& 10	& 3		& 2		& 16 \\
 		Niet-realistische planning 	& 8 	& 8 	& 2 	& 18 \\
+		Communicatieprobleem		& 10	& 8		& 8		& 24 \\ 
 		Gebrek aan ervaring 		& 8 	& 8 	& 4 	& 36 \\
+		Merge conflicten			& 10	& 5		& 7		& 42 \\
 		Verkeerde functionaliteit 	& 6 	& 7 	& 4 	& 80 \\
-		Performantie 				& 7 	& 2 	& 7 	& 252\\
-
+		Performantie 				& 7 	& 2 	& 7 	& 252 \\
+		Browser support				& 7 	& 4 	& 10 	& 280
 	\end{tabular}
 	\label{tab:riskPriorityTabel}
 \end{table}

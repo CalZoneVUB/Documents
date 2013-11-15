@@ -18,7 +18,7 @@ Dit deel van het document beschrijft de allocatie van de verantwoordelijkheden e
 De in dit onderdeel beschreven richtlijnen voor het gebruik van de aangeboden en verworven tools, zijn van toepassing voor elk teamlid. Het is de verantwoordelijkheid van deze leden om zich hiermee vertrouwd te maken en deze toe te passen binnen dit project. Met problemen of vragen over de gebruikte software, kunnen zij terecht bij de Configuration Manager: Christophe Gaethofs.
 \\
 \\
-Het is de taak van de Configuration Manager, Christophe Gaethofs, om hulp te verlenen aan de andere teamleden, toezicht te houden dat de teamleden deze richtlijnen volgen, alsook hen op de hoogte te brengen over veranderen of bijsturingen gemaakt aan het SCMP, hetzij of het besluit voor verandering collectief of individueel werd genomen. Slechts na unanieme goedkeuring, zullen bijsturingen effectief worden geïmplementeerd en opgenomen in het SCMP.
+Het is de taak van de Configuration Manager, Christophe Gaethofs, om hulp te verlenen aan de andere teamleden, toezicht te houden dat de teamleden deze richtlijnen volgen, alsook hen op de hoogte te brengen over veranderen of bijsturingen gemaakt aan het SCMP, hetzij door een collectief of individueel genomen besluit. Slechts na unanieme goedkeuring, zullen bijsturingen effectief worden geïmplementeerd en opgenomen in het SCMP.
 \\
 \\
 Verder zal de Configuration Manager verantwoordelijk zijn voor de configuratie en controle van al de in sectie \ref{sec:SCMActiviteiten} opgenomen activiteiten.
@@ -27,18 +27,18 @@ Verder zal de Configuration Manager verantwoordelijk zijn voor de configuratie e
 Voor deze opdracht zal de Configuration Manager, Christophe Gaethofs, bijgestaan worden door Tim Witters, die de taak van Configuration Manager op zich neemt bij afwezigheid van Christophe Gaethofs, of waneer de situatie dit vereist. Dit op voorwaarde dat deze hiervan op tijd op de hoogte wordt gebracht, om hem de mogelijkheid te geven zich voor eventuele taken in te werken.
 
 \subsection{SCM Activiteiten} \label{sec:SCMActiviteiten}
-Dit deel van het document identificeert alle functies en taken die nodig zijn om de configuratie van het beschreven software project en bijhorende tools te beheren. Hierbij wordt rekening gehouden met de bij het project opgelegde procedures voor het indien en beheren. Voor de controle, het beheer en het overzicht van alle activiteiten, zal voornamelijk de team website \cite{portalWebsite} en GitHub gebruikt worden.
+Dit deel van het document identificeert alle functies en taken die nodig zijn om de configuratie van het beschreven software project en bijhorende tools te beheren. Hierbij wordt rekening gehouden met de bij het project opgelegde procedures voor het indienen en beheren. Voor de controle, het beheer en het overzicht van alle activiteiten, zal voornamelijk de team website \cite{portalWebsite} en GitHub gebruikt worden.
 \\
 \\
 Alle gebruikte en in dit document aangehaalde tools, die een API ter beschikking hebben en bijdragen aan de workflow, zullen in deze website worden geïntegreerd.
 
 \subsubsection{Website}
-De team website zal intensief gebruikt worden als platform dat voor alle leden ter beschikken wordt gesteld als collaboratie-platform. Het zal onder meer worden gebruikt om een overzicht te cre\"{e}eren voor:
+De team website zal intensief gebruikt worden als platform dat voor alle leden ter beschikken wordt gesteld ter collaboratie. Het zal onder meer worden gebruikt om een overzicht te cre\"{e}eren voor:
 \begin{itemize}
- \item updates, gemaakt aan het SRS of update aan andere documenten;
+ \item updates, gemaakt aan het SRS of updates aan andere documenten;
  \item gedetailleerde informatie van alle activiteiten, beschreven in het Project Plan;
  \item opvolging van de vooruitgang (o.a. vooruitgang van de requirements);
- \item opvolging van de besteedde tijd per activiteit per team lid via Time Tracking;
+ \item opvolging van de besteedde tijd per activiteit per lid via Time Tracking;
  \item de communicatie door correspondentie op te lijsten in een overzicht;
  \item code-overzicht, door volledige integratie van GitHub. 
 \end{itemize}
@@ -52,31 +52,39 @@ Hoewel dit in eerste instantie meer werk met zich meebrengt, zal dit werk zich s
 De implementatie, onderhoud en controle van de website is de verantwoordelijkheid van de Webmaster en Configuration Manager. Beide taken zullen worden vervuld door Christophe Gaethofs. Bij eventuele conflicten of problemen op de website, dienen de leden deze hiervan dan ook zo snel mogelijk op de hoogte te brengen om deze problemen te kunnen oplossen.
 \\
 \\
-De website is gebouwd op het opensource CMS (Content Management System) SilverStripe (\url{http://www.silverstripe.org}) en maakt gebruikt van het Bootstrap JS (\url{http://getbootstrap.com/}) framework voor het thema en JavaScript functionaliteit.
+De communicatie op de website zal verlopen via een berichtenpagina, waarop leden mededelingen en berichten kunnen posten. Dit systeem werkt als een blog waarbij het gepubliceerde artikel, in deze context dan bericht, direct wordt weergegeven op de website. Dit bericht wordt, vanaf het adres van het lid dat deze publicatie maakte, ook als e-mail verstuurd naar de projectmailbox. Alle leden krijgen dit bericht dan in hun inbox, maar kunnen dit ook online bekijken. De communicatiepagina's stellen hen ook in staat online te reageren op deze berichten via Disqus (\url{http://disqus.com/}). Deze open source tool geeft een website de mogelijkheid om een reactieformulier aan een pagina toe te voegen en dit te beheren. Elke berichtpagina zal onder het bericht zo'n formulier bevatten. De geplaatste reacties worden niet via mail verstuurd.
+\\
+\\
+De website is gebouwd op het opensource CMS (Content Management System) SilverStripe (\url{http://www.silverstripe.org}) en maakt gebruikt van het Bootstrap JS (\url{http://getbootstrap.com/}) framework voor het thema en JavaScript functionaliteit. Voor de kalender is een eigen module ontworpen op basis van Bootstrap Calendar (\url{http://bootstrap-calendar.azurewebsites.net}), een opensource kalender voor Bootstrap JS.
+\\
+\\
 
 \subsubsection{Documenten en source code}
-Om alle fase van het project ordelijk en gestructureerd te kunnen laten verlopen, zal er gebruikt gemaakt worden van publieke repositories, aangeboden door GitHub.
+Om alle fasen van het project ordelijk en gestructureerd te kunnen laten verlopen, zal er gebruikt gemaakt worden van publieke repositories, aangeboden door GitHub.
 \\
 \\
-De configuratie hiervan dient in lijn te zijn met de opgegeven voorwaarden waardoor alle documenten en source code overeenkomstig zal worden getagd/gebranchd (se2-iterN waarbij N staat voor het iteratienummer) in de repository.
+De configuratie hiervan dient in lijn te zijn met de opgegeven voorwaarden waardoor alle documenten en source code overeenkomstig zullen worden getagd/gebranchd (se2-iterN waarbij N staat voor het iteratienummer) in de repository.
 \\
 \\
-Voor de documentatie en de source code zullen aanvankelijk verschillende repositories worden aangemaakt. 
+Voor de documentatie en de source code worden verschillende repositories worden aangemaakt.
 \\
 \\
-Hoewel momenteel met Sharelatex\cite{ShareLateX} wordt gewerkt, is reeds in deze fase van het project dat dit niet de meest evidente manier van werken is. Daarom zal er mogelijk worden geopteerd om alle documenten onder te brengen in een repository. Hierdoor zijn de documenten voor alle leden beschikbaar, worden alle wijzigingen en versies bijgehouden en kan er simultaan in hetzelfde document worden gewerkt zonder conflicten.
+De in de repository ondergebrachte documenten, worden in Latex geschreven en bijgehouden in branches op de Git. Hierdoor zijn de stabiele documenten voor alle leden beschikbaar, worden alle wijzigingen en versies bijgehouden en kan er simultaan aan hetzelfde document worden gewerkt zonder conflicten.
 \\
 \\
-Alle source code is terug te vinden in de Git, toegankelijk via de website.
+Om problemen bij het mergen van branches te vermijden en controle te houden op de gemaakte wijzigingen op de Git, zal voor het coderen gebruikt worden gemaakt van forks. Dit zijn clones van de eigenlijke team repository in de persoonlijke repositories van de leden. Hierin kan men verder werken zonder conflicten te veroorzaken. Als een lid  wijzigingen wil doorvoeren, dient deze een pull request uit te voeren naar de team repository. De Configuration Manager, Christophe Gaethofs, zal dan samen met de reserve Configuration Manager, Tim Witters, al deze pull requests behandelen en doorvoeren indien deze geen conflicten veroorzaken.
 \\
 \\
-Via locale versies van deze repositories, kunnen teamleden samen werken aan de code en documenten. Er wordt nooit online in de Git zelf gewerkt, tenzij bepaalde goed gegronde redenen lokaal werken niet mogelijk maken en andere teamleden hiermee akkoord gaan.
+Alle source code is terug te vinden in de Git, toegankelijk via de website. Als editor zal er gebruikt worden gemaakt van twee open source git editors. Voor een eenvoudige werking zonder te veel verwarrende functionaliteit, zal gebruik gemaakt worden van een GitHub client. Voor de meer geavanceerde functies en het beheer van de repositories, zullen de Configuration Managers, gebruik maken van SourceTree \url{http://www.sourcetreeapp.com}.
+\\
+\\
+Er wordt nooit online in de Git zelf gewerkt, tenzij bepaalde goed gegronde redenen lokaal werken niet mogelijk maken en andere teamleden hiermee akkoord gaan.
 \\
 \\
 In elke fase van het project wordt er ook onderling besproken hoe we het eventuele branchen van een repository gaan aanpakken bij het opdelen van de implementatie-taken.
 
 \subsubsection{Issues \& Milestones}
-De melding en opvolging van problemen gebeurt ook via GitHub. Dit stelt ons in staat om code-specifieke issues te melden en een verantwoordelijke aan te duiden. Via de comments kan er gereageerd worden en kan een probleem worden gesloten wanneer het is opgelost. Dit laatste wordt ook opgevolgd door de Configuration Manager die, buiten de orde en netheid van de repositories te bewaren, ook toezicht houdt over alle open problemen of bugs. Ook voor problemen of opmerkingen bij de documentatie zal hier van gebruik worden gemaakt.
+De melding en opvolging van problemen gebeurt ook via GitHub. Dit stelt ons in staat om code-specifieke issues te melden en hiervoor een verantwoordelijke aan te duiden. Via de comments kan er gereageerd worden en kan een probleem worden gesloten wanneer het is opgelost. Dit laatste wordt ook opgevolgd door de Configuration Manager die, buiten de orde en netheid van de repositories te bewaren, ook toezicht houdt over alle open problemen of bugs. Ook voor problemen of opmerkingen bij de documentatie zal hier van gebruik worden gemaakt.
 \\
 \\
 Problemen die geen betrekking hebben tot de code of de documenten, kunnen via de website worden ingediend. De website zal verder ook een overzicht geven (status, beschrijving, …) van alle ingediende bugs of problemen, zij het of deze werden ingediend via de website zelf of via GitHub.
@@ -85,10 +93,10 @@ Problemen die geen betrekking hebben tot de code of de documenten, kunnen via de
 Aan de hand van de ingediende commits en de milestones wordt de vooruitgang van het project in kaart gebracht. Dit kan worden gebruikt voor evaluaties of het bewerken van het requirements dashboard. Ook deze zullen allemaal in de website worden geïntegreerd.
 \\
 \\
-Om grote problemen of code-verlies tegen te gaan, wordt er enerzijds vertrouwd op de berekenbaarheid en stabiliteit van GitHub, en wordt er door de Configuration Manager anderzijds wekelijks back-ups genomen van alle documenten en repositories. Deze back-ups zulle ook via de website ter beschikken worden gesteld.
+Om grote problemen of code-verlies tegen te gaan, wordt er enerzijds vertrouwd op de berekenbaarheid en stabiliteit van GitHub, en worden er door de Configuration Manager anderzijds wekelijks back-ups genomen van alle documenten en repositories. Deze back-ups zullen ook via de website ter beschikken worden gesteld.
 
 \subsection{Groei en planning}
-De in de vorige secties van \ref{SoftwareConfigurationManagementPlan} aangehaalde delen, worden gebruikt in functie van het project en zullen bijgevolg (mogelijk) veranderingen of uitbreidingen ondervinden. Het in dit document beschreven SCMP is dan ook een basis voor goed samenwerken en een vertrekpunt bij de collaboratie. Om flexibele groei toe te staan in correspondentie met het project, stellen we volgende beslissingsprocedures op voor de wijziging van software, implementatie van nieuwe functies of ingebruikname van nieuwe tools.
+De in de vorige secties van \ref{SoftwareConfigurationManagementPlan} aangehaalde delen, worden gebruikt in functie van het project en zullen bijgevolg (mogelijk) veranderingen of uitbreidingen ondervinden. Het in dit document beschreven SCMP is dan ook een basis voor goed samenwerken en een richtlijn bij de collaboratie. Om flexibele groei toe te staan in correspondentie met het project, stellen we volgende beslissingsprocedures op voor de wijziging van software, implementatie van nieuwe functies of ingebruikname van nieuwe tools.
 \\
 \\
 Het al dan niet adopteren of afkeuren van functies of software, of de manier waarop deze worden gebruikt, zal altijd in samenspraak met het gehele team gebeuren.
@@ -97,13 +105,13 @@ Het al dan niet adopteren of afkeuren van functies of software, of de manier waa
 De verdere planning en diepere uitwerking van het gebruik, zal verder vorm gegeven worden in de beginfase van de implementatie.
 
 \subsection{SCM Resources}
-Omdat het gebruikte besturingssysteem afhankelijk is van en kan verschillen per student, wordt er geopteerd voor software dit op zijn minst de laatste versies van de besturingssystemen van Windows en Apple ondersteunt.
+Omdat het gebruikte besturingssysteem afhankelijk is van de gebruiker en kan verschillen per lid, wordt er geopteerd voor software die op zijn minst de laatste versies van de besturingssystemen van Windows en Apple ondersteunt.
 \\
 \\
 Er wordt enkel gebruikt gemaakt van open source software of zelf ontwikkelde tools.
 \\
 \\
-Voor de samenwerkingen maken we, zoals eerder vermeld, gebruikt van onze website waar we trachten alles te centraliseren en van GitHub dat voor elk platform beschikbaar is: meer info op \url{http://windows.github.com} en \url{http://mac.github.com} of in sectie \ref{sec:SCMActiviteiten}.
+Voor de samenwerkingen maken we, zoals eerder vermeld, gebruikt van onze website, waar we trachten alles te centraliseren, en van GitHub, dat voor elk platform beschikbaar is: meer info op \url{http://windows.github.com} en \url{http://mac.github.com} of in sectie \ref{sec:SCMActiviteiten}. De Configuration Managers, of leden die geavanceerder aan de repositories willen sleutelen, zullen dan ook gebruik maken van SourceTree \url{http://www.sourcetreeapp.com}.
 \\
 \\
 Code zal worden geschreven in Eclipse\cite{Eclipse} en gedocumenteerd in Javadoc\cite{Javadoc}.
@@ -170,12 +178,15 @@ In onderstaande tabel vindt u de datum van alle uitgevoerde inspecties, de datum
 
 %\section{Reviews and audits plan} niet
 
-\section{Problem resolution plan}
+\section{Problem resolution plan} \label{sec:ProblemResolutionPlan}
 %wat als er inconsisties met documentatie ? wat met bugfixing ? (gebruik maken van bugtracker tool !!) hoe integratie van oplossingen hiervoor, hoe terug testen ? hier moeten ook procedures voor geschreven worden.
-Wanneer er inconsistenties gevonden worden in de documenatie of code zullen deze gemeld worden op onze website \cite{portalWebsite}. Deze website is verbonden met GitHub via de GitHub API \cite{GitHubAPI}, hierdoor blijft alles gesynchroniseerd met onze GitHub repository \cite{GitHubRepository}. Vervolgens wordt er een persoon aangewezen die de verantwoordelijkheid krijgt.
+Wanneer er inconsistenties gevonden worden in de documenatie of code zullen deze gemeld worden op GitHub m.b.v. issues. Deze issues worden automatisch ook gesynchroniseerd met de website \cite{portalWebsite}. Deze synchronisatie gebeurt met de GitHub API \cite{GitHubAPI}. Het voordeel van gebruik te maken van de GitHub API is dat alles gecentraliceerd blijf op onze website. Hierdoor is het gemakkelijk om snel een overzicht te krijgen van de huidige stand van zaken. 
 \\
 \\
-Het voordeel van gebruik te maken van de GitHub API is dat alles gecentraliceerd blijf op onze website. Hierdoor is het gemakkelijk om snel een overzicht te krijgen van de huidige stand van zaken.
+Vervolgens wordt er een persoon aangewezen die de verantwoordelijkheid krijgt. Voor de documenten is de verantwoordelijke steeds de verantwoordelijke voor het betreffende document (zie hoofdstuk \ref{chap:ProjectOrganisatie}). Voor issues in de code wordt de documentatie bij de desbetreffende code geraadgepleegd voor de verantwoordelijke aan te wijzen.
+\\
+\\
+De aangewezen verantwoordelijke is dan verantwoordelijk voor het oplossen van het issue. Dit betekent niet noodzakelijk dat deze persoon het issue effectief moet oplossen. Hij mag ook opdrachten doorgeven aan andere teamleaden op het issue op te lossen. De verantwoordelijke moet er enkel voor zorgen dat het issue opgelost geraakt, ongeacht de gebruikte methode. Vervolgens wordt het issue gesloten door deze verantwoordelijke.
 %\section{Subcontractor management plans} niet
 
 %\section{Process improvement plan}
