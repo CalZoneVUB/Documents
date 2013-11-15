@@ -5,12 +5,21 @@
                 \textbf{TITEL:} & Aanpassen detail formulier vak \\ \hline
                 \textbf{PRIORITEIT:} &  laag \\ \hline
                 \textbf{PREREQUISITIES:} & Detailformulier vak moet al bestaan\\ \hline
-                \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & Zolang het nieuwe vak nog niet toegevoegd is door de Programmabeheerder kan de professor nog aanpassingen aanbrengen op het ingediende formulier. Ook is het mogelijk an bestaande detailformulieren aanpassingen te doen. Dit mag enkel gebeuren voordat het schema is gemaakt.\\ 
+                \textbf{TOEGANG:} & Professor\\ \hline
+                \textbf{BESCHRIJVING:} & Zolang het nieuwe vak nog niet toegevoegd is door de programmabeheerder kan de professor nog aanpassingen aanbrengen op het ingediende formulier. Ook is het mogelijk om aan bestaande detailformulieren aanpassingen te doen. Dit mag enkel gebeuren voordat het schema is gemaakt.\\ 
             \end{tabular}\\
             \caption{FR3.13 - Aanpassen detail formulier vak}
-            \label{tab:FR3.13 - Aanpassen detail formulier vak}
+            \label{tab:FR3.13 - Aanpassen detailformulier vak}
         \end{table}
+
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De professor ziet zijn beginscherm op zijn webbrowser. Hier ziet hij een optie om zijn docerende vakken te bezichtigen.
+\item De professor klikt op deze optie en krijgt een lijst van zijn vakken te zien in een nieuwe pagina.
+\item De professor klikt een van zijn vakken aan en krijgt een detailoverzicht met de eigenschappen van het vak te zien in een nieuwe pagina.
+\item De professor wijzigt de gegevens en ziet onderaan een knop met de naam "Wijzigingen opslaan".
+\item De professor klikt op de knop en de gegevens worden permanent gewijzigd.
+\end{enumerate}
 
 %Aanpassen planning vak        
 \noindent\begin{table}[H]
@@ -20,12 +29,25 @@
                 \textbf{PRIORITEIT:} &  Medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Het moet mogelijk  zijn een vak te verplaatsen in de algemene planning voor elke week. Dit kan gebeuren op een schema dat al vast ligt en eventueel al bezig is. Als een verplaatsing geen conflicten veroorzaakt gebeurd dit automatisch. Anders wordt een voorstel doorgeschoven aan de programmabeheerder om het goed te keuren.\\
+                \textbf{BESCHRIJVING:} & Het moet mogelijk zijn een vak te verplaatsen in de algemene planning voor elke week. Dit kan gebeuren op een schema dat reeds vast ligt en eventueel al bezig is. Als een verplaatsing geen conflicten veroorzaakt gebeurt dit automatisch. Anders wordt een voorstel doorgeschoven aan de programmabeheerder om het goed te keuren.\\
             \end{tabular}\\
             \caption{FR3.14 - Aanpassen planning vak}
             \label{tab:FR3.14 - Aanpassen planning vak}
         \end{table}
-        
+
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item De professor ziet zijn persoonlijk rooster. Dit rooster bevat de planning waarop hij zijn vakken doceren zal.
+\item De professor klikt een vak aan en krijgt de optie om de datum van het  hoorcollege of werkcollege te verplaatsen naar een datum en tijdstip die nog niet versteken is.
+\item De professor wijzigt de datum en het tijdstip en bevestigt dit door de knop met de naam "Verplaatsen" aan te klikken.
+\item Het vak is verplaatst en is nu op het gewijzigde moment te zien in het rooster.
+\end{enumerate}
+
+\textbf{Uitzonderingen:}
+\begin{itemize}
+\item De wijzigingen wordt niet automatisch doorgevoerd
+\end{itemize}
+
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.15 \\ \hline
@@ -39,6 +61,11 @@
             \caption{FR3.15 - Planning markeren als voorstel}
             \label{tab:FR3.15 - Planning markeren als voorstel}
         \end{table}
+
+\textbf{Stappenplan:}
+\begin{itemize}
+\item De professor ziet zijn beginscherm in zijn webbrowser. 
+\end{itemize}
 
 %Vakken verwijderen van lesprogramma        
 \noindent\begin{table}[H]
@@ -54,6 +81,7 @@
             \label{tab:FR3.16 - Vakken verwijderen van lesprogramma}
         \end{table}
 
+\textbf{Stappenplan:}
    
 %Lokaal detailformulier toevoegen  
 \noindent\begin{table}[H]
@@ -69,6 +97,7 @@
             \label{tab:FR3.17 - Lokaal detailformulier toevoegen}
         \end{table}
 
+\textbf{Stappenplan:}
 
 %Lokaal detail formulier verwijderen        
 \noindent\begin{table}[H]
@@ -80,22 +109,26 @@
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & De Programmabeheerder moet in staat zijn lokalen te verwijderen (In het geval dat deze niet meer in gebruik worden genomen).\\ 
             \end{tabular}\\
-            \caption{FR3.18 - Lokaal detail formulier verwijderen}
-            \label{tab:FR3.18 - Lokaal detail formulier verwijderen}
+            \caption{FR3.18 - Lokaal detailformulier verwijderen}
+            \label{tab:FR3.18 - Lokaal detailformulier verwijderen}
         \end{table}
-        
+
+\textbf{Stappenplan:}
+    
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.19 \\ \hline
-                \textbf{TITEL:} & Lokaal detail formulier aanpassen\\ \hline
+                \textbf{TITEL:} & Lokaaldetail formulier aanpassen\\ \hline
                 \textbf{PRIORITEIT:} &  medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & Mocht er nood zijn aan het aanpassen van een lokaal formulier, moet de Programmabeheerder de optie hebben om dit te doen.\\ 
             \end{tabular}\\
             \caption{FR3.19 - Lokaal detail formulier aanpassen}
-            \label{tab:FR3.19 - Lokaal detail formulier aanpassen}
+            \label{tab:FR3.19 - Lokaaldetail formulier aanpassen}
         \end{table}
+
+\textbf{Stappenplan:}
 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
@@ -110,6 +143,8 @@
             \label{tab:FR3.20 - Lesprogramma aanmaken voor een richting}
         \end{table}
 
+\textbf{Stappenplan:}
+
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.21 \\ \hline
@@ -122,6 +157,8 @@
             \caption{FR3.21 - Bekijken lesserooster als specifiek gebruiker}
             \label{tab:FR3.21 - Bekijken lesserooster als specifiek gebruiker}
         \end{table}
+        
+\textbf{Stappenplan:}        
         
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
@@ -136,6 +173,8 @@
             \label{tab:FR3.22 - Bevriezen van een voorstel}
         \end{table}
         
+\textbf{Stappenplan:}
+        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.23 \\ \hline
@@ -148,6 +187,8 @@
             \caption{FR3.23 - Bevriezen volledige planning}
             \label{tab:FR3.23 - Bevriezen volledige planning}
         \end{table}   
+
+\textbf{Stappenplan:}
 
 %Beschikbaarheidsformulier aanmaken   
 \noindent\begin{table}[H]
@@ -162,3 +203,6 @@
             \caption{FR3.24 - Beschikbaarheidsformulier aanmaken}
             \label{tab:FR24 - Beschikbaarheidsformulier aanmaken}
         \end{table}
+
+
+\textbf{Stappenplan:}
