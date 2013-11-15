@@ -1,254 +1,129 @@
-\subsection{Vakken - FR4}
+\subsection{Schedular - FR4}
 
-%Ingeschreven vakken bekijken        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR4.1 \\ \hline
-                \textbf{TITEL:} & Ingeschreven vakken bekijken\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & Uitvoeren van een full scheduling\\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Student \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde student kan ten alle tijden de lijst van vakken zien waarvoor deze is ingeschreven. De student drukt hiervoor op een knop getiteld “Ingeschreven Vakken” en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.\\
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De Scheduler moet in staat zijn om lesroosters op te kunnen stellen, hierbij word er rekening gehouden met verschillende constraint: locatie, tijstip, studenten, professoren en assitenten. \\
             \end{tabular}\\
-            \caption{FR4.1 - Ingeschreven vakken bekijken}
-            \label{tab:FR4.1 - Ingeschreven vakken bekijken}
-        \end{table}  
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item Aangemelde student klikt op de knop aan de rechter kant om naar zijn gebruikersprofiel te gaan
-	\item Gebruiker klikt aan de rechterkant op de knop 'Ingeschreven Vakken'
-	\item Gebruiker krijgt overzicht van alle ingeschreven vakken (Dit is een statische lijst)
-	\end{enumerate}
-
-%Notifiacties van last-minute verandering krijgen        
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.2 \\ \hline
-                \textbf{TITEL:} & Notificaties van last-minute veranderingen \\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Student, Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Mocht er een lesaanpassing plaats vinden (bijv.: een professor die de les van lokaal verandert) dan moeten de gebruiker die dat vak volgen of geven verwittigd worden. Zij zullen dan een bericht op hun e-mail adres ontvangen met daarin de nodige informatie over de lesaanpassing.\\
-            \end{tabular}\\
-            \caption{FR4.2 - Notificaties van last-minute veranderingen}
-			\label{tab:FR4.2 - Notificaties van last-minute veranderingen}
-        \end{table}      
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item Een les uur of locatie word aangepast in het systeem. Als deze les de zelfde dag nog word gegeven zal er een last minute notificatie worden verzonden.
-	\item Het programma kijkt naar iedereen die deze les volgt en zend een email naar het geassocieerde vub adres.
-	\item Optioneel: Ingelogde gebruikers krijgen een browser notificatie dat er een aanpassing is gedaan aan het programma.  
-	\end{enumerate}
-
-%Last-minute tijdstip vak aanpassen
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.3 \\ \hline
-                \textbf{TITEL:} & Last-minute tijdstip vak aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een gebruiker (van type toegang) heeft de optie om het tijdstip van een vak last-minute aan te passen. Enkel toegelaten als deze gebruiker de les zelf geeft of de programmabeheerder is.  De gebruiker drukt dan op de knop getiteld “Lesuur aanpassen” en wordt dan gevraagd om een nieuwe dag en een tijdstip uit te kiezen. 
-                                        Hierna wordt dan een e-mail gestuurd naar alle studenten die dat vak volgen met het nieuwe tijdstip van het vak.\\ 
-            \end{tabular}\\
-            \caption{FR4.3 - Last-minute tijdstip vak aanpassen}
-            \label{tab:FR4.3 - Last-minute tijdstip vak aanpassen}
+            \caption{FR4.1 - Uitvoeren van een full scheduling}
+            \label{tab:FR4.1 - Uitvoeren van een full scheduling}
         \end{table}
-       
+      
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item Gebruiker vertrekt op het home screen waar zijn persoonlijk rooster is weergegeven.
-	\item Gebruiker selecteer les dat hij wilt aanpassen
-	\item Met de juiste les geselecteerd klikt de gebruiker op 'Last-Minute aanpassing'. Dit gaat enkel 48 uur voor het starten van de les
-	\item Het is dan mogelijk om voor de gebruiker een nieuw uur te selecteren.
-	\item Gebruiker kan dan op 'toepassen' klikken waarop een conflictdetectie kan gebeuren.
-	\item Eventuele conflicten worden aangeduid waarop de gebruiker moet beslissen of hij al dan niet de aanpassing wilt doen
+	\item Programmabeheerder beslist om schedular te laten runnen en een voorstel te doen voor een mogelijk schema.
+	\item Schedular word uitgevoerd rekening houdend met: Beschikbaarheid localen/professoren/assistenten, Aantal uren per vak, voorrang voor vaste vakken in het lessenrooster en eventueel andere contraints.
+	\item Er word een mogelijk schema gepresenteerd aan de programmabeheerder. Deze krijgt de keuze om het schema te accepteren of te weigeren.
+	\item Na het accepteren van een schema moet het mogelijk zijn om het programma te bekijken als elke type gebruiker van het systeem. Dit kan via het selecteren uit een lijst.
+	\end{enumerate}
+
+\noindent\begin{table}[H]
+	\begin{tabular}{l | p{10cm}}
+    \textbf{ID:} & FR4.2 \\ \hline
+    \textbf{TITEL:} & Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)\\ \hline
+    \textbf{PRIORITEIT:} &  medium \\ \hline
+    \textbf{PREREQUISITIES:} & \\ \hline
+    \textbf{TOEGANG:} & Assistent, Professor, Programmabeheerder \\ \hline
+    \textbf{BESCHRIJVING:} & Gebruiker (van type toegang) kunnen bekijken hoe haalbaar hun schema is. Dit zal een score zijn die afhankelijk is van het aantal beschikbare uren van de persoon en het aantal uren dat deze persoon les zal moeten geven. (Vb: 12uur les te geven en 18u vrij zal een goede haalbaarheidsscore krijgen. 16u les en 10u vrij zal een score geven die overeenkomt met onmogelijk)\\
+    \end{tabular}
+    \caption{FR4.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+    \label{tab:FR4.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+\end{table}
+
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Gebruiker klikt in zijn profiel op een knop 'Bereken haalbaarheid eigen schema'
+	\item Het programma berekent hoe haalbaar het schema is van een bepaalde gebruiker. Dit houd rekening met hoeveel lessen de gebruiker moet geven in uren. (Gebruik makende van vak formulieren waaraan de gebruiker gelinkt is) en hoeveel beschikbare uren de gebruiker heeft voor lessen te geven (gebruik makende van beschikbaarheidsformulier)
+	\item Score word gepresenteerd aan de gebruiker. Als zijn schema onmogelijk is krijgt hij een knop die linkt naar de pagina waar de gebruiker zijn beschikbaarheidsdatum kan aanpassen.
 	\end{enumerate}
         
-%Locatie Les aanpassen
+        
+        
+\noindent\begin{table}[H]
+	\begin{tabular}{l | p{10cm}}
+	\textbf{ID:} & FR4.3 \\ \hline
+	\textbf{TITEL:} & Rooster bevat data, tijdstippen en lokalen voor bepaalde vakken\\ \hline
+	\textbf{PRIORITEIT:} &  hoog \\ \hline
+	\textbf{PREREQUISITIES:} & \\ \hline
+	\textbf{TOEGANG:} &  \\ \hline
+	\textbf{BESCHRIJVING:} & Het rooster dat is opgesteld bevat alle informatie over elk vak dat nodig is om het vak te kunnen volgen.\\
+	\end{tabular}\\
+	\caption{FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+	\label{tab:FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+\end{table}
+       
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR4.4 \\ \hline
-                \textbf{TITEL:} & Locatie les aanpasen\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een professor heeft de optie om de locatie van een vak aan te passen. 
-                                        De professor drukt dan op de knop getiteld “Lokaal aanpassen” en wordt dan gevraagd om een nieuwe locatie uit te kiezen, deze locatie is dan van de vorm G.V.L (met G = gebouw, V = verdieping en L = lokaal). De Scheduler zal dan nagaan of het ingevoerde lokaal vrij is op het tijdstip van het vak. Keurt de Scheduler het nieuwe lokaal goed, dan wordt er een e-mail gestuurd naar alle studenten die het vak volgen met daarin het nieuwe lokaal van het vak. Keurt de Scheduler het nieuwe lokaal af, dan wordt de professor gevraagd een ander lokaal in te geven.\\ 
-            \end{tabular}\\
-            \caption{FR4.4 - Locatie les aanpassen}
-            \label{tab:FR4.4 - Locatie les aanpassen}
-        \end{table}
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item Gebruiker vertrekt op het home screen waar zijn persoonlijk rooster is weergegeven.
-	\item Gebruiker selecteer les dat hij wilt aanpassen
-	\item Met de juiste les geselecteerd klikt de gebruiker op 'Last-Minute aanpassing'. Dit gaat enkel 48 uur voor het starten van de les
-	\item Het is dan mogelijk om voor de gebruiker een nieuw lokaal te selecteren.
-	\item Gebruiker krijgt de optie om eerst gebouw te kiezen. Vervolgens de verdieping en dan het locaal. Dit om te voorkomen dat er lokalen worden geselecteerd die niet bestaan.
-	\item Gebruiker kan dan op 'toepassen' klikken waarop een conflictdetectie kan gebeuren.
-	\item Eventuele conflicten worden aangeduid waarop de gebruiker moet beslissen of hij al dan niet de aanpassing wilt doen 
-	\item Optioneel: Selecteer vak dat ervoor zorgt dat het enkel mogelijk is lokalen te selecteren waar geen lessen gegeven worden.
-	\end{enumerate}	        
-        
-        
-%Details les aanpassen 
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.5 \\ \hline
-                \textbf{TITEL:} & Details vak aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & Een professor kan de beschrijving en details van een vak aanpassen. Hiervoor zal er een knop getiteld “Aanpassen” zijn, waarna de professor vrij is in het aanpassen van de details. \\ 
-            \end{tabular}\\
-            \caption{FR4.5 - Details vak aanpassen}
-            \label{tab:FR4.5 - Details vak aanpassen}
-        \end{table}	
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
-	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
-	\item De gebruiker kan dan op de knop 'Aanpassen' klikken ter hoogte van het gewenste vak.
-	\item Gebruiker krijgt dan de opties om het detailformulier aan te passen van het vak.
-	\item Gebruiker kan vervolgens op 'Opslaan' klikken.
-	\end{enumerate}
-
-\textbf{Opmerking:}
-	\begin{enumerate}
-	\item Vak details moeten worden aangepast voor runnen van een schedular. Als er aanpassingen moeten gebeuren nadien, zoals meer lessen HOC. Moet dit rechtstreeks en manueel verlopen via de programmabeheerder.
-	\end{enumerate}
-        
-%Detail formulier nieuw vak indienen
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}} 
-                \textbf{ID:} & FR4.6 \\ \hline
-                \textbf{TITEL:} & Detail formulier nieuw vak indienen\\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Mocht er nood zijn aan het toevoegen van een nieuw vak aan de database, dan kan een professor hiervoor een formulier opstellen met daarin:
-        \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
-                                        \item beschrijving van het vak
-                                        \item aantal studiepunten
-                                        \item nodige prerequisities
-                                        \item welk semester het vak gegeven wordt
-                                        \item aantal uren studie tijd
-                                        \item studiegidsnummer
-                                        \item 2e zittijd mogelijk
-                                        \item onderwijstaal
-                                        \item faculteit
-                                        \item verantwoordelijke vakgroep
-                                        \item onderwijsteam
-                                        \item onderdelen en contacturen
-                                        \item studiemateriaal
-                                        \item leerresultaten
-                                        \item beoordelingsinformatie
-                                        \item Aanvullende info m.b.t. examinering
-                                        \item Academische context
-                                        \end{itemize}
-                                        Het formulier wordt dan gestuurd naar de Programmabeheerder die het vak zal toevoegen. 
-            \end{tabular}\\
-            \caption{FR4.6- Detail formulier nieuw vak indienen}
-            \label{tab:FR4.6 - Detail formulier nieuw vak indienen}
-        \end{table}
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
-	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
-	\item De gebruiker kan dan op de knop 'Toevoegen' klikken ter hoogte van het gewenste vak.
-	\item Gebruiker krijgt nu een formulier voor een nieuw vak aan te maken.
-	\item Na het invullen kan de gebruiker op 'Indienen' klikken.
-	\item Hierbij word eerst controle gedaan of de informatie voldoende ingevuld is. Als dit zo is gaan we naar de volgende stap. Als er error in het formulier zitten krijgt de gebruiker een error toegewezen om het veld dat voor problemen zorgt. Hij kan dit nu aanpassen en weer op 'Indienen' klikken.
-	\item Een ingediend detail formulier moet goedgekeurd worden door de programmabeheerder om zo in het systeem te komen.
-	\end{enumerate}
-
-%Goedkeuren detail formulier     
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.7 \\ \hline
-                \textbf{TITEL:} & Goedkeuren detail formulier   \\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
-                \textbf{PREREQUISITIES:} & De professor moet al een detail formulier ingedient hebben\\ \hline
-                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & De programma beheerder bekijkt en ingediende formulier van een professor en beslist dit toe wel of niet toe te voegen aan het de database. 
-            \end{tabular}\\
-            \caption{FR4.7 - Goedkeuren detail formulier  }
-            \label{tab:FR4.7 - Goedkeuren detail formulier  }
-        \end{table}
- 
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
-	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
-	\item De gebruiker kan dan op de knop 'Wachtende Vakken' klikken.
-	\item Gebruiker krijgt nu een formulier voor een nieuw vak met de informatie die de professor heeft ingegeven.
-	\item Na het invullen kan de gebruiker op 'Goedkeuren' of 'Afkeuren' drukken
-		\begin{enumerate}
-		\item Als een formulier word afgekeurd word het verwijderd en krijgt de desbetreffende professor een notificatie in zijn mailbox.
-		\item Als een formulier word goedgekeurd word deze toegevoegd aan de database van vakken en krijgt de desbetreffende professor een notificatie in zijn mailbox.
-		\end{enumerate}
-	\end{enumerate}       
-         
-        
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.8 \\ \hline
-                \textbf{TITEL:} & Planning markeren als voorstel\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een professor kan een voorstel indienen aan de Scheduler. 
-                                        Deze geeft dan in wanneer hij zijn vak het liefst zou geven en dan wordt dit doorgegeven aan de Scheduler die dan rekening probeert te houden met de ingegeven constraint. Dit staat los van de beschikbaarheid van de professor en lokalen.  \\
-            \end{tabular}\\
-            \caption{FR4.8 - Planning markeren als voorstel}
-            \label{tab:FR4.8 - Planning markeren als voorstel}
-        \end{table}
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
-	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
-	\item De gebruiker kan dan op de knop 'Toevoegen Voorstel' klikken ter hoogte van het gewenste vak.
-	\item Gebruiker krijgt nu een formulier voor een nieuw voorstel in te dienen. Dit gebeurd door selectie les per les toe te voegen gebruik makende van volgende parameters.
-		\begin{itemize}
-		\item Dag v/d week (Verplicht)
-		\item Begin uur (Verplicht)
-		\item Eind uur (Verplicht)
-		\item Lokaal (Optioneel)
-		\item Herhaling: Eenmalig, x Weken
-		\end{itemize}
-	\item Het is mogelijk om verschillende van deze lessen in te geven door steeds op 'Toevoegen' te klikken en het proces hierboven te herhalen.
-	\item Na het invullen van een of meerdere lessen kan de gebruiker op 'Indienen' klikken.
-	\item Entrys verwijderen kan ook door op 'Delete' te klikken. Corresponderende met het entry veld.
-	\item Hierbij word eerst controle gedaan of de informatie voldoende ingevuld is volgens het detailformulier van het vak. Bij een error kan de gebruiker deze nog proberen op te lossen en opnieuw op 'Indienen' klikken.
-	\item Een ingediend formulier kan de schedular gebruiken als het mogelijk is om aan het voorstel te voldoen.
-	\end{enumerate}	        
-
-%Vakken verwijderen van lesprogramma        
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.9 \\ \hline
-                \textbf{TITEL:} & Vakken verwijderen van lesprogramma\\ \hline
+                \textbf{TITEL:} & Aanpassen berekend rooster \\ \hline
                 \textbf{PRIORITEIT:} &  hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
-                \textbf{BESCHRIJVING:} & De Programmabeheerder kan ook vakken verwijderen uit lesprogramma’s \\ 
+                \textbf{BESCHRIJVING:} & Het moet mogelijk zijn om een berekend lessenrooster aan te passen.\\
             \end{tabular}\\
-            \caption{FR4.9 - Vakken verwijderen van lesprogramma}
-            \label{tab:FR4.9 - Vakken verwijderen van lesprogramma}
-        \end{table}    
+            \caption{FR4.4 - Aanpassen berekend rooster}
+            \label{tab:FR4.4 - Aanpassen berekend rooster}
+        \end{table}
         
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
-	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is. Bij de programmabeheerder zijn dit alle vakken in het systeem.
-	\item De gebruiker kan vervolgens klikken op de knop 'Verwijderden' corresponderend met het juiste vak.
-	\end{enumerate}	    
+	\item Programmabeheerder gaat naar zijn gebruikersprofiel.
+	\item Klinkt op label 'Rooster' in het navigatiebalk (Dit is een dropdown menu)
+	\item Klinkt op knop 'Rooster Aanpassen'
+	\item Hier word een rooster weergegeven en moet het mogelijk zijn het rooster aan te passen. Er zijn verschillende opties om les aan te passen.
+	\item Programmabeheerder klinkt op de les die hij wilt aanpassen. En krijgt volgende opties voorgeschoteld.
+		\begin{itemize}
+		\item Vakken wisselen
+		\item Uur/lokaal aanpassen
+		\item Eenmalig aanpassen 
+		\item x maal herhalen (x nummer in te geven) 
+		\item Tot einde slot 
+		\end{itemize}
+	\item Programmabeheerder klikt op 'Controleer'.
+	\item Programma controleert op eventuele conflicten die veroorzaakt worden door de aanpassing en presenteert het resultaat naar de gebruiker toe. Volgende opties zijn mogelijk.
+		\begin{itemize}
+		\item Geen conflicten gedetecteerd
+		\item Conflict gedetecteerd met ander vak 
+		\item Conflict gedetecteerd met beschikbaarheid lesgever
+		\end{itemize}
+	\item Programmabeheerder krijgt keuze uit volgende opties.
+		\begin{itemize}
+		\item Toepassen rooster: Programma word toegepast. Dit kan zelf gebeuren als er conflicten zijn veroorzaakt.
+		\item Voorstel aanpassen: Keert terug naar vorige pagina.
+		\item Annuleren: Keert terug naar gebruikersprofiel 
+		\end{itemize}
+	\end{enumerate}	
+		
         
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.5 \\ \hline
+                \textbf{TITEL:} & Conflictdetectie\\ \hline
+                \textbf{PRIORITEIT:} & hoog \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} &  \\ \hline
+                \textbf{BESCHRIJVING:} & De Scheduler moet in staat zijn om conflicten te detecteren. Conflicten zijn: 
+                \begin{enumerate}
+                \item Twee of meer vakken op hetzelfde moment of hetzelfde lokaal
+                \item Een professor/assistent  die twee of meer vakken op hetzelfde tijdstip moet geven 
+                \item Studenten die twee of meer vakken op hetzelfde tijdstip moeten volgen
+                \end{enumerate}
+                Puntje 1 en 2 zijn harde conflicten die altijd opgelost moeten worden. Ook verplichte vakken voor studenten van een bepaalde richting mogen nooit samenvallen. Bij keuzevakken is dit wel toegelaten maar niet gewenst.\\
+            \end{tabular}\\
+            \caption{FR4.5 - Conflictdetectie}
+            \label{tab:FR4.5 - Conflictdetectie}
+        \end{table}
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Als conflictdetectie word opgeroepen gaat dit steeds over een wijziging van een les.
+	\item Er word gecontroleerd of er op het zelfde moment van de gewijzigde les een andere les word gegeven door de leerlingen die deze gewijzigde les volgen.
+	\item Er word gecontroleerd of de lesgever van de gewijzigde les op dat moment geen andere les geeft
+	\item Er word gecontroleerd dat het lokaal aan de nodige voorzieningen voldoet gespecificeerd in het formulier van het vak. 
+	\end{enumerate}
+
 \clearpage

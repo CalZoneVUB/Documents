@@ -1,147 +1,73 @@
-\subsection{Lessenrooster - FR3}
+\subsection{Lokalen - FR3}
 
-%Richting Bekijken    
+%Lokaal detailformulier toevoegen  
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.1 \\ \hline
-                \textbf{TITEL:} & Lesrooster van richting bekijken \\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & Lokaal detailformulier toevoegen\\ \hline
+                \textbf{PRIORITEIT:} &  hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Iedereen \\ \hline
-                \textbf{BESCHRIJVING:} & Een (niet) ingelogde gebruiker heeft de optie om het standaard lesrooster van een bepaalde richting te bekijken. Hiervoor moet hij een richting en jaar uitkiezen uit een lijst van alle richtingen.\\
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De Programmabeheerder moet in staat zijn om lokalen toe te voegen aan de database zodat de scheduler die kan gebruiken in zijn planning. Lokalen hebben een ID nummer van de vorm G.V.L (met G = gebouw, V = verdieping en L = lokaal) en hebben ook bepaalde faciliteiten (beamer, overheadprojector...) een maximaal aantal plaatsen, \\ 
             \end{tabular}\\
-            \caption{FR3.1 - Lesrooster van richting bekijken}
-            \label{tab:FR3.1 - Lesrooster van richting bekijken}
+            \caption{FR3.1 -Lokaal detailformulier toevoegen}
+            \label{tab:FR3.1 - Lokaal detailformulier toevoegen}
         \end{table}
 
 \textbf{Stappenplan:}
-\begin{itemize}
-\item Voor de niet-aangemelde gebruiker: 
-	\begin{enumerate}
-		\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
-		\item De gebruiker klikt op deze optie en wordt doorverwezen naar een nieuwe pagina. Op deze nieuwe pagina ziet de gebruiker 2 opties om lesroosters te bezichtigen: per richting of per vak.
-		\item De gebruiker kiest de optie om per richting roosters te bezichtigen en wordt doorverwezen naar een nieuw venster om waar hij 3 lijsten ziet. Deze lijsten bevatten respectievelijk de faculteiten, richtingen per faculteit en de jaren per richting.
-		\item De gebruiker selecteert telkens de gewenste optie voor de 3 lijsten. Het is noodzakelijk dat de gebruiker dit in de juiste volgorde doet: eerst faculteit, vervolgens de richting en tenslotte het jaar. De volgende lijst in deze reeks is namelijk telkens gebaseerd op de vorige selectie(s).
-		\item Nadat de gebruiker de gewenste opties heeft geselecteerd, klikt hij op de knop "Toon rooster" om het rooster op te vragen.
-		\item Het gevraagde lesrooster verschijnt in hetzelfde venster naast de 3 lijsten.
-		\item De gebruiker kan telkens stap 4, 5 en 6 herhalen om andere roosters te tonen. Hierdoor verdwijnt de vorige opzoeking uit het scherm en komt de nieuwe in de plaats.
-	\end{enumerate}
-\item Voor de aangemelde gebruiker:
-	\begin{enumerate}
-	\item De aangemelde gebruiker (voortaan gebruiker geheten) ziet het venster met zijn persoonlijk lesrooster in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
-	\item De gebruiker doorloopt dezelfde stappen van het stappenplan van de niet-aangemelde gebruiker vanaf stap 2.
-	\end{enumerate}
-\end{itemize}
+\begin{enumerate}
+\item De programmabeheerder ziet zijn beginscherm op zijn webbrowser. Hier ziet hij de optie "lokalen".
+\item De programmabeheerder klikt hierop en wordt doorverwezen naar een nieuwe pagina waar hij de optie ziet om lokalen toe te voegen.
+\item De programmabeheerder klikt op deze optie en wordt doorverwezen naar een nieuwe pagina met een formulier om de nodige gegevens van het lokaal in te vullen.
+\item De programmabeheerder vult deze gegevens correct in en ziet een knop met de naam "Lokaal toevoegen".
+\item De programmabeheerder klikt op deze knop en het lokaal wordt toegevoegd in de database en dus ook in het systeem.
+\end{enumerate}
 
-%TODO
-\textbf{Uitzonderingen:}
-\begin{itemize}
-\item Lesrooster onbeschikbaar
-\end{itemize}
-
-%TODO Meerdere zoekopties voorleggen (naam, titularis...)
-%Specifiek vak bekijken      
+%Lokaal detail formulier verwijderen        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.2 \\ \hline
-                \textbf{TITEL:} & Lesrooster van specifiek vak bekijken \\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & 3. Lokaal detailformulier verwijderen\\ \hline
+                \textbf{PRIORITEIT:} &  hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Iedereen \\ \hline
-                \textbf{BESCHRIJVING:} & Een (niet)ingelogde gebruiker heeft de optie om het lesrooster van een bepaald vak te bekijken. 
-                                        Hiervoor moet hij \'{e}\'{e}n van de bestaande vakken aan de VUB kiezen.\\
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De Programmabeheerder moet in staat zijn lokalen te verwijderen (In het geval dat deze niet meer in gebruik worden genomen).\\ 
             \end{tabular}\\
-            \caption{FR3.2 - Lesrooster van specifiek vak bekijken}
-            \label{tab:FR3.2 - Lesrooster van specifiek vak bekijken}
+            \caption{FR3.2 - Lokaal detailformulier verwijderen}
+            \label{tab:FR3.2- Lokaal detailformulier verwijderen}
         \end{table}
-
-\textbf{Stappenplan:}
-\begin{itemize}
-\item Voor de niet-aangemelde gebruiker: 
-	\begin{enumerate}
-		\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
-		\item De gebruiker klikt op deze optie en wordt doorverwezen naar een nieuwe pagina. Op deze nieuwe pagina ziet de gebruiker 3 opties om lesroosters te bezichtigen: per richting, per vak of lokaal.
-		\item De gebruiker kiest de optie om per vak roosters te bezichtigen en wordt doorverwezen naar een nieuw venster om waar hij een veld ziet om een zoekterm in te vullen.
-		\item De gebruiker vult een zoekterm in. Deze zoekterm verwijst naar het vak waarvan de gebruiker het rooster wil bezichtigen.
-		\item De gebruiker klikt op de knop met de naam "Zoek vak". Er verschijnt in hetzelfde venster een tabel met gevonden vakken die voldoen aan de zoekterm. In die tabel kan je de naam en de titularis van het vak bezichtigen alsook de richtingen waaraan het vak gedoceerd wordt.
-		\item De gebruiker selecteert in de tabel het gewenste vak. Hierdoor verdwijnt de tabel en verschijnt er in de plaats het lesrooster van het geselecteerde vak.
-		\item De gebruiker kan telkens stap 4 en 5 herhalen om andere roosters te tonen. Hierdoor verdwijnt de vorige opzoeking uit het scherm en komt de nieuwe in de plaats.
-	\end{enumerate}
-\item Voor de aangemelde gebruiker:
-	\begin{enumerate}
-	\item De aangemelde gebruiker (voortaan gebruiker geheten) ziet het venster met zijn persoonlijk lesrooster in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
-	\item De gebruiker doorloopt dezelfde stappen van het stappenplan van de niet-aangemelde gebruiker vanaf stap 2.
-	\end{enumerate}
-\end{itemize}
-
         
-%Lessenrooster Locaal bekijken
+\textbf{Stappenplan:}       
+\begin{enumerate}
+\item De programmabeheerder ziet zijn beginscherm op zijn webbrowser. Hier ziet hij de optie "lokalen".
+\item De programmabeheerder klikt hierop en wordt doorverwezen naar een nieuwe pagina waar hij de optie ziet om lokalen te verwijderen.
+\item De programmabeheerder klikt op deze optie en wordt doorverwezen naar een nieuwe pagina met 3 lijsten, respectievelijk voor de gebouwen, verdiepingen en de lokalen.
+\item De programmameerbeheerder selecteert telkens de gewenste optie in de lijsten en ziet een knop met de naam "lokaal verwijderen".
+\item De programmabeheerder klikt op de knop en krijgt een melding met de vraag of hij zeker is of hij dit lokaal wil verwijderen.
+\item De programmabeheerder klikt op "ja" en voert de verwijdering hierdoor permanent door.
+\end{enumerate}      
+
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR3.3 \\ \hline
-                \textbf{TITEL:} & Lesrooster van een lokaal bekijken\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{TITEL:} & Lokaal detailformulier aanpassen\\ \hline
+                \textbf{PRIORITEIT:} &  medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Iedereen \\ \hline
-                \textbf{BESCHRIJVING:} & Een (niet) ingelogde gebruiker heeft de optie om het lesrooster van een leslokaal te bekijken, d.w.z. wanneer dat lokaal bezet is. Hiervoor moet de gebruiker zelf een les lokaal invullen van de vorm G.V.L (met G = gebouw, V = verdieping en L = lokaal)\\
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Mocht er nood zijn aan het aanpassen van een lokaal detailformulier, moet de programmabeheerder de optie hebben om dit te doen.\\ 
             \end{tabular}\\
-            \caption{FR3.3 - Lesrooster van een lokaal bekijken}
-            \label{tab:FR3.3 - Lesrooster van een lokaal bekijken}
-        \end{table}
-        
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster van de applicatie in zijn webbrowser. Rechts in het scherm ziet hij een optie met de naam "Lessenroosters".
-		\item De gebruiker klikt op deze optie en wordt doorverwezen naar een nieuwe pagina. Op deze nieuwe pagina ziet de gebruiker 2 opties om lesroosters te bezichtigen: per richting, per vak of lokaal.
-		\item Gebruiker klikt op de optie lokaal en krijgt de optie om het lokaal in te vullen. Dit gebeurd via keuzelijsten voor Gebouw, Verdieping en lokaal.
-		\item De gebruiker klinkt  op de knop "Zoek lokaal". Er verschijnt een table die voldoet aan de zoekterm. 
-		\item Onder de tabel met het rooster is het nog altijd mogelijk om de lokaal zoekterm aan te passen. Als dit gebeurd word de tabel automatisch geüpdatet. 		
-	\end{enumerate}
-
-\textbf{Opmerking:}
-	\begin{enumerate}
-	\item Keuze van lokaal moet enkel bestaan uit vakken die effectief bestaan. De opties die aan de gebruiker gegeven worden mogen dus enkel zijn van lokalen in het systeem.
-	\end{enumerate}  
-
-%Gepersonaliseer lesrooster bekijken
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR3.4 \\ \hline
-                \textbf{TITEL:} & Gepersonaliseerd lesrooster bekijken\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} &  Student, Assistent, Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een aangemelde gebruiker kan op elk moment zijn persoonlijk rooster opvragen. Voor studenten gaat dit over lessen volgen. Assistenten en professoren krijgen hier de lessen gepresenteerd die ze moeten geven. Een aangemelde student kan zijn eigen lesrooster bekijken, deze bevat alleen de vakken waarvoor de student ingeschreven is. 
-                                        Het lesrooster geeft aan waar en om hoe laat een vak gegeven wordt en kan waarschuwingen geven bij mogelijke overlappingen.\\ 
-            \end{tabular}\\
-            \caption{FR3.4  - Gepersonaliseerd lesrooster bekijken}
-            \label{tab:FR3.4 - Gepersonaliseerd lesrooster bekijken}
-        \end{table}
-
-\textbf{Stappenplan:}
-	\begin{enumerate}
-	\item Gebruiker kan bovenaan in de navigatiebalk klikken op de knop. "Persoonlijk lessenrooster"
-	\item Programma zoekt alle vakken die deze gebruiker moet geven of moet volgen en toont dit aan de gebruiker in een nieuwe scherm.
-	\end{enumerate}
-
-
- 
-%Gespecializeerd schema opvragen lesgever.       
-\noindent\begin{table}[H]
-            \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR3.5 \\ \hline
-                \textbf{TITEL:} & Gespecialiseerd schema opvragen lesgever\\ \hline
-                \textbf{PRIORITEIT:} &  Medium \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
-                \textbf{TOEGANG:} & Professor \\ \hline
-                \textbf{BESCHRIJVING:} & Een professor kan zijn eigen schema van alle lessen bekijken die onder zijn bevoegdheid vallen. Ook WPO's die niet door de professor gegeven worden staan op deze speciale lijst. Verschil word aangeduid via kleurmarkeringen. \\ 
-            \end{tabular}\\
-            \caption{FR3.5 - Gespecialiseerd schema opvragen lesgever}
-            \label{tab:FR3.5 - Gespecializeerd schema opvragen lesgever}
+            \caption{FR3.3 - Lokaal detail formulier aanpassen}
+            \label{tab:FR3.3 - Lokaal detailformulier aanpassen}
         \end{table}
         
 \textbf{Stappenplan:}
 \begin{enumerate}
-\item De professor kan bovenaan in de navigatiebalk klikken op de knop "Geavanceerd schema".
-\item Programma zoekt alle vakken, zowel hoor- als werkcollege die tot het vakkenpakket van de professor behoren en toont dit in een nieuw scherm.
+\item De programmabeheerder ziet zijn beginscherm op zijn webbrowser. Hier ziet hij de optie "lokalen".
+\item De programmabeheerder klikt hierop en wordt doorverwezen naar een nieuwe pagina waar hij de optie ziet om lokalen te verwijderen.
+\item De programmabeheerder klikt op deze optie en wordt doorverwezen naar een nieuwe pagina met 3 lijsten, respectievelijk voor de gebouwen, verdiepingen en de lokalen.
+\item De programmameerbeheerder selecteert telkens de gewenste optie in de lijsten en ziet een knop met de naam "lokaal wijzigen".
+\item De programmabeheerder klikt op de knop en krijgt het detailformulier van het lokaal te zien.
+\item De programmabeheerder past de nodige gegevens aan en ziet een knop met de naam "Wijzigingen opslaan".
+\item De programmabeheerder klikt op deze knop en voert hierdoor de wijzigingen permanent door.
 \end{enumerate}
+\clearpage
