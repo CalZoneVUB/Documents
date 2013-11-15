@@ -1,0 +1,129 @@
+\subsection{Schedular - FR4}
+
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.1 \\ \hline
+                \textbf{TITEL:} & Uitvoeren van een full scheduling\\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De Scheduler moet in staat zijn om lesroosters op te kunnen stellen, hierbij word er rekening gehouden met verschillende constraint: locatie, tijstip, studenten, professoren en assitenten. \\
+            \end{tabular}\\
+            \caption{FR4.1 - Uitvoeren van een full scheduling}
+            \label{tab:FR4.1 - Uitvoeren van een full scheduling}
+        \end{table}
+      
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Programmabeheerder beslist om schedular te laten runnen en een voorstel te doen voor een mogelijk schema.
+	\item Schedular word uitgevoerd rekening houdend met: Beschikbaarheid localen/professoren/assistenten, Aantal uren per vak, voorrang voor vaste vakken in het lessenrooster en eventueel andere contraints.
+	\item Er word een mogelijk schema gepresenteerd aan de programmabeheerder. Deze krijgt de keuze om het schema te accepteren of te weigeren.
+	\item Na het accepteren van een schema moet het mogelijk zijn om het programma te bekijken als elke type gebruiker van het systeem. Dit kan via het selecteren uit een lijst.
+	\end{enumerate}
+
+\noindent\begin{table}[H]
+	\begin{tabular}{l | p{10cm}}
+    \textbf{ID:} & FR4.2 \\ \hline
+    \textbf{TITEL:} & Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)\\ \hline
+    \textbf{PRIORITEIT:} &  medium \\ \hline
+    \textbf{PREREQUISITIES:} & \\ \hline
+    \textbf{TOEGANG:} & Assistent, Professor, Programmabeheerder \\ \hline
+    \textbf{BESCHRIJVING:} & Gebruiker (van type toegang) kunnen bekijken hoe haalbaar hun schema is. Dit zal een score zijn die afhankelijk is van het aantal beschikbare uren van de persoon en het aantal uren dat deze persoon les zal moeten geven. (Vb: 12uur les te geven en 18u vrij zal een goede haalbaarheidsscore krijgen. 16u les en 10u vrij zal een score geven die overeenkomt met onmogelijk)\\
+    \end{tabular}
+    \caption{FR4.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+    \label{tab:FR4.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+\end{table}
+
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Gebruiker klikt in zijn profiel op een knop 'Bereken haalbaarheid eigen schema'
+	\item Het programma berekent hoe haalbaar het schema is van een bepaalde gebruiker. Dit houd rekening met hoeveel lessen de gebruiker moet geven in uren. (Gebruik makende van vak formulieren waaraan de gebruiker gelinkt is) en hoeveel beschikbare uren de gebruiker heeft voor lessen te geven (gebruik makende van beschikbaarheidsformulier)
+	\item Score word gepresenteerd aan de gebruiker. Als zijn schema onmogelijk is krijgt hij een knop die linkt naar de pagina waar de gebruiker zijn beschikbaarheidsdatum kan aanpassen.
+	\end{enumerate}
+        
+        
+        
+\noindent\begin{table}[H]
+	\begin{tabular}{l | p{10cm}}
+	\textbf{ID:} & FR4.3 \\ \hline
+	\textbf{TITEL:} & Rooster bevat data, tijdstippen en lokalen voor bepaalde vakken\\ \hline
+	\textbf{PRIORITEIT:} &  hoog \\ \hline
+	\textbf{PREREQUISITIES:} & \\ \hline
+	\textbf{TOEGANG:} &  \\ \hline
+	\textbf{BESCHRIJVING:} & Het rooster dat is opgesteld bevat alle informatie over elk vak dat nodig is om het vak te kunnen volgen.\\
+	\end{tabular}\\
+	\caption{FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+	\label{tab:FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+\end{table}
+       
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.4 \\ \hline
+                \textbf{TITEL:} & Aanpassen berekend rooster \\ \hline
+                \textbf{PRIORITEIT:} &  hoog \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Het moet mogelijk zijn om een berekend lessenrooster aan te passen.\\
+            \end{tabular}\\
+            \caption{FR4.4 - Aanpassen berekend rooster}
+            \label{tab:FR4.4 - Aanpassen berekend rooster}
+        \end{table}
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Programmabeheerder gaat naar zijn gebruikersprofiel.
+	\item Klinkt op label 'Rooster' in het navigatiebalk (Dit is een dropdown menu)
+	\item Klinkt op knop 'Rooster Aanpassen'
+	\item Hier word een rooster weergegeven en moet het mogelijk zijn het rooster aan te passen. Er zijn verschillende opties om les aan te passen.
+	\item Programmabeheerder klinkt op de les die hij wilt aanpassen. En krijgt volgende opties voorgeschoteld.
+		\begin{itemize}
+		\item Vakken wisselen
+		\item Uur/lokaal aanpassen
+		\item Eenmalig aanpassen 
+		\item x maal herhalen (x nummer in te geven) 
+		\item Tot einde slot 
+		\end{itemize}
+	\item Programmabeheerder klikt op 'Controleer'.
+	\item Programma controleert op eventuele conflicten die veroorzaakt worden door de aanpassing en presenteert het resultaat naar de gebruiker toe. Volgende opties zijn mogelijk.
+		\begin{itemize}
+		\item Geen conflicten gedetecteerd
+		\item Conflict gedetecteerd met ander vak 
+		\item Conflict gedetecteerd met beschikbaarheid lesgever
+		\end{itemize}
+	\item Programmabeheerder krijgt keuze uit volgende opties.
+		\begin{itemize}
+		\item Toepassen rooster: Programma word toegepast. Dit kan zelf gebeuren als er conflicten zijn veroorzaakt.
+		\item Voorstel aanpassen: Keert terug naar vorige pagina.
+		\item Annuleren: Keert terug naar gebruikersprofiel 
+		\end{itemize}
+	\end{enumerate}	
+		
+        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.5 \\ \hline
+                \textbf{TITEL:} & Conflictdetectie\\ \hline
+                \textbf{PRIORITEIT:} & hoog \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} &  \\ \hline
+                \textbf{BESCHRIJVING:} & De Scheduler moet in staat zijn om conflicten te detecteren. Conflicten zijn: 
+                \begin{enumerate}
+                \item Twee of meer vakken op hetzelfde moment of hetzelfde lokaal
+                \item Een professor/assistent  die twee of meer vakken op hetzelfde tijdstip moet geven 
+                \item Studenten die twee of meer vakken op hetzelfde tijdstip moeten volgen
+                \end{enumerate}
+                Puntje 1 en 2 zijn harde conflicten die altijd opgelost moeten worden. Ook verplichte vakken voor studenten van een bepaalde richting mogen nooit samenvallen. Bij keuzevakken is dit wel toegelaten maar niet gewenst.\\
+            \end{tabular}\\
+            \caption{FR4.5 - Conflictdetectie}
+            \label{tab:FR4.5 - Conflictdetectie}
+        \end{table}
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Als conflictdetectie word opgeroepen gaat dit steeds over een wijziging van een les.
+	\item Er word gecontroleerd of er op het zelfde moment van de gewijzigde les een andere les word gegeven door de leerlingen die deze gewijzigde les volgen.
+	\item Er word gecontroleerd of de lesgever van de gewijzigde les op dat moment geen andere les geeft
+	\item Er word gecontroleerd dat het lokaal aan de nodige voorzieningen voldoet gespecificeerd in het formulier van het vak. 
+	\end{enumerate}
+
+\clearpage
