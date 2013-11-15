@@ -1,3 +1,187 @@
-\subsection{GUI - FR3}
+\subsection{Vakken - FR4}
 
+%Ingeschreven vakken bekijken        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.1 \\ \hline
+                \textbf{TITEL:} & Ingeschreven vakken bekijken\\ \hline
+                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} &  Student \\ \hline
+                \textbf{BESCHRIJVING:} & Een aangemelde student kan ten alle tijden de lijst van vakken zien waarvoor deze is ingeschreven. De student drukt hiervoor op een knop getiteld “Ingeschreven Vakken” en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.\\
+            \end{tabular}\\
+            \caption{FR4.1 - Ingeschreven vakken bekijken}
+            \label{tab:FR4.1 - Ingeschreven vakken bekijken}
+        \end{table}  
+        
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Aangemelde student klikt op de knop aan de rechter kant om naar zijn gebruikersprofiel te gaan
+	\item Gebruiker klink aan de rechterkant op de knop 'Ingeschreven Vakken'
+	\item Gebruiker krijgt overzicht van alle ingeschreven vakken (Dit is een statische lijst)
+	\end{enumerate}
+
+%Notifiacties van last-minute verandering krijgen        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.2 \\ \hline
+                \textbf{TITEL:} & Notificaties van last-minute veranderingen \\ \hline
+                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Student, Assistent, Professor \\ \hline
+                \textbf{BESCHRIJVING:} & Mocht er een lesaanpassing plaats vinden (bijv.: een professor die de les van lokaal verandert) dan moeten de gebruiker die dat vak volgen of geven verwittigd worden. Zij zullen dan een bericht op hun e-mail adres ontvangen met daarin de nodige informatie over de lesaanpassing.\\
+            \end{tabular}\\
+            \caption{FR4.2 - Notificaties van last-minute veranderingen}
+			\label{tab:FR4.2 - Notificaties van last-minute veranderingen}
+        \end{table}      
+
+%Last-minute tijdstip vak aanpassen
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.3 \\ \hline
+                \textbf{TITEL:} & Last-minute tijdstip vak aanpassen\\ \hline
+                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Assistent, Professor, Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Een gebruiker van type Toegang heeft de optie om het tijdstip van een vak last-minute aan te passen. Enkel toegelaten als deze gebruiker de les zelf geeft of de programmabeheerder is.  De gebruiker drukt dan op de knop getiteld “Lesuur aanpassen” en wordt dan gevraagd om een nieuwe dag en een tijdstip uit te kiezen. 
+                                        Hierna wordt dan een e-mail gestuurd naar alle studenten die dat vak volgen met het nieuwe tijdstip van het vak.\\ 
+            \end{tabular}\\
+            \caption{FR4.3 - Last-minute tijdstip vak aanpassen}
+            \label{tab:FR4.3 - Last-minute tijdstip vak aanpassen}
+        \end{table}
+        
+%Locatie Les aanpassen
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.4 \\ \hline
+                \textbf{TITEL:} & Locatie les aanpasen\\ \hline
+                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Assistent, Professor \\ \hline
+                \textbf{BESCHRIJVING:} & Een professor heeft de optie om de locatie van een vak aan te passen. 
+                                        De professor drukt dan op de knop getiteld “Lokaal aanpassen” en wordt dan gevraagd om een nieuwe locatie uit te kiezen, deze locatie is dan van de vorm G.V.L (met G = gebouw, V = verdieping en L = lokaal). De Scheduler zal dan nagaan of het ingevoerde lokaal vrij is op het tijdstip van het vak. Keurt de Scheduler het nieuwe lokaal goed, dan wordt er een e-mail gestuurd naar alle studenten die het vak volgen met daarin het nieuwe lokaal van het vak. Keurt de Scheduler het nieuwe lokaal af, dan wordt de professor gevraagd een ander lokaal in te geven.\\ 
+            \end{tabular}\\
+            \caption{FR4.5 - Locatie les aanpassen}
+            \label{tab:FR4.5 - Locatie les aanpassen}
+        \end{table}
+        
+        
+%Details les aanpassen 
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.6 \\ \hline
+                \textbf{TITEL:} & Details vak aanpassen\\ \hline
+                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Een professor kan de beschrijving en details van een vak aanpassen. Hiervoor zal er een knop getiteld “Vak details aanpassen” zijn waarna de professor vrij is in het aanpassen van de details. \\ 
+            \end{tabular}\\
+            \caption{FR4.7 - Details vak aanpassen}
+            \label{tab:FR4.7 - Details vak aanpassen}
+        \end{table}	
+        
+%Detail formulier nieuw vak indienen
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}} 
+                \textbf{ID:} & FR4.8 \\ \hline
+                \textbf{TITEL:} & Detail formulier nieuw vak indienen\\ \hline
+                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Professor \\ \hline
+                \textbf{BESCHRIJVING:} & Mocht er nood zijn aan het toevoegen van een nieuw vak aan de database, dan kan een professor hiervoor een formulier opstellen met daarin:
+        \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
+                                        \item beschrijving van het vak
+                                        \item aantal studiepunten
+                                        \item nodige prerequisities
+                                        \item welk semester het vak gegeven wordt
+                                        \item aantal uren studie tijd
+                                        \item studiegidsnummer
+                                        \item 2e zittijd mogelijk
+                                        \item onderwijstaal
+                                        \item faculteit
+                                        \item verantwoordelijke vakgroep
+                                        \item onderwijsteam
+                                        \item onderdelen en contacturen
+                                        \item studiemateriaal
+                                        \item leerresultaten
+                                        \item beoordelingsinformatie
+                                        \item Aanvullende info m.b.t. examinering
+                                        \item Academische context
+                                        \end{itemize}
+                                        Het formulier wordt dan gestuurd naar de Programmabeheerder die het vak zal toevoegen. 
+            \end{tabular}\\
+            \caption{FR4.8- Detail formulier nieuw vak indienen}
+            \label{tab:FR4.8 - Detail formulier nieuw vak indienen}
+        \end{table}
+
+%Goedkeuren detail formulier     
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.9 \\ \hline
+                \textbf{TITEL:} & Goedkeuren detail formulier   \\ \hline
+                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PREREQUISITIES:} & De professor moet al een detail formulier ingedient hebben\\ \hline
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De programma beheerder bekijkt en ingediende formulier van een professor en beslist dit toe wel of niet toe te voegen aan het de database. 
+            \end{tabular}\\
+            \caption{FR4.9 - Goedkeuren detail formulier  }
+            \label{tab:FR4.9 - Goedkeuren detail formulier  }
+        \end{table}
+        
+%Aanpassen detail formulier vak      
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.10 \\ \hline
+                \textbf{TITEL:} & Aanpassen detail formulier vak \\ \hline
+                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PREREQUISITIES:} & Detailformulier vak moet al bestaan\\ \hline
+                \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Zolang het nieuwe vak nog niet toegevoegd is door de Programmabeheerder kan de professor nog aanpassingen aanbrengen op het ingediende formulier. Ook is het mogelijk an bestaande detailformulieren aanpassingen te doen. Dit mag enkel gebeuren voordat het schema is gemaakt.\\ 
+            \end{tabular}\\
+            \caption{FR4.11 - Aanpassen detail formulier vak}
+            \label{tab:FR4.11 - Aanpassen detail formulier vak}
+        \end{table}
+
+%Aanpassen planning vak        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.12 \\ \hline
+                \textbf{TITEL:} & Aanpassen planning vak\\ \hline
+                \textbf{PRIORITEIT:} &  Medium \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Professor \\ \hline
+                \textbf{BESCHRIJVING:} & Het moet mogelijk  zijn een vak te verplaatsen in de algemene planning voor elke week. Dit kan gebeuren op een schema dat al vast ligt en eventueel al bezig is. Als een verplaatsing geen conflicten veroorzaakt gebeurd dit automatisch. Anders wordt een voorstel doorgeschoven aan de programmabeheerder om het goed te keuren.\\
+            \end{tabular}\\
+            \caption{FR4.12 - Aanpassen planning vak}
+            \label{tab:FR4.12 - Aanpassen planning vak}
+        \end{table}        
+        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.13 \\ \hline
+                \textbf{TITEL:} & Planning markeren als voorstel\\ \hline
+                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Professor \\ \hline
+                \textbf{BESCHRIJVING:} & Een professor kan een voorstel indienen aan de Scheduler. 
+                                        Deze geeft dan in wanneer hij zijn vak het liefst zou geven en dan wordt dit doorgegeven aan de Scheduler die dan rekening probeert te houden met de ingegeven constraint. Dit staat los van de beschikbaarheid van de professor en lokalen.  \\
+            \end{tabular}\\
+            \caption{FR4.13 - Planning markeren als voorstel}
+            \label{tab:FR4.13 - Planning markeren als voorstel}
+        \end{table}
+
+%Vakken verwijderen van lesprogramma        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.14 \\ \hline
+                \textbf{TITEL:} & Vakken verwijderen van lesprogramma\\ \hline
+                \textbf{PRIORITEIT:} &  hoog \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & De Programmabeheerder kan ook vakken verwijderen uit lesprogramma’s \\ 
+            \end{tabular}\\
+            \caption{FR4.14 - Vakken verwijderen van lesprogramma}
+            \label{tab:FR4.14 - Vakken verwijderen van lesprogramma}
+        \end{table}        
+        
 \clearpage
