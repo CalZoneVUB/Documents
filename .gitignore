@@ -5,10 +5,3 @@ SRS/main.lot
 SRS/main.out
 SRS/main.synctex.gz
 SRS/main.toc
-*.aux
-*.lof
-*.log
-*.lot
-*.out
-*.gz
-*.toc
