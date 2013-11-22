@@ -1,0 +1,26 @@
+GITHUB WORKFLOW
+
+INLEIDING
+Hier korte uitleg over het gebruik van github voor documenten en code.
+We gaan gebruik maken van foks. Dit wil zeggen dat iedereen een locale kopie neemt van de algemene repository en 
+vervolgens in deze kopie zijn weizegingen kan toebrengen. Eenmaal je wilt dat deze nieuwe code werkt kun je deze
+aanbieden als een 'pull request' om te worden toegevoegd aan het main project. Tim of Christophe keuren dit dan goed
+als er geen conflicten optreden.
+
+WERKING
+1. Maak aanpassingen in eigen fork (Je kan branchen, committen. Beste een eigen branche per feature dat je aan werkt)--> Vb Naam: MyCalZoneVUB
+2. Klaar met een deel/feature en wilt een push request aanmaken
+3. Pull de laatste master uit CalZoneVUB naar je eigen master in MyCalZoneVUB
+4. Merge je eigen feature branch met eigen master branch
+5. Los evnetuele mergeconflicten op
+6. Maak pull ruequest aan van MyCalZoneVUB master naar CalZoneVUB master
+
+HOE INSTELLEN
+1. Ga naar https://github.com/CalZoneVUB/Documents en klik rechtsboven op fork
+2. In Sourcetree cloon deze fork naar je pc (Te herkennen aan het de autor die je github user name is)
+3. Voeg CalZoneVUB toe aan repositorys. Dit doe je door in sourcetree bij repositorie > add repositorie. 
+   Path is van de vorm https://Timbo925@github.com/CalZoneVUB/Documents.git
+   
+OPMERKING
+  - Bij een probleem maak een issue aan op github en assign naar Tim of Christophe.
+  - Of vraag het na/tijdenst de vergadering
