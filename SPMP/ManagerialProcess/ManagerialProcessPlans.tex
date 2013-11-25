@@ -99,8 +99,8 @@ Er is een requirements dashboard beschikbaar dat een overzicht weergeeft van all
 \\
 Op de website van het team \cite{portalWebsite} is er een pagina beschikbaar die het mogelijk maakt om zaken te rapporteren, en veranderingen door te voeren met betrekkeing tot de SRS. Het is aan de Requirements Manager om ervoor te zorgen dat de verschillende requirements-ID's stabiel blijven. Indien nodig overlegt de Requirements Manager met de Project Manager over eventuele invloed op de planning wanneer er wijzigingen plaatsvinden aan het SRS.
 
-\subsection{Planning controle}
-Voor het opvolgen en schatten van de planning wordt gebruik gemaakt van milestones op GitHub.  Voor elke milestone wordt een verantwoordelijke aangesteld. De vooruitgang t.o.v. elke deadline zal gecontroleerd worden door de bijhorende verantwoordelijke en de Project Manager. Indien de actuele vooruitgang niet overeenkomt met de geplande vooruitgang, kunnen volgende maatregelen genomen worden:
+\subsection{Planning controle} \label{sec:PlanningControle}
+Voor het opvolgen en schatten van de planning wordt gebruik gemaakt van milestones op GitHub.  Voor elke milestone wordt een verantwoordelijke aangesteld. De vooruitgang t.o.v. elke deadline zal gecontroleerd worden door de bijhorende verantwoordelijke en de Project Manager. Bovendien zal ook de progressie wekelijks op de vergadering besproken worden. Indien de actuele vooruitgang niet overeenkomt met de geplande vooruitgang, kunnen volgende maatregelen genomen worden:
 \begin{itemize}
 	\item Planning herbekijken.
 	\item Teams herindelen.
@@ -166,7 +166,7 @@ De Eclipse Metrics Plugin verzamelt automatisch metrieken bij elk compile proces
 Verzamelde metrieken zullen op de webpagina van het team gevisualiseerd worden. De metrieken worden verzameld tijdens de activiteiten waar er gecodeerd wordt. Bij de start van het coderen zullen er wekelijks metrieken verzameld worden. In de laatste week van coderen worden er dagelijks metrieken verzameld, hierdoor kan er refactoring plaatsvinden die de kwaliteit van de code verhoogt.
 
 \section{Risico management plan} \label{sec:risicoManagementPlan}
-In deze paragraaf zullen de verschillende risico's verbonden aan dit project besproken worden. In paragraaf \ref{sec:riskPriority} zullen deze risico's gepriotiseerd worden. Om de risico's te kunnen prioritiseren zullen we gebruiken maken van 3 parameters:
+In deze paragraaf zullen de verschillende risico's verbonden aan dit project besproken worden. In paragraaf \ref{sec:riskPriority} zullen deze risico's geprioritiseerd worden. Om de risico's te kunnen prioritiseren zullen we gebruiken maken van 3 parameters:
 \begin{itemize}
 	\item 
 		De kans $p$ waarmee dit risico kan voorkomen. Hierbij is $ p \in \{1, 2, \ldots , 10\} $. Verder betekent $p = 1$ dat het risico niet kan voorkomen en $p = 10$ dat het risico met zekerheid voorkomt.
@@ -181,7 +181,7 @@ In deze paragraaf zullen de verschillende risico's verbonden aan dit project bes
 In paragraaf \ref{sec:ProjectStartPlan} is de werkduur geschat met het COCOMO I-model. Hier werd reeds duidelijk dat de geschatte tijdsduur enorm hoog ligt. Dit zorgt voor een grote druk op de planning.
 \\
 \\
-Om de vooropgestelde deadlines (zie tabel \ref{tab:kalender}) te bereiken dient men dus voldoende tijd vrij te maken. Het zwaartepunt van het academiejaar van de verschillende groepsleden ligt bij de meeste groepsleden in het eerste semester. Het grootste risico in verband met planning ligt dus vooral bij de eerste iteratie. Dit kan het best vermeden worden door gebruik te maken van interne deadlines en de progressie op te volgen tijdens de wekelijkske teammeetings.
+Om de vooropgestelde deadlines (zie tabel \ref{tab:kalender}) te bereiken dient men dus voldoende tijd vrij te maken. Het zwaartepunt van het academiejaar van de verschillende groepsleden ligt bij de meeste groepsleden in het eerste semester. Het grootste risico in verband met planning ligt dus vooral bij de eerste iteratie. Dit kan het best vermeden worden door gebruik te maken van interne deadlines en de progressie op te volgen tijdens de wekelijkske teammeetings. Dit is besproken in paragraaf \ref{sec:PlanningControle}.
 \\
 \\
 We karakteriseren dit risico m.b.v. volgende parameters:
@@ -195,7 +195,7 @@ We karakteriseren dit risico m.b.v. volgende parameters:
 Bij een team van zeven personen is communicatie essentieel. Indien er geen bijzondere maatregelen worden genomen, zal deze snel verkeerd lopen.
 \\
 \\
-Als oplossing hiervoor wordt er reeds een mailinglijst aangeleverd door VUB. Omdat wij deze niet overzichtelijk genoeg vinden, hebben wij zelf een communicatieplatform ontwikkeld op onze website. De werking verloopt als een blog waarbij de teamleaden een bericht kunnen plaatsen en vervolgens hierop kunnen reageren. Bij elk nieuw bericht worden de teamleden van een notificatie voorzien.
+Als oplossing hiervoor wordt er reeds een mailinglijst aangeleverd door VUB. Omdat wij deze niet overzichtelijk genoeg vinden, hebben wij zelf een communicatieplatform ontwikkeld op onze website. De werking verloopt als een blog waarbij de teamleaden een bericht kunnen plaatsen en vervolgens hierop kunnen reageren. Bij elk nieuw bericht worden de teamleden van een notificatie voorzien. Dit is ook besproken in paragraaf \ref{sec:InterneStructuur}.
 \\
 \\
 De implementatie hiervan is niet triviaal en vraagt de nodige investering. Wij verwachten echter dat de ``return on investment'' groot zal zijn. Samengevat:
@@ -284,7 +284,7 @@ Uit ervaring weten we dat Internet Explorer soms voor compatibiliteitsproblemen 
 \end{align*}
 
 \subsubsection{Merge conflicten}
-Bij het werken met de GitHub repository zijn merge conflicten nooit verweg. Door het werken met forking en pull requests vermijden we echter deze conflicten en zorgen we voor een goed beheer van onze GitHub repository. Het implementeren van forking en pull requests vergt echter enig opzoekwerk waardoor de kost hoog ligt. Het beheer van de GitHub repository wordt verder besproken in het SCMP (zie paragraaf \ref{SoftwareConfigurationManagementPlan}.
+Bij het werken met de GitHub repository zijn merge conflicten nooit verweg. Door het werken met forking en pull requests vermijden we echter deze conflicten en zorgen we voor een goed beheer van onze GitHub repository. Het implementeren van forking en pull requests vergt echter enig opzoekwerk waardoor de kost hoog ligt. Het beheer van de GitHub repository wordt verder besproken in het SCMP (zie paragraaf \ref{SoftwareConfigurationManagementPlan}).
 \begin{align*}
 	p &= 10\\
 	i &= 5\\
