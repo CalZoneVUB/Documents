@@ -1,6 +1,8 @@
-\documentclass{book}
+\documentclass[a4paper,11pt]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
+\usepackage[backend=bibtex8]{biblatex}
+\usepackage[autostyle]{csquotes}
 \usepackage[dutch]{babel}
 \usepackage{vub}
 \usepackage{sansmath}
@@ -17,6 +19,8 @@
 \renewcommand{\familydefault}{\sfdefault}
 \sansmath
 
+\bibliography{build/refs}
+
 \begin{document}
 
 \frontmatter
@@ -28,5 +32,11 @@
 \listoftables
 
 \mainmatter
+\include{tex/Introduction}
+\include{tex/SystemArchitecture}
+\include{tex/Modules}
+
+\nocite{*}
+\printbibliography
 
 \end{document}

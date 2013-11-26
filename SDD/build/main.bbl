@@ -1,0 +1,47 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{SRS}{manual}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Groen}{G.}%
+     {Fernando~Suarez}{F.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Witters}{W.}%
+     {Tim}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Coppens}{C.}%
+     {Youri}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GFSWTCY1}
+  \strng{fullhash}{GFSWTCY1}
+  \field{sortinit}{G}
+  \field{title}{Software Requirements Specification}
+  \field{year}{2013}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
