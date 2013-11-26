@@ -1,5 +1,7 @@
 \subsection{Schedular - FR4}
 
+%Uitvoeren van een full scheduling
+\subsubsection{Uitvoeren van een full scheduling}
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR4.1 \\ \hline
@@ -21,6 +23,8 @@
 	\item Na het accepteren van een schema moet het mogelijk zijn om het programma te bekijken als elke type gebruiker van het systeem. Dit kan via het selecteren uit een lijst.
 	\end{enumerate}
 
+%Semi-scheduling uitvoeren
+\subsubsection{Semi-scheduling uitvoeren}
 \noindent\begin{table}[H]
 	\begin{tabular}{l | p{10cm}}
     \textbf{ID:} & FR4.2 \\ \hline
@@ -41,8 +45,8 @@
 	\item Score word gepresenteerd aan de gebruiker. Als zijn schema onmogelijk is krijgt hij een knop die linkt naar de pagina waar de gebruiker zijn beschikbaarheidsdatum kan aanpassen.
 	\end{enumerate}
         
-        
-        
+%Rooster inhoud
+\subsubsection{Rooster inhoud}        
 \noindent\begin{table}[H]
 	\begin{tabular}{l | p{10cm}}
 	\textbf{ID:} & FR4.3 \\ \hline
@@ -56,12 +60,14 @@
 	\label{tab:FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
 \end{table}
        
+%Aanpassen berekend rooster       
+\subsubsection{Aanpassen berekend rooster}         
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR4.4 \\ \hline
                 \textbf{TITEL:} & Aanpassen berekend rooster \\ \hline
                 \textbf{PRIORITEIT:} &  Hoog \\ \hline
-                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{PREREQUISITIES:} & Er moet een lesrooster berekend zijn door de scheduler of ingedient zijn\\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & Het moet mogelijk zijn om een berekend lessenrooster aan te passen.\\
             \end{tabular}\\
@@ -90,18 +96,39 @@
 		\item Conflict gedetecteerd met ander vak 
 		\item Conflict gedetecteerd met beschikbaarheid lesgever
 		\end{itemize}
-	\item Programmabeheerder krijgt keuze uit volgende opties.
-		\begin{itemize}
-		\item Toepassen rooster: Programma word toegepast. Dit kan zelf gebeuren als er conflicten zijn veroorzaakt.
-		\item Voorstel aanpassen: Keert terug naar vorige pagina.
-		\item Annuleren: Keert terug naar gebruikersprofiel 
-		\end{itemize}
+	
 	\end{enumerate}	
 		
-        
+%Roostergoedkeuring
+\subsubsection{Roostergoedkeuring}
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR4.5 \\ \hline
+                \textbf{TITEL:} & Roostergoedkeuring\\ \hline
+                \textbf{PRIORITEIT:} & Hoog \\ \hline
+                \textbf{PREREQUISITIES:} & Er moet een rooster voorstel ingedient zijn\\ \hline
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Als er een rooster voorstel is ingedient moet de programma die goedkeuren. Het ingediende voorstel bevat geen conflicten, daar word voor het inzenden al rekening mee gehouden.
+            \end{tabular}\\
+            \caption{FR4.5 - Roostergoedkeuring}
+            \label{tab:FR4.5 - Roostergoedkeuring}
+        \end{table}
+
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item Programmabeheerder krijgt keuze uit volgende opties.
+		\begin{itemize}
+		\item Toepassen rooster: Programma word toegepast. 
+		\item Voorstel aanpassen 
+		\item Annuleren: Keert terug naar gebruikersprofiel 
+		\end{itemize}
+	\end{enumerate}		
+		
+%Conflictdetectie      
+\subsubsection{Conflictdetectie}        
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.6 \\ \hline
                 \textbf{TITEL:} & Conflictdetectie\\ \hline
                 \textbf{PRIORITEIT:} & Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
@@ -114,8 +141,8 @@
                 \end{enumerate}
                 Puntje 1 en 2 zijn harde conflicten die altijd opgelost moeten worden. Ook verplichte vakken voor studenten van een bepaalde richting mogen nooit samenvallen. Bij keuzevakken is dit wel toegelaten maar niet gewenst.\\
             \end{tabular}\\
-            \caption{FR4.5 - Conflictdetectie}
-            \label{tab:FR4.5 - Conflictdetectie}
+            \caption{FR4.6 - Conflictdetectie}
+            \label{tab:FR4.6 - Conflictdetectie}
         \end{table}
         
 \textbf{Stappenplan:}
@@ -125,5 +152,7 @@
 	\item Er word gecontroleerd of de lesgever van de gewijzigde les op dat moment geen andere les geeft
 	\item Er word gecontroleerd dat het lokaal aan de nodige voorzieningen voldoet gespecificeerd in het formulier van het vak. 
 	\end{enumerate}
+	
+
 
 \clearpage
