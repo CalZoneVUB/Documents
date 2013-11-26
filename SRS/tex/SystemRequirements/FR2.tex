@@ -1,11 +1,12 @@
 \subsection{Vakken - FR2} 
 
-%Ingeschreven vakken bekijken        
+%Ingeschreven vakken bekijken  
+\subsubsection{Ingeschreven vakken bekijken}      
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.1 \\ \hline
                 \textbf{TITEL:} & Ingeschreven vakken bekijken\\ \hline
-                \textbf{PRIORITEIT:} &  High \\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} &  Student \\ \hline
                 \textbf{BESCHRIJVING:} & Een aangemelde student kan ten alle tijden de lijst van vakken zien waarvoor deze is ingeschreven. De student drukt hiervoor op een knop getiteld “Ingeschreven Vakken” en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.\\
@@ -16,17 +17,18 @@
         
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item Aangemelde student klikt op de knop aan de rechter kant om naar zijn gebruikersprofiel te gaan
-	\item Gebruiker klikt aan de rechterkant op de knop 'Ingeschreven Vakken'
+	\item Aangemelde student ziet zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}) en kan bovenaan op de optie "Ingeschreven Vakken" klikken.
+	\item Gebruiker klikt op de knop 'Ingeschreven Vakken'
 	\item Gebruiker krijgt overzicht van alle ingeschreven vakken (Dit is een statische lijst)
 	\end{enumerate}
 
-%Notifiacties van last-minute verandering krijgen        
+%Notificaties van last-minute verandering krijgen
+\subsubsection{Notificaties van last-minute verandering krijgen}        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.2 \\ \hline
                 \textbf{TITEL:} & Notificaties van last-minute veranderingen \\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PRIORITEIT:} &  Medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Student, Assistent, Professor \\ \hline
                 \textbf{BESCHRIJVING:} & Mocht er een lesaanpassing plaats vinden (bijv.: een professor die de les van lokaal verandert) dan moeten de gebruiker die dat vak volgen of geven verwittigd worden. Zij zullen dan een bericht op hun e-mail adres ontvangen met daarin de nodige informatie over de lesaanpassing.\\
@@ -39,15 +41,17 @@
 	\begin{enumerate}
 	\item Een les uur of locatie word aangepast in het systeem. Als deze les de zelfde dag nog word gegeven zal er een last minute notificatie worden verzonden.
 	\item Het programma kijkt naar iedereen die deze les volgt en zend een email naar het geassocieerde vub adres.
+	\item De betreffende gebruikers krijgen dan een notificatie op hun hoofdpagina te zien (zie figuur \ref{fig:CalZone Profile}).
 	\item Optioneel: Ingelogde gebruikers krijgen een browser notificatie dat er een aanpassing is gedaan aan het programma.  
 	\end{enumerate}
 
 %Last-minute tijdstip vak aanpassen
+\subsubsection{Last-minute tijdstip vak aanpassen} 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.3 \\ \hline
                 \textbf{TITEL:} & Last-minute tijdstip vak aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PRIORITEIT:} &  Medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Assistent, Professor \\ \hline
                 \textbf{BESCHRIJVING:} & Een gebruiker (van type toegang) heeft de optie om het tijdstip van een vak last-minute aan te passen. Enkel toegelaten als deze gebruiker de les zelf geeft of de programmabeheerder is.  De gebruiker drukt dan op de knop getiteld “Lesuur aanpassen” en wordt dan gevraagd om een nieuwe dag en een tijdstip uit te kiezen. 
@@ -59,7 +63,7 @@
        
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item Gebruiker vertrekt op het home screen waar zijn persoonlijk rooster is weergegeven.
+	\item Gebruiker vertrekt vanuit zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}).
 	\item Gebruiker selecteer les dat hij wilt aanpassen
 	\item Met de juiste les geselecteerd klikt de gebruiker op 'Last-Minute aanpassing'. Dit gaat enkel 48 uur voor het starten van de les
 	\item Het is dan mogelijk om voor de gebruiker een nieuw uur te selecteren.
@@ -68,11 +72,12 @@
 	\end{enumerate}
         
 %Locatie Les aanpassen
+\subsubsection{Locatie Les aanpassen} 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.4 \\ \hline
                 \textbf{TITEL:} & Locatie les aanpasen\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PRIORITEIT:} &  Medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Assistent, Professor \\ \hline
                 \textbf{BESCHRIJVING:} & Een professor heeft de optie om de locatie van een vak aan te passen. 
@@ -84,7 +89,7 @@
         
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item Gebruiker vertrekt op het home screen waar zijn persoonlijk rooster is weergegeven.
+	\item Gebruiker vertrekt vanuit zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}).
 	\item Gebruiker selecteer les dat hij wilt aanpassen
 	\item Met de juiste les geselecteerd klikt de gebruiker op 'Last-Minute aanpassing'. Dit gaat enkel 48 uur voor het starten van de les
 	\item Het is dan mogelijk om voor de gebruiker een nieuw lokaal te selecteren.
@@ -96,11 +101,12 @@
         
         
 %Details les aanpassen 
+\subsubsection{Details les aanpassen} 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.5 \\ \hline
                 \textbf{TITEL:} & Details vak aanpassen\\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PRIORITEIT:} &  Laag \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Professor, Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & Een professor kan de beschrijving en details van een vak aanpassen. Hiervoor zal er een knop getiteld “Aanpassen” zijn, waarna de professor vrij is in het aanpassen van de details. \\ 
@@ -111,7 +117,7 @@
         
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker vertrekt vanuit zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}). De gebruiker gaat naar zijn gebruikersprofiel via de knop bovenaan op het scherm.
 	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
 	\item De gebruiker kan dan op de knop 'Aanpassen' klikken ter hoogte van het gewenste vak.
 	\item Gebruiker krijgt dan de opties om het detailformulier aan te passen van het vak.
@@ -124,11 +130,12 @@
 	\end{enumerate}
         
 %Detail formulier nieuw vak indienen
+\subsubsection{Detail formulier nieuw vak indienen} 
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}} 
                 \textbf{ID:} & FR2.6 \\ \hline
                 \textbf{TITEL:} & Detail formulier nieuw vak indienen\\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PRIORITEIT:} &  Laag \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Professor \\ \hline
                 \textbf{BESCHRIJVING:} & Mocht er nood zijn aan het toevoegen van een nieuw vak aan de database, dan kan een professor hiervoor een formulier opstellen met daarin:
@@ -159,7 +166,7 @@
         
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item  De gebruiker vertrekt vanuit zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}). De gebruiker gaat naar zijn gebruikersprofiel via de knop bovenaan op het scherm.
 	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
 	\item De gebruiker kan dan op de knop 'Toevoegen' klikken ter hoogte van het gewenste vak.
 	\item Gebruiker krijgt nu een formulier voor een nieuw vak aan te maken.
@@ -168,12 +175,13 @@
 	\item Een ingediend detail formulier moet goedgekeurd worden door de programmabeheerder om zo in het systeem te komen.
 	\end{enumerate}
 
-%Goedkeuren detail formulier     
+%Goedkeuren detail formulier 
+\subsubsection{Goedkeuren detail formulier}     
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.7 \\ \hline
                 \textbf{TITEL:} & Goedkeuren detail formulier   \\ \hline
-                \textbf{PRIORITEIT:} &  laag \\ \hline
+                \textbf{PRIORITEIT:} &  Laag \\ \hline
                 \textbf{PREREQUISITIES:} & De professor moet al een detail formulier ingedient hebben\\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & De programma beheerder bekijkt en ingediende formulier van een professor en beslist dit toe wel of niet toe te voegen aan het de database. 
@@ -184,7 +192,7 @@
  
 \textbf{Stappenplan:}
 	\begin{enumerate}
-	\item De gebruiker gaat naar zijn gebruikersprofiel via de knop recht op het scherm.
+	\item De gebruiker vertrekt vanuit zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}). De gebruiker gaat naar zijn gebruikersprofiel via de knop bovenaan op het scherm.
 	\item De gebruiker klikt vervolgens op 'Vakken' en krijgt hierbij een overzicht van de vakken waaraan hij gekoppeld is.
 	\item De gebruiker kan dan op de knop 'Wachtende Vakken' klikken.
 	\item Gebruiker krijgt nu een formulier voor een nieuw vak met de informatie die de professor heeft ingegeven.
@@ -200,7 +208,7 @@
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.8 \\ \hline
                 \textbf{TITEL:} & Planning markeren als voorstel\\ \hline
-                \textbf{PRIORITEIT:} &  medium \\ \hline
+                \textbf{PRIORITEIT:} &  Medium \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Professor \\ \hline
                 \textbf{BESCHRIJVING:} & Een professor kan een voorstel indienen aan de Scheduler. 
@@ -230,12 +238,13 @@
 	\item Een ingediend formulier kan de schedular gebruiken als het mogelijk is om aan het voorstel te voldoen.
 	\end{enumerate}	        
 
-%Vakken verwijderen van lesprogramma        
+%Vakken verwijderen van lesprogramma
+\subsubsection{Vakken verwijderen van lesprogramma}        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR2.9 \\ \hline
                 \textbf{TITEL:} & Vakken verwijderen van lesprogramma\\ \hline
-                \textbf{PRIORITEIT:} &  hoog \\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & De Programmabeheerder kan ook vakken verwijderen uit lesprogramma’s \\ 
