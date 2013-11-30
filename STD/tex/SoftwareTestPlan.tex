@@ -1,0 +1,64 @@
+\chapter{Software Test Plan}
+\section{Inleiding}
+Het systeem kan op verschilende manieren getest worden. 
+Langs de ene kant zijn er tests voor onafhankelijke stukjes code (Unittests), en langs de andere kant wordt de samenwerking van deze componenten getest (Integratietests). 
+Daarnaast moet op vlak van GUI getest worden of de applicatie stabiel blijft in bepaalde scenario's, of bij foute input. 
+Door middel van tests moet gegarandeerd worden dat het systeem werkt en voldoet aan de specificatie beschreven in het SRS\cite{srs}. 
+
+Wanneer de programmeur code wenst te pushen naar de hoofdrepository moet deze eerst alle tests successvol uitvoeren. 
+Wanneer voldoende tests zijn geschreven garandeert dit dat het systeem werkt zoals verwacht.
+
+\section{Soorten tests}
+
+\subsection{Unittests}
+Unittests zijn tests die kleine, onafhankelijke stukken code testen. Code die door unittests getest wordt mag geen gebruik maken van externe bronnen, anders kan men niet nagaan of de fout in de te testen klasse/methode zit of in de externe code.
+Wanneer een klasse wordt afgewerkt (of een subset van zijn methoden) moet hiervoor reeks unittests worden geschreven. 
+Deze tests moeten correctheid van een individueel component nagaan. 
+Wanneer de klasse wordt aangepast kunnen deze opnieuw gerunt worden. Hierdoor kunnen mogelijke problemen vroeg gedetecteerd worden.
+
+\subsection{Integratietests}
+Bij unittests werd vermeld dat de klassen geen gebruik mogen maken van externe bronnen. Wanneer dit wel zo is, en dus de samenwerking tussen de twee componenten wordt getest, zijn dit integratietests, m.a.w. hoe twee of meer componenten met elkaar integreren. 
+Gewoonlijk vangen integratietests meer bugs en regressies dan unittests, daarom moet de programmeur extra aandacht besteden aan het schrijven van dit soort tests.
+
+\subsection{Verificatietests}
+Verificatietests testen en garanderen dat het systeem voldoet aan de requirements beschreven in de SRS\cite{srs}. 
+Deze tests zijn niet mutueel exclusief met unittests en integratietests, maar zijn in sommige gevallen wel expliciet nodig.
+
+\subsection{GUI tests}
+De GUI wordt ook uitvoerig getest. Deze moet blijven werken zoals verwacht met arbitraire input. Deze tests worden eveneens geautomatiseerd.
+
+\section{Indeling}
+Alle tests worden bijgehouden in een aparte folder. 
+De directorystructuur in deze folder is gelijkaardig aan die van de source code van het project. 
+De bestandsnamen zijn ook gelijkaardig, maar met het suffix ``\_tests''. 
+Op deze manier kan de ``\_tests'' folder uitgesloten worden van het compilen van een release-versie van het project.
+
+\section{Tools}
+Door middel van JUnit 4\cite{junit} worden tests opgesteld voor het project. 
+JUnit is een standaard Java library en overigens geïntegreerd in de user interface van Eclipse, waardoor het uitvoeren van tests makkelijk wordt en zodat men makkelijk conclusies kan trekken nadat alle tests gerunt zijn. 
+Met JUnit kunnen makkelijk tests geschreven worden d.m.v. ``assertions''. 
+Een assertion test of een echte waarde (verkregen door het uitvoeren van een methode) gelijk is aan de verwachte waarde opgegeven door de programmeur. Wanneer dit het geval is faalt de test. 	
+
+\section{Criteria voor success}
+Wanneer er geen fouten gevonden worden in een klasse d.m.v. de bijhorende tests zeggen we dat deze slaagt. 
+Wanneer er zich wel fouten voordoen moeten deze worden opgelost. 
+Tests worden ook gebruikt om functionaliteit te testen. 
+Hieruit volgt dat we een requirement als afgewerkt markeren wanneer deze in combinatie met slagende tests kan worden aangeboden. 
+
+\subsection{Bug reports}
+Wanneer een test faalt in onverwachte omstandigheden, m.a.w. in code die de programmeur niet heeft aangepast maar eventueel wel gebruikt, moet hiervoor een bug report geplaatst worden op GitHub.
+
+\noindent
+Deze issue bevat de volgende informatie:
+\begin{itemize}
+	\item Het requirement ID, zoals gespecifieerd in de SRS\cite{srs}
+	\item Een beschrijving van het probleem
+	\item Input die het probleem veroorzaakt
+	\item De verwachte output
+	\item De daadwerkelijke output
+\end{itemize}
+
+Deze issue kan daarna opgelost worden door de programmeur verantwoordelijk voor die code, of door bijdrage van andere programmeurs.
+
+\section{Verantwoordelijkheden}
+De programmeur is verantwoordelijk voor het schrijven van tests. Code waar geen tests voor geschreven zijn mag niet worden opgenomen in de repository op GitHub. Zonder tests kan de werking van deze code eenmaal niet worden bevestigd. De Software Quality Assurance Manager is verantwoordelijk voor het controleren dat de programmeurs deze tests volledig en correct schrijven.
