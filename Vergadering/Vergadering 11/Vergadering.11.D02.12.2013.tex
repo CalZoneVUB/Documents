@@ -30,7 +30,24 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 		Planning bespreken & 30min & Hoog & \\
 	\end{tabular}
 \end{table}
+Design:
 
+\sububsection{Usermanagement}
+Volgende procedure wordt gebruikt voor het aanmaken van users:
+\begin{itemize}
+	\item Alle VUB-studenten, persoon etc. worden automatisch ingeladen in een speciaal hiervoor voorziene tabel.
+	\item Vervolgens moet de gebruiker zich registeren op de website. Op basis hiervan krijgt de gebruiker een activatie-email.
+	\item Wanneer de gebruiker op de activatielink klinkt in de e-mail, komt hij op een activatiepagina waar hij nog eventuele extra informatie kan invullen. Als we te maken hebben met een VUB-lid, dan worden beschikbare velden reeds ingevuld.
+	\item De gebruiker drukt op "finish" en de registratie is compleet.
+\end{itemize}
+
+\subsubsection{activation object}
+Nadat de gebruiker zich geregistreerd heeft, krijgt deze een registratieemail. Wanneer hij echter een nieuwe activatieemail wil krijgen, zal hij zich opnieuw moeten registeren. In het design wordt dit als volgt ge\"{i}mplementeerd:
+\begin{itemize}
+	\item Voor elk mail wordt er een nieuw activation object gemaakt.
+	\item Indien er bijv. 3 mails verzonden worden, zijn er 3 activation objects aangemaakt.
+	\item Wanneer 1 activation object geactiveerd wordt, worden de eventuele andere activation objecten ook verwijderd. Dit moet in de controller gebeuren.
+\end{itemize}
 
 
 \subsection{Action items tegen volgende vergadering}
@@ -38,6 +55,7 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
+		
 		\hline
 	\end{tabular}
 \end{table}
