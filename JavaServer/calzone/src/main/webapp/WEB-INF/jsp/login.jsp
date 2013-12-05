@@ -8,16 +8,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login pagina</title>
+<title>Create Account Pagina</title>
 </head>
 <body>
 Language <a href="?language=en">English</a> | <a href="?language=nl">Nederlands</a>
 
-<form:form commandName="credentials">
+<form:form commandName="user">
 	<table>
 		<tr>
 			<td><spring:message code="login.username.text"/></td>
-			<td><form:input path="username"/></td>
+			<td><form:input path="userName"/></td>
 		</tr>
 		<tr>
 			<td>Password:</td>
