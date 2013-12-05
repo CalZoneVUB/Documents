@@ -8,6 +8,8 @@
 \usepackage{float}
 \usepackage{multirow}
 
+\floatstyle{plaintop}
+
 \restylefloat{table} % om om tabellen niet te laten herpositioneren
 \raggedbottom
 \let\cleardoublepage\clearpage
@@ -18,6 +20,8 @@
 \sansmath
 
 \begin{document}
+
+%\floatsetup[table]{capposition=top}
 
 \frontmatter
 \include{tex/title}
