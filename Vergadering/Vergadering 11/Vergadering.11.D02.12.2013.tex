@@ -1,4 +1,4 @@
-\section{Vergadering 28/11/2013}
+\section{Vergadering 02/12/2013}
 \subsection{Aanwezigheidslijst}
 \begin{table}[htbp]
 	\centering
@@ -11,7 +11,9 @@
 \end{table}
 
 \subsection{Vooruitgang sinds vorige vergadering}
-
+\begin{itemize}
+	\item 
+\end{itemize}
 
 \subsection{Verantwoordelijkheden}
 \begin{itemize}
@@ -30,7 +32,46 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 		Planning bespreken & 30min & Hoog & \\
 	\end{tabular}
 \end{table}
+\subsubsection{Usermanagement}
+Er zijn 2 mogelijkheden betreffende het aanmaken van nieuwe users op het systeem. Bij het eerste systeem worden enkel nieuwe users toegelaten die lid zijn van de VUB, bij het tweede systeem worden ook users toegelaten die niet lid zijn van de VUB.
+\begin{enumerate}
+	\item
+	{
+		\textbf{Enkel VUB-leden toegelaten}
+			Volgende procedure wordt gebruikt voor het aanmaken van users:
+		\begin{itemize}
+			\item Alle VUB-studenten, persoon etc. worden automatisch ingeladen in een speciaal hiervoor voorziene tabel in de database.
+			\item Naar alle VUB-leden wordt een email gestuurd met een verzoek om zich te registeren op ons systeem.
+			\item Vervolgens moet de gebruiker zich dus registeren op de website. Op basis hiervan krijgt de gebruiker een activatie-email.
+			\item Wanneer de gebruiker op de activatielink klinkt in de e-mail, komt hij op een activatiepagina waar hij nog eventuele extra informatie kan invullen. 
+			\item 
+			{
+				De gebruiker drukt op "finish" en de registratie is compleet. De user is dan geactiveerd. Deze user wordt dan toegevoegd in een tabel die alle geactiveerde users bevat.
+				\\
+				\\
+				Het voornaamste discussiepunt van deze manier van werken is de data-duplicatie. Er is een tabel voor alle VUB-leden en een tabel voor geactiveerde VUB-leden. Dit moet nog verder besproken worden.
+			}
+		\end{itemize}
 
+	}
+	\item
+	{
+		\textbf{Zowel VUB-leden als niet VUB-leden toegelaten}
+		Om extra flexibel te werk gaan, laten we ook users toe die niet in direct verband staan met de VUB. Het toevoegen van nieuwe users hier verloopt bijna volgens dezelfde procedure.
+			\\
+			\\
+			Het toelaten van niet VUB-leden laat toe om later ook features in te bouwen die ervoor zorgen dat bijv. ouders ook kunnen inloggen op het systeem en het lessenrooster van hun zoon/dochter volgen.
+	}
+\end{enumerate}
+
+\subsubsection{Design van de activatie}
+Nadat de gebruiker zich geregistreerd heeft, krijgt deze een registratieemail. Wanneer hij echter een nieuwe activatieemail wil krijgen, zal hij zich opnieuw moeten registeren. In het design wordt dit als volgt ge\"{i}mplementeerd:
+\begin{itemize}
+	\item Voor elk mail wordt er een nieuw activation object gemaakt.
+	\item Indien er bijv. 3 mails verzonden worden, zijn er 3 activation objects aangemaakt.
+	\item Wanneer 1 activation object geactiveerd wordt, worden de eventuele andere activation objecten ook verwijderd. Dit moet in de controller gebeuren.
+	\item De implementatie hiervan is afhankelijk hoe we Java-code kunnen runnen op de server. We kunnen dit implementeren als achtergrondprocessen, of alles opslaan in de database en telkens in de controller de gegevens verwerken. Conclusie: de mogelijkheden van het Spring MVC framework moeten opgezocht worden.
+\end{itemize}
 
 
 \subsection{Action items tegen volgende vergadering}
@@ -38,6 +79,7 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
+		
 		\hline
 	\end{tabular}
 \end{table}
