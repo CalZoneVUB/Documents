@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{xstring}
 
 \raggedbottom
 \let\cleardoublepage\clearpage
@@ -15,7 +16,13 @@
 \renewcommand{\familydefault}{\sfdefault}
 \sansmath
 
+% Configure meeting information
+\newcommand{\MeetingDate}{05/12/2013}
+\newcommand{\MeetingNumber}{12}
+\newcommand{\ConvertDate}[1]{\StrSubstitute{#1}{/}{.}}
+\newcommand{\MeetingFilePath}{Vergadering.\MeetingNumber.D\ConvertDate{\MeetingDate}}
+
 \begin{document}
 \include{title}
-\include{Vergadering.15.D05.12.2013}
+\input{Vergadering.\MeetingNumber.D05.12.2013}
 \end{document}

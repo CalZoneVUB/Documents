@@ -1,5 +1,10 @@
-\section{Vergadering 28/11/2013}
-\subsection{Aanwezigheidslijst}
+\section{Vergadering \MeetingDate}
+\subsection{Praktische informatie}
+\subsubsection{Tijd \& Plaats}
+Uur: 18:00 - 19:30
+\\
+Lokaal: E0.03
+\subsubsection{Aanwezigheidslijst}
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{c|c}
@@ -10,17 +15,25 @@
 	\end{tabular}
 \end{table}
 
-\subsection{Vooruitgang sinds vorige vergadering}
-\begin{itemize}
-	\item Onderzoek van het Spring MVC framework: https-implementatie, Spring Security Framework en validatie.
-\end{itemize}
-
-\subsection{Verantwoordelijkheden}
+\subsubsection{Verantwoordelijkheden}
 \begin{itemize}
 	\item Voorzitter: Pieter Meiresone
 	\item Secretaris: Tim Witters
 \end{itemize}
-\subsection{Vergaderingspunten}
+
+\subsection{Kritiekpunten op verslag vorige vergadering}
+De requirements en design van het user management moeten opnieuw overlopen worden (zie sectie \ref{sec:VergaderingsPunten}: Vergaderingspunten).
+
+\subsection{Vooruitgang sinds vorige vergadering}
+\begin{itemize}
+	\item Onderzoek van het Spring MVC framework: https-implementatie, Spring Security Framework en validatie.
+	\item SRS: enkele aanpassingen (zie issues op GitHub)
+	\item Database: ontwerp verder uitgewerkt
+	\item Layout Frond End
+\end{itemize}
+
+
+\subsection{Vergaderingspunten} \label{sec:VergaderingsPunten}
 
 Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 \begin{table} [H]
@@ -28,24 +41,36 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 	\begin{tabular} {l|cll}
 		\textbf{Onderwerp} & \textbf{Tijdsduur} & \textbf{Prioriteit} & \textbf{Beschrijving} \\ % Prioriteit: Hoog, Middelmatig of Laag
 		\hline
+		Design User Management & 15min & Middelmatig & \\
 		Teams indelen & 20min & Hoog & \\
 	\end{tabular}
 \end{table}
 
+\subsubsection{Design User Management}
+Conclusie: we leggen momenteel geen restrictie op het type van de gebruikers van onze applicatie. Zowel VUB- als niet VUB-studenten mogen registreren op de website. Dit vereenvoudigt het ontwerp van de database. Momenteel zal de data dump voor users nog niet gebruikt worden.
+\\
+\\
+Er moeten een extra requirement toegevoegd worden dat het access geven van users door de programmabeheerder moet gebeuren. Velden zoals rolnummer en richting zijn optioneel.
+
+\subsubsection{Teams indelen}
+Dit is weergeven in paragraaf \ref{sec:TODOActiviteiten}.
 
 
-
-
-\subsection{Action items tegen volgende vergadering}
+\subsection{Volgende vergadering}
+De volgende vergadering vindt plaats op maandag 9/12/2013 16u, verzamelen aan IG.
+\subsubsection{Activiteiten tegen volgende vergadering} \label{sec:TODOActiviteiten}
 \begin{table} [H]
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
-		
 		\hline
+		Font End & Christophe & Design website in bootstrap \\
+		Back End - Security & Pieter, Youri & Ondersteuning van HTTPS \& User Roles \\
+		Back End - Database & Nicolas & \\
+		Back End - Controllers & Sam, Fernando, Tim \\
 	\end{tabular}
 \end{table}
 
-\subsection{Agenda Punten volgende vergadering}
+\subsubsection{Agenda Punten volgende vergadering}
 
 
