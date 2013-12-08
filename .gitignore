@@ -1,3 +1,7 @@
+JavaServer/.metadata/
+JavaServer/Servers/
+JavaServer/calzone/target/m2e-wtp/web-resources/META-INF/maven/com.vub/calzone/pom.properties
+.gitignore.orig
 SRS/main.aux
 SRS/main.lof
 SRS/main.log
@@ -5,10 +9,6 @@ SRS/main.lot
 SRS/main.out
 SRS/main.synctex.gz
 SRS/main.toc
-*.aux
-*.lof
-*.log
-*.lot
-*.out
-*.gz
-*.toc
+SRS/tex/SystemRequirements/FR1.log
+SRS/tex/SystemRequirements/SystemRequirements.aux
+SRS/tex/SystemRequirements/UserInterface.log
