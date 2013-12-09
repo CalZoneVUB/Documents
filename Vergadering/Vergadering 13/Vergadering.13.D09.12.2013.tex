@@ -1,9 +1,9 @@
 \section{Vergadering \MeetingDate}
 \subsection{Praktische informatie}
 \subsubsection{Tijd \& Plaats}
-Uur: 13:30 - XX:XX
+Uur: 16:00 - XX:XX
 \\
-Lokaal: EX.XX
+Lokaal: E0.04
 \subsubsection{Aanwezigheidslijst}
 \begin{table}[htbp]
 	\centering
@@ -22,8 +22,19 @@ Lokaal: EX.XX
 \end{itemize}
 
 \subsubsection{Kritiekpunten op verslag vorige vergadering}
+Geen kritiekpunten.
 
 \subsection{Vooruitgang sinds vorige vergadering}
+\begin{itemize}
+	\item Koppeling Controllers en database onderzicht
+	\item Alle DAO-objecten en SQL-queries voorzien
+	\item Login-systeem voorzien
+	\item Sessions management geimplementterd
+	\item Design Frond Afgewerkt
+	\item HTTPS-implementatie onderzocht, maar niet gelukt.
+	\item User-Rolers onderzocht, maar niet gelukt.
+	\item Data flow tussen front-end en back-end afgewerkt.
+\end{itemize}
 
 \subsection{Vergaderingspunten}
 Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
@@ -37,29 +48,79 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 		Design Front End & 10min & Middelmatig & Briefing \\
 		Spring Security & 20min & Hoog & Briefing \\
 		Spring Controllers & 20min & Hoog & Briefing \\
+		Documenten & 10min & Middelmatig & \\
 	\end{tabular}
 \end{table}
 
 \subsubsection{FR 1.7}
+We kiezen voor de flexibiliteit en laten het requirement zoals het is. Alles mag achteraf gewijzigd worden. Hier moet echter nog toegevoegd worden dat het email adres ook kan gewijzigd worden.
 
 \subsubsection{HTTPS}
+Uitstellen naar volgende iteratie vanwege de complexiteit.
 
 \subsubsection{Design Frond End}
+Volledig af, buiten de kleuren die nog bepaald moeten worden. Dit wordt overgelaten aan Christophe en Tim.
 
 \subsubsection{Spring Security}
+Uitstellen.
 
 \subsubsection{Spring Controllers}
+De reeds aanwezige functionaliteit:
+\begin{itemize}
+	\item Nog geen hashing -> Non-Functional Requirement toevoegen
+	\item Geen pagina voor profiel aan te passen.
+	\item TODO: activeren van users.
+	\item User verwijderen -> Requirement toevoegen.
+	\item Elke user-agent krijgt zijn eigen sessie. Bij het uitloggen worden alle session tupels in de database met overeenkomende user id verwijderd. -> Requirement toevoegen.
+	\item 
+	{
+		Emails verzenden.
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	
+	}
+	
+\end{itemize}
+
+\subsubsection{}
+Opmerkingen over de database:
+\begin{itemize}
+	\item SQL injection vermijden door SQL-string geparametriseerd te maken en ondersteuning voor BEGIN en COMMIT.
+	\item clean-methode er laten in staan
+	\item Voor de configuratie-file kunnen we beter eventueel gebruik van een JSON-parser. Hierdoor krijgen we al excepties bij een verkeerde structuur in de configuratiefile.
+\end{itemize}
+
+\subsubsection{Documenten}
+Documenten op te leveren
+\begin{itemize}
+	\item SPMP en SRS enkele nog kleine aanpassingen.
+	\item Sectie Non Functional Requirement toevoegen
+	\item STD is normaal ook af op kleine aanpassingen. 
+	\item SDD: ORM & UML moeten nog afgewerkt worden.
+	\item ER vervolledigen adhv de conventies van het ER model.
+\end{itemize}
+
+\subsubsection{Testing}
+Deze iteratie doen we geen testen. 
+
 
 \subsection{Volgende vergadering}
-De volgende vergadering vindt plaats op DAG XX/XX/XXXX XXu, verzamelen aan IG.
+De volgende vergadering vindt plaats op dinsdag XX/XX/XXXX 18u, verzamelen aan IG.
 \subsubsection{Activiteiten tegen volgende vergadering} \label{sec:TODOActiviteiten}
 \begin{table} [H]
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
 		\hline
-
+		SRS & Fernando & Zie vergadering \\
+		SDD & Nicolas & ER relaties toevoegen en aanleveren aan Youri \\
+		SDD & Youri & \\
+		Mail & Pieter & \\
+		Design Implementatie & Tim, Christophe & \\
+		Test Implementatie & Sam & Al enkele testen schrijven \\
 	\end{tabular}
 \end{table}
 
 \subsubsection{Agenda Punten volgende vergadering}
+Alles lokaal samenzetten en het proberen deployen van de applicatie op de wilma server. 
