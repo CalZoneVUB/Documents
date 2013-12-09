@@ -16,6 +16,21 @@
   {}
 \endgroup
 
+\entry{Tomcat}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Foundation}{F.}%
+     {The Apache~Software}{T.~A.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{FTAS1}
+  \strng{fullhash}{FTAS1}
+  \field{sortinit}{F}
+  \field{title}{Apache Tomcat 7 Documenatation}
+  \field{year}{2013}
+\endentry
+
 \entry{SRS}{manual}{}
   \name{author}{3}{}{%
     {{}%
