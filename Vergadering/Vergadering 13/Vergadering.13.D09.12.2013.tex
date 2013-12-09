@@ -1,7 +1,7 @@
 \section{Vergadering \MeetingDate}
 \subsection{Praktische informatie}
 \subsubsection{Tijd \& Plaats}
-Uur: 16:00 - XX:XX
+Uur: 16:00 - 17:30
 \\
 Lokaal: E0.04
 \subsubsection{Aanwezigheidslijst}
@@ -24,33 +24,40 @@ Lokaal: E0.04
 \subsubsection{Kritiekpunten op verslag vorige vergadering}
 Geen kritiekpunten.
 
-\subsection{Vooruitgang sinds vorige vergadering}
+\subsection{Vooruitgang sinds vorige vergadering} \label{sec:Vooruitgang}
 \begin{itemize}
-	\item Koppeling Controllers en database onderzicht
-	\item Alle DAO-objecten en SQL-queries voorzien
-	\item Login-systeem voorzien
-	\item Sessions management geimplementterd
-	\item Design Frond Afgewerkt
-	\item HTTPS-implementatie onderzocht, maar niet gelukt.
-	\item User-Rolers onderzocht, maar niet gelukt.
-	\item Data flow tussen front-end en back-end afgewerkt.
+	\item Koppeling Controllers en database ge\"{i}mplementeerd (door Nicolas en Tim).
+	\item Alle DAO-objecten en SQL-queries voorzien (door Nicolas).
+	\item Login-systeem voorzien (door Tim).
+	\item Sessions management geimplementterd (door Tim).
+	\item Design Frond Afgewerkt (door Christophe).
+	\item HTTPS-implementatie onderzocht, maar niet gelukt (door Pieter).
+	\item User-Rolers onderzocht, maar niet gelukt (door Youri).
+	\item Data flow tussen front-end en back-end afgewerkt (door Sam).
+	\item Emails verzenden in Java, maar niet gelukt (door Fernando).
 \end{itemize}
 
-\subsection{Vergaderingspunten}
+\subsection{Vergaderingspunten} 
 Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 \begin{table} [H]
 	\centering
 	\begin{tabular} {l|c|c|c}
 		Onderwerp & Tijdsduur & Prioriteit & Beschrijving \\ % Prioriteit: Hoog, Middelmatig of Laag
 		\hline
+		Progressie & 10min & Middelmatig & \\
 		FR 1.7 & 10min & Middelmatig & Bespreken en eventueel herzien \\
 		HTTPS & 10min & Middelmatig & Briefing \\
 		Design Front End & 10min & Middelmatig & Briefing \\
 		Spring Security & 20min & Hoog & Briefing \\
 		Spring Controllers & 20min & Hoog & Briefing \\
+		Database & 10min & Middelmatig & Briefing \\
+		Testing & 10min & Hoog & Briefing \\
 		Documenten & 10min & Middelmatig & \\
 	\end{tabular}
 \end{table}
+
+\subsubsection{Progresse}
+Zie paragraaf \ref{sec:Vooruitgang}.
 
 \subsubsection{FR 1.7}
 We kiezen voor de flexibiliteit en laten het requirement zoals het is. Alles mag achteraf gewijzigd worden. Hier moet echter nog toegevoegd worden dat het email adres ook kan gewijzigd worden.
@@ -62,28 +69,18 @@ Uitstellen naar volgende iteratie vanwege de complexiteit.
 Volledig af, buiten de kleuren die nog bepaald moeten worden. Dit wordt overgelaten aan Christophe en Tim.
 
 \subsubsection{Spring Security}
-Uitstellen.
+Uitstellen naar volgende iteratie vanwege de complexiteit.
 
 \subsubsection{Spring Controllers}
-De reeds aanwezige functionaliteit:
+Nog te implementeren:
 \begin{itemize}
-	\item Nog geen hashing -> Non-Functional Requirement toevoegen
-	\item Geen pagina voor profiel aan te passen.
-	\item TODO: activeren van users.
-	\item User verwijderen -> Requirement toevoegen.
-	\item Elke user-agent krijgt zijn eigen sessie. Bij het uitloggen worden alle session tupels in de database met overeenkomende user id verwijderd. -> Requirement toevoegen.
-	\item 
-	{
-		Emails verzenden.
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	
-	}
-	
+	\item Hashing van wachtwoorden implementeren.
+	\item Activeren van users.
+	\item Elke user-agent krijgt zijn eigen sessie. Bij het uitloggen worden alle session tupels in de database met overeenkomende user id verwijderd.
+	\item Emails verzenden.
 \end{itemize}
 
-\subsubsection{}
+\subsubsection{Database}
 Opmerkingen over de database:
 \begin{itemize}
 	\item SQL injection vermijden door SQL-string geparametriseerd te maken en ondersteuning voor BEGIN en COMMIT.
@@ -91,34 +88,32 @@ Opmerkingen over de database:
 	\item Voor de configuratie-file kunnen we beter eventueel gebruik van een JSON-parser. Hierdoor krijgen we al excepties bij een verkeerde structuur in de configuratiefile.
 \end{itemize}
 
-\subsubsection{Documenten}
-Documenten op te leveren
-\begin{itemize}
-	\item SPMP en SRS enkele nog kleine aanpassingen.
-	\item Sectie Non Functional Requirement toevoegen
-	\item STD is normaal ook af op kleine aanpassingen. 
-	\item SDD: ORM & UML moeten nog afgewerkt worden.
-	\item ER vervolledigen adhv de conventies van het ER model.
-\end{itemize}
-
 \subsubsection{Testing}
-Deze iteratie doen we geen testen. 
+Testing is nog niet begonnen en wordt na deze vergadering opgestart (zie paragraaf \ref{sec:TODOActiviteiten}).
 
+\subsubsection{Documenten}
+Overzicht van de huidige status van de verschillende documenten:
+\begin{itemize}
+	\item SPMP, STD klaar op enkele kleine aanpassingen.
+	\item SRS: issues op GitHub nog verwerken
+	\item SDD: ORM \& UML moeten nog afgewerkt worden.
+\end{itemize}
+Conclusie: SPMP, STD en SRS kunnen al nagekenen worden door de QAM.
 
 \subsection{Volgende vergadering}
-De volgende vergadering vindt plaats op dinsdag XX/XX/XXXX 18u, verzamelen aan IG.
+De volgende vergadering vindt plaats op dinsdag 13/12/2013 18u, verzamelen aan IG.
 \subsubsection{Activiteiten tegen volgende vergadering} \label{sec:TODOActiviteiten}
 \begin{table} [H]
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
 		\hline
-		SRS & Fernando & Zie vergadering \\
+		SRS & Fernando & Zie issues op GitHub \\
 		SDD & Nicolas & ER relaties toevoegen en aanleveren aan Youri \\
-		SDD & Youri & \\
-		Mail & Pieter & \\
-		Design Implementatie & Tim, Christophe & \\
-		Test Implementatie & Sam & Al enkele testen schrijven \\
+		SDD & Youri & UML en ORM diagrammen \\
+		Mail in Java & Pieter & \\
+		Design Front End Implementatie & Tim, Christophe & \\
+		Testing & Sam & Al enkele testen schrijven \\
 	\end{tabular}
 \end{table}
 
