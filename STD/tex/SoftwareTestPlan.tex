@@ -3,25 +3,26 @@
 Het systeem kan op verschilende manieren getest worden. 
 Langs de ene kant zijn er tests voor onafhankelijke stukjes code (Unittests), en langs de andere kant wordt de samenwerking van deze componenten getest (Integratietests). 
 Daarnaast moet op vlak van GUI getest worden of de applicatie stabiel blijft in bepaalde scenario's, of bij foute input. 
-Door middel van tests moet gegarandeerd worden dat het systeem werkt en voldoet aan de specificatie beschreven in het SRS\cite{srs}. 
-
+Door middel van tests moet gegarandeerd worden dat het systeem werkt en voldoet aan de specificaties beschreven in het SRS\cite{srs}. 
+\\
+\\
 Wanneer de programmeur code wenst te pushen naar de hoofdrepository moet deze eerst alle tests successvol uitvoeren. 
 Wanneer voldoende tests zijn geschreven garandeert dit dat het systeem werkt zoals verwacht.
 
 \section{Soorten tests}
 
 \subsection{Unittests}
-Unittests zijn tests die kleine, onafhankelijke stukken code testen. Code die door unittests getest wordt mag geen gebruik maken van externe bronnen, anders kan men niet nagaan of de fout in de te testen klasse/methode zit of in de externe code.
+Unittests zijn tests die kleine, onafhankelijke stukken code testen. Code die door unittests getest wordt mag geen gebruik maken van externe bronnen, anders kan men niet nagaan of de fout in de te testen klasse/methode zit, of in de externe code.
 Wanneer een klasse wordt afgewerkt (of een subset van zijn methoden) moet hiervoor reeks unittests worden geschreven. 
 Deze tests moeten correctheid van een individueel component nagaan. 
-Wanneer de klasse wordt aangepast kunnen deze opnieuw gerunt worden. Hierdoor kunnen mogelijke problemen vroeg gedetecteerd worden.
+Wanneer de klasse wordt aangepast kunnen deze tests opnieuw gerunt worden. Hierdoor kunnen mogelijke problemen vroeg gedetecteerd worden.
 
 \subsection{Integratietests}
 Bij unittests werd vermeld dat de klassen geen gebruik mogen maken van externe bronnen. Wanneer dit wel zo is, en dus de samenwerking tussen de twee componenten wordt getest, zijn dit integratietests, m.a.w. hoe twee of meer componenten met elkaar integreren. 
 Gewoonlijk vangen integratietests meer bugs en regressies dan unittests, daarom moet de programmeur extra aandacht besteden aan het schrijven van dit soort tests.
 
 \subsection{Verificatietests}
-Verificatietests testen en garanderen dat het systeem voldoet aan de requirements beschreven in de SRS\cite{srs}. 
+Verificatietests testen en garanderen dat het systeem voldoet aan de requirements beschreven in het SRS\cite{srs}. 
 Deze tests zijn niet mutueel exclusief met unittests en integratietests, maar zijn in sommige gevallen wel expliciet nodig.
 
 \subsection{GUI tests}
@@ -51,7 +52,7 @@ Wanneer een test faalt in onverwachte omstandigheden, m.a.w. in code die de prog
 \noindent
 Deze issue bevat de volgende informatie:
 \begin{itemize}
-	\item Het requirement ID, zoals gespecifieerd in de SRS\cite{srs}
+	\item Het requirement ID, zoals gespecifieerd in het SRS\cite{srs}
 	\item Een beschrijving van het probleem
 	\item Input die het probleem veroorzaakt
 	\item De verwachte output
