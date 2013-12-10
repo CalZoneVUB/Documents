@@ -153,18 +153,24 @@ De documenten zullen gestockeerd worden op een afzonderlijke repository op GitHu
 \section{Software Quality Assurance Plan}
 Op vergaderingen met het team wordt besproken of men nog steeds op schema zit van het voorgestelde ontwikkelingsproces. 
 Wanneer dit niet zo is moet de Project Manager ofwel het team bijsturen, ofwel de verwachtingen veranderen.
-
+\\
+\\
 \subsection{Documenten en standaard}
-Per iteratie worden 4 (argumenteerbaar 6) documenten opgeleverd die elk door een verschillend persoon worden gemaakt, nl. het SPMP, STD, SRS, SDD, en als onderdeel van het SPMP: het SQAP en SCMP. 
+Per iteratie worden 4 (argumenteerbaar 6) documenten opgeleverd die elk door een verschillend persoon worden gemaakt, nl. het SPMP, STD, SRS, SDD, en als onderdeel van het SPMP: het SQAP en SCMP.
+\\
+\\ 
 Al deze documenten worden gemaakt door hun respectievelijke verantwoordelijke. 
 Daarom is het belangrijk dat de Quality Assurance Manager standaarden vastlegt i.v.m. structuur en opmaak. 
 Alle documenten worden geschreven in LaTeX en hun structuur, opmaak, spelling en zinsbouw worden gecontroleerd door de Quality Assurance Manager. 
-Als rechtstreeks gevolg zijn er intern deadlines vastgelegd één week voor officiële deadlines. 
+Als rechtstreeks gevolg zijn er intern deadlines vastgelegd één week voor officiële deadlines.
 Dit geeft het hele team ruim voldoende tijd om eventuele gebreken op te lossen, maar ook kan de Quality Assurance Manager documenten en source code controleren voor oplevering. 
 Wanneer een document klaar is dient de verantwoordelijke van dit document een mail te sturen (met rechtstreekse URL) via de mailinglijst naar alle leden van de groep. 
 Vervolgens kan de Quality Assurance Manager controleren of het document voldoet aan de afgesproken layout en conventies. 
+\\
+\\
 Het is niet de verantwoordelijkheid van de Quality Assurance Manager om documenten te corrigeren, slechts om te controleren en de verantwoordelijke op de hoogte te stellen van eventuele gebreken. 
-
+\\
+\\
 Alle documenten worden opgeleverd in het Nederlands met een aangepaste VUB LateX stijl\cite{VUBHuisstijl}. Het voorblad van documenten ziet er zo uit:
 
 \begin{figure}[ht!]
@@ -177,32 +183,37 @@ Alle documenten worden opgeleverd in het Nederlands met een aangepaste VUB LateX
 \subsection{Broncode}
 \subsubsection{Documentatie en commentaar}
 Er wordt verwacht dat de programmeurs hoogkwalitatieve code schrijven, d.w.z. mooie, leesbare code met voldoende commentaar. 
-Meer concreet moet alle code voldoen aan de conventies opgesteld door het voormalige Sun Microsystems\cite{javaConventions}.
-Bovendien moet code voldoende gedocumenteerd worden d.m.v. JavaDoc voor Java, of equivalent voor andere gebruikte programmeertalen. 
+Meer concreet moet alle code voldoen aan de conventies opgesteld door het voormalige Sun Microsystems\cite{JavaCodeConventions}.
+Bovendien moet code voldoende gedocumenteerd worden d.m.v. JavaDoc\cite{Javadoc} voor Java, of equivalent voor andere gebruikte programmeertalen. 
 Deze documentatie moet samen met de commentaar bij broncode voldoende zijn voor de Quality Assurance Manager om code te lezen en begrijpen. 
 Wanneer code niet voldoet aan de vooropgestelde eisen zal de Quality Assurance Manager de programmeur hier onmiddelijk van verwittigen, waarna de programmeur ervoor moet zorgen dat de code wel voldoet aan de eisen. 
 De Quality Assurance Manager zal broncode controleren nadat de programmeur een module heeft afgewerkt. 
-
+\\
+\\
 Uiteindelijk ligt de verantwoordelijkheid voor hoogkwalitatieve code bij de programmeur zelf. 
 De Quality Assurance Manager zorgt er slechts voor dat code voldoet aan een bepaalde standaard, en zo niet moet de programmeur zijn best doen om deze standaard alsnog te halen. 
-
-Geschreven code in Java moet voldoen aan de conventies opgelegd door JavaDoc\cite{JavaDocConventies}. 
+\\
+\\
+Geschreven code in Java moet voldoen aan de conventies opgelegd door Javadoc \cite{JavadocConventions}. 
 Er wordt extra aandacht besteed door de Quality Assurance Manager aan het formaat van commentaar en de documentatie die hieruit gegenereerd wordt door JavaDoc. 
 
 \subsubsection{Unittests}
 De Quality Assurance Manager zal er ook op toezien dat modules voorzien zijn van geautomatiseerde tests d.m.v. JUnit voor Java of equivalent voor andere programmeertalen. 
 Niet-triviale methoden en klassen moeten voorzien zijn van Unittests. 
 Wanneer deze tests niet aanwezig zijn voor modules die dit wel vereisen zal de programmeur hierop attent gemaakt worden. 
-Code moet dus voldoen aan het Software Test Document (STD). 
+Code moet dus voldoen aan de Software Test Documentation (STD). 
 
 \subsection{Inspecties}
-In onderstaande tabel vindt u de datum van alle uitgevoerde inspecties, de datum waarop veranderingen aan de code zijn toegepast, alsook een korte beschrijving van het onderdeel dat onderhevig is aan inspectie en als laatste een link naar het rapport van de inspectie.
+Onderstaande tabel bevat de datum van alle uitgevoerde inspecties, de datum waarop veranderingen aan de code zijn toegepast, alsook een korte beschrijving van het onderdeel dat onderhevig is aan inspectie. Rapporten van de inspectie zijn op GitHub\cite{GitHubRepository} te vinden in een folder "Inspecties". De rapporten van de inspecties zijn gesorteerd op datum wanneer de inspectie is uitgevoerd.
 
 \begin{center}
     \begin{tabular}{| l | l | l | l |}
     \hline
     Inspectie datum & Doorvoering veranderingen & Beschrijving \\ \hline
     14/11/2013 & 14/11/2013 & Inspectie SPMP \\ \hline
+    10/12/2013 & Nog niet aangepast & Inspectie SPMP Iter 1 \\ \hline
+    10/12/2013 & Nog niet aangepast & Inspectie STD Iter 1 \\ \hline
+    10/12/2013 & Nog niet aangepast & Inspectie SRS Iter 1 \\ \hline
     
     \end{tabular}
 \end{center}
