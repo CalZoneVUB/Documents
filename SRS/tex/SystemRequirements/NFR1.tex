@@ -1,0 +1,43 @@
+\subsection{Beveiliging - NFR1}
+
+%Implementatie van HTTPS
+\subsubsection{Implementatie van HTTPS}
+	\begin{table}[H]
+	\caption{NFR1.1 - Implementatie van HTTPS}
+    		\begin{tabular}{l | p{10cm}}
+        \textbf{ID:} & NFR1.1 \\ \hline
+        \textbf{TITEL:} & Implementatie van HTTPS \\ \hline
+        \textbf{PRIORITEIT:} &  Medium \\ \hline
+        \textbf{PREREQUISITIES:} & Geen\\ \hline
+        \textbf{BESCHRIJVING:} & HTTPS gebruiken voor de beveiliging van de applicatie.\\
+    \end{tabular} 
+	\label{tab:NFR1.1 -Implementatie van HTTPS}
+\end{table}
+
+%Hashing
+\subsubsection{Hashing}
+	\begin{table}[H]
+	\caption{NFR1.2 - Hasing}
+    		\begin{tabular}{l | p{10cm}}
+        \textbf{ID:} & NFR1.2 \\ \hline
+        \textbf{TITEL:} & Hashing \\ \hline
+        \textbf{PRIORITEIT:} &  Hoog \\ \hline
+        \textbf{PREREQUISITIES:} & Geen\\ \hline
+        \textbf{BESCHRIJVING:} & Wachtwoorden moeten in de database opgeslagen worden met behulp van een hash. Er zal gebruik gemaakt worden van SHA-256 als cryptografische hash functie en een SALT.\\
+    \end{tabular} 
+	\label{tab:NFR1.2 -Hashing}
+\end{table}
+
+%Session Management
+\subsubsection{Session Management}
+	\begin{table}[H]
+	\caption{NFR1.3 - Session Management}
+    		\begin{tabular}{l | p{10cm}}
+        \textbf{ID:} & NFR1.3 \\ \hline
+        \textbf{TITEL:} & Session Management \\ \hline
+        \textbf{PRIORITEIT:} &  Medium \\ \hline
+        \textbf{PREREQUISITIES:} & Geen\\ \hline
+        \textbf{BESCHRIJVING:} & Elke user-agent krijgt zijn eigen sessie zodat bij het uitloggen alle sessie tupels die overeenkomen met de user ID verwijderd kunnen worden.\\
+    \end{tabular} 
+	\label{tab:NFR1.3 -Session Management}
+\end{table}
