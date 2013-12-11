@@ -9,8 +9,10 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{multirow}
-
-\restylefloat{table} % om om tabellen niet te laten herpositioneren
+\usepackage{subfig}
+\captionsetup{belowskip=12pt,aboveskip=4pt}
+\floatstyle{plaintop}
+\restylefloat{table}% om om tabellen niet te laten herpositioneren
 \raggedbottom
 \let\cleardoublepage\clearpage
 
@@ -33,8 +35,7 @@
 
 \mainmatter
 \include{tex/Introduction} % identification of the SDD
-\include{tex/SystemArchitecture}
-\include{tex/Modules}
+\include{tex/Viewpoints}
 
 \backmatter
 \nocite{*}
