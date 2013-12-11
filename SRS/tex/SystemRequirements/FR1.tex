@@ -3,6 +3,7 @@
 %Profiel Aanmaken
 \subsubsection{Profiel aanmaken}
 	\begin{table}[H]
+	\caption{FR1.1 - Profiel aanmaken}
     		\begin{tabular}{l | p{10cm}}
         \textbf{ID:} & FR1.1 \\ \hline
         \textbf{TITEL:} & Profiel aanmaken \\ \hline
@@ -17,13 +18,12 @@
                                         \item Wachtwoord
                                         \item Geboortedatum
                                         \item E-mail
-                                        \item Rolnummer
-                                        \item Richting (= vaste lijst)
+                                        \item Rolnummer (optioneel)
+                                        \item Richting (= vaste lijst) (optioneel)
                                         \item Gewenste taal
                                     \end{itemize}\\
     \end{tabular} 
-    \caption{FR1.1 - Profiel aanmaken}
-    \label{tab:FR1.1 -Profiel aanmaken}
+	\label{tab:FR1.1 -Profiel aanmaken}
 \end{table}
 
 \textbf{Stappenplan:}
@@ -214,9 +214,7 @@
 \begin{enumerate}
 \item De aangemelde gebruiker ziet zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}) in zijn webbrowser. Rechts boven ziet hij de optie om af te melden.
 \item De gebruiker klikt op deze optie en wordt uitgelogd. Hij krijgt de melding dat hij uitgelogd is en krijgt het beginscherm (zie figuur \ref{fig:CalZone Home}) van de niet-aangemelde gebruiker te zien.
-\end{enumerate}
- 
-%TODO Uitzonderingen moesten die er zijn? I assume not 
+\end{enumerate} 
 
 %Profiel gegevens aanpassen
 \subsubsection{Profiel gegevens aanpassen}
@@ -234,6 +232,7 @@
                                         \item Gebruikersnaam
                                         \item Wachtwoord
                                         \item Geboortedatum
+                                        \item Email
                                         \end{itemize}\\
             \end{tabular}\\
             \caption{FR1.7 - Profiel gegevens aanpassen}
@@ -271,7 +270,7 @@
             \begin{tabular}{l | p{10cm}}
                 \textbf{ID:} & FR1.9 \\ \hline
                 \textbf{TITEL:} & Meertaligheid voorzien\\ \hline
-                \textbf{PRIORITEIT:} &  hoog \\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
                 \textbf{TOEGANG:} & Aangemelde gebruiker \\ \hline
                 \textbf{BESCHRIJVING:} & Een gebruiker (van het type beschreven in toegang) moet de optie hebben op zijn taal aan te passen. Het programma zal minstens over 2 talen beschikken, namelijk Engels en Nederlands\\ 
@@ -279,5 +278,42 @@
             \caption{FR1.9 - Meertaligheid voorzien}
             \label{tab:FR1.9 - Meertaligheid voorzien}
         \end{table}
+        
+%Automatisch Inloggen
+\subsubsection{Automatisch Inloggen}  
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR1.10 \\ \hline
+                \textbf{TITEL:} & Automatisch Inloggen\\ \hline
+                \textbf{PRIORITEIT:} &  Medium \\ \hline
+                \textbf{PREREQUISITIES:} & Gebruiker moet zich al eens ingelogd hebben \\ \hline
+                \textbf{TOEGANG:} & Aangemelde gebruiker \\ \hline
+                \textbf{BESCHRIJVING:} & Een gebruiker (van het type beschreven in toegang) kan automatisch ingelogd worden als deze terugkomt naar de website van CalZone. 
+            \end{tabular}\\
+            \caption{FR1.10 - Automatisch Inloggen}
+            \label{tab:FR1.10 - Automatisch Inloggen}
+        \end{table}
+        
+%Profiel verwijderen
+\subsubsection{Profiel verwijderen}
+	\begin{table}[H]
+	\caption{FR1.11 - Profiel aanmaken}
+    		\begin{tabular}{l | p{10cm}}
+        \textbf{ID:} & FR1.11 \\ \hline
+        \textbf{TITEL:} & Profiel verwijderen \\ \hline
+        \textbf{PRIORITEIT:} &  Laag \\ \hline
+        \textbf{PREREQUISITIES:} & Gebruiker moet al een account hebben\\ \hline
+        \textbf{TOEGANG:} &  Aangemelde Gebruiker \\ \hline
+        \textbf{BESCHRIJVING:} & Een gebruiker kan zijn account verwijderen\\
+    \end{tabular} 
+	\label{tab:FR1.11 -Profiel aanmaken}
+\end{table}
+
+\textbf{Stappenplan:}
+\begin{enumerate}
+\item Een aangemelde gebruiker kan bij profiel gegevens keizen voor de optie "account verwijderen".
+\item De gebruiker klikt hierop en er verschijnt een waarschuwings bericht waarin staat of hij zeker is dat hij zijn account wil verwijderen.
+\item De gebruiker klikt op "ja" en word terug naar het beginvenster (zie figuur \ref{fig:CalZone Home}) gebracht.
+\end{enumerate}
 
 \clearpage
