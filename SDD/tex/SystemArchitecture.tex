@@ -1,6 +1,20 @@
 \chapter{Systeemarchitectuur}
+\label{chap:architectuur}
+
 \section{Model}
-MVC
+\label{sec:model}
+CalZone is een webapplicatie. Gebruikers van het systeem bezoeken de applicatie via hun webbrowser. Deze browser kan de browser op hun computer  zijn of op de Android browser op hun smartphone.
+
+CalZone heeft als architectuur gekozen voor het MVC-patroon.\cite{mvc}
 
 \section{Gebruikte technologie}
-Spring MVC framework
+\label{sec:technologie}
+De programmeertaal die gebruikt wordt voor het ontwikkelen van CalZone is Java. Er wordt gebruik gemaakt van het Spring MVC framework\cite{spring, spring-mvc}. De IDE waarin geprogrammeerd wordt is de meest recente versie van 'Eclipse Classic' met volgende uitbreidingen:
+
+\begin{itemize}
+\item De gehele collectie 'Web, XML, Java EE and OSGi Enterprise Development'	
+\item Spring Tool Suite (uit de Eclipse Marketplace)
+\item De gehele collectie 'Maven Integration for Eclipse'
+\end{itemize}
+
+Het uitvoeren van de applicatie wordt mogelijk gemaakt door middel van Apache Maven\cite{Maven} en Apache Tomcat\cite{Tomcat}.
