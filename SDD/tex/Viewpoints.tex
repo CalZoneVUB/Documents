@@ -90,11 +90,17 @@ Volgende validators zijn in het huidige systeem aanwezig:
 \section{Data}
 \label{sec:data}
 
-CalZone heeft in zijn databank tabellen voorzien om 
+De huidige databank is ontworpen om gebruikers, die zich willen registreren in het systeem, op te slaan. 
+Men maakt een onderscheid tussen gebruikers die al dan niet hun account geactiveerd hebben. 
+Een gebruiker die niet geactiveerd is, bezit een lijst van activatiesleutels. 
+Dit is een lijst omdat activatiesleutels slechts tijdelijk geldig zijn en gebruikers in staat moeten kunnen zijn om een nieuwe activatiesleutel aan te vragen indien ze hun account als dan nog willen activeren nadat hun huidige activatiesleutel vervallen is.
+Geactiveerde gebruikers kunnen inloggen. 
+Hierdoor wordt een sessie aangemaakt in het systeem. 
+Deze sessies worden gelogd in de databank. Figuur~\ref{fig:EER diagram} toont het EER-model van de databank.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{design/EERIT1.pdf}
-	\label{fig:EER}
 	\caption{EER diagram}
+	\label{fig:EER diagram}
 \end{figure}
