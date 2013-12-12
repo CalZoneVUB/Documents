@@ -3,29 +3,27 @@
 Voor het project management zal er gebruikt worden van Microsoft Project \cite{MicrosoftProject}. Een licentie valt gratis te verkrijgen via Microsoft Dreamspark for VUB Students \cite{DreamsparkVUB}. M.b.v. Microsoft Project zullen er Gantt charts gegenereerd worden. Voor Work Breakdown Structures zal er gebruik worden gemaaakt van WBS Chart Pro \cite{WBSChartPro}. Hiervan is een demo-versie verkrijgbaar die voldoende functionaliteit biedt. WBS Chart Pro kan op basis van een Microsoft Project file onmiddelijk een WBS genereren.
 \\
 \\
-In deze paragraaf bespreken we de verwachte kost van het project. Voor de kostberekening maken we gebruik van het COCOMO I model \cite{CocomoI}. Ondanks dat het COCOMO I model reeds verouderd is t.o.v. COCOMO II \cite{CocomoII}, verkiezen we toch COCOMO I. De reden hiervoor is dat COCOMO II afhangt van veel inputparameters. Vermits we hiervoor weinig tot geen ervaring hebben, verkiezen we COCOMO I dat slechts afhangt van 2 inputparameters. Bij COCOMO I zijn de vrije parameters het project type en aantal lijnen code. Als type project moeten we kiezen tussen ``simple'', ``semidetached'' en ``embedded''. We kiezen hierin voor het type ``semidetached''. Dit weerspiegelt goed de huidige situatie van ons team. De omvang van ons team is aan de grote kant en er zijn veel onbekende factoren in dit project (zie ook \ref{sec:risicoManagementPlan}). We berekenen dan de effort $E$ uitgedrukt in persoonsmaanden (pm) als
-\begin{equation*}
-	E = a*KLOC^b
-\end{equation*}
-Hierbij zijn $a$ en $b$ constanten gegeven door het COCOMO I-model. Voor ons is het interessanter om naar de werkuren te kijken i.p.v. het aantal persoonsmaanden. Volgens de COCOMO standaard bevat \'{e}\'{e}n werkmaand 152 uren.  De benodigde tijd ($T$) is dan
-\begin{equation*}
-	T = 152\frac{u}{pm}*E
-\end{equation*}
-Hierbij wordt T uitgedrukt in uren. Uit de tabellen van het COCOMO-model volgt dat $a = 3.0$ en $b = 1.12$. Verder schatten we in dat dit project een totale omvang zal hebben van 10KLOC. Dit geeft dan:
-\begin{equation*}
-	T = 152*3.0*10^{1.12} \approx 6011u 
-\end{equation*}
-Vermits ons team uit 7 personen bestaat, geeft dit per persoon een tijdsduur van:
-\begin{equation*}
-	T_{persoon} \approx 859u
-\end{equation*}
-Het is evident dat een werklast van $859u$ per persoon niet haalbaar is. Dit hoge resultaat is waarschijnlijk het gevolg van de onbetrouwbare methode COCOMO I. Tegenwoordig zijn er meer tools beschikbaar (waaronder GitHub) die de productiviteit sterk verhogen. 
-\\
-\\
-Op basis van de Gantt-chart die zal opgesteld worden in paragraaf \ref{sec:workplan} bekomen we een meer realistische schatting van 
-\begin{equation*}
-	T_{persoon} \approx 300u
-\end{equation*}
+% In deze paragraaf bespreken we de verwachte kost van het project. 
+"%Voor de kostberekening maken we gebruik van het COCOMO I model \cite{CocomoI}. Ondanks dat het COCOMO I model reeds verouderd is t.o.v. COCOMO II \cite{CocomoII}, verkiezen we toch COCOMO I. De reden hiervoor is dat COCOMO II afhangt van veel inputparameters. Vermits we hiervoor weinig tot geen ervaring hebben, verkiezen we COCOMO I dat slechts afhangt van 2 inputparameters. Bij COCOMO I zijn de vrije parameters het project type en aantal lijnen code. Als type project moeten we kiezen tussen ``simple'', ``semidetached'' en ``embedded''. We kiezen hierin voor het type ``semidetached''. Dit weerspiegelt goed de huidige situatie van ons team. De omvang van ons team is aan de grote kant en er zijn veel onbekende factoren in dit project (zie ook \ref{sec:risicoManagementPlan}). We berekenen dan de effort $E$ uitgedrukt in persoonsmaanden (pm) als
+%\begin{equation*}
+%	E = a*KLOC^b
+%\end{equation*}
+%Hierbij zijn $a$ en $b$ constanten gegeven door het COCOMO I-model. Voor ons is het interessanter om naar de werkuren te kijken i.p.v. het aantal persoonsmaanden. Volgens de COCOMO standaard bevat \'{e}\'{e}n werkmaand 152 uren.  De benodigde tijd ($T$) is dan
+%\begin{equation*}
+%	T = 152\frac{u}{pm}*E
+%\end{equation*}
+%Hierbij wordt T uitgedrukt in uren. Uit de tabellen van het COCOMO-model volgt dat $a = 3.0$ en $b = 1.12$. Verder schatten we in dat dit project een totale omvang zal hebben van 10KLOC. Dit geeft dan:
+%\begin{equation*}
+%	T = 152*3.0*10^{1.12} \approx 6011u 
+%\end{equation*}
+%Vermits ons team uit 7 personen bestaat, geeft dit per persoon een tijdsduur van:
+%\begin{equation*}
+%	T_{persoon} \approx 859u
+%\end{equation*}
+%Het is evident dat een werklast van $859u$ per persoon niet haalbaar is. Dit hoge resultaat is waarschijnlijk het gevolg van de onbetrouwbare methode COCOMO I. Tegenwoordig zijn er meer tools beschikbaar (waaronder GitHub) die de productiviteit sterk verhogen. 
+%\\
+%\\
+
 \section{Werk plan} \label{sec:workplan}
 \subsection{Activiteiten}
 Het project bestaat uit volgende activiteiten\footnote{In volgende versies van het SPMP komen hier nog verscheidene activiteiten bij.}, weergegeven als een work breakdown structure in figuur \ref{fig:workbreakdownstructure}. De activiteiten in de WBS komen overeen met de gegroepeerde requirements die in het SRS-document en website te vinden zijn.
@@ -44,57 +42,58 @@ Voor de eerste iteratie is de work breakdown structure weergegeven in figuur \re
 \end{figure}
 In de volgende versies van de SPMP zullen de work breakdown structures van de volgende iteraties worden weergegeven.
 \subsection{Planning}
-In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven van de verschillende activiteiten gedurende iteratie 1. Hierbij zijn ook de afhankelijkheden weergegeven tussen deze activiteiten. Op basis van deze tabel kunnen we een Gantt chart opstellen en het kritisch pad bepalen.
+In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven van de verschillende activiteiten gedurende iteratie 1. Op basis van deze tabel kunnen we een Gantt chart opstellen.
 \begin{table} [H]
 	\centering
 	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
-	\begin{tabular} {l|l|c|c|c}
-		Activiteit ID & Activiteit Naam & Tijdsduur (in weken) & Geschatte aantal werkuren (in u) & Afhankelijkheden \\
+	\begin{tabular} {l|l|c|c}
+		Activiteit & Activiteit & Tijdsduur & Geschatte aantal  \\
+		ID & Naam & (in weken) & werkuren (in u) \\
 		\hline
-		1 	& System Engineering 		& n.v.t. & n.v.t. & \\
-		1.1 & Project Management 		& n.v.t. & n.v.t. & \\
-		1.1.1 & SPMP					& n.v.t. & n.v.t. & \\
-		1.1.2 & Meetings				& n.v.t. & n.v.t. & \\
-		1.2	& Configuration Management	& n.v.t. & n.v.t. & \\
-		1.2.1 & SCMP  					& n.v.t. & n.v.t. & \\
-		1.2.2 & Website					& n.v.t. & n.v.t. & \\
-		1.3	& Quality Assurance Management & n.v.t. & n.v.t. & \\
-		1.3.1 & SQAP					& n.v.t. & n.v.t. & \\
-		1.3.2 & Quality Control			& n.v.t. & n.v.t. & \\
+		1 	& System Engineering 		& n.v.t. & n.v.t.  \\
+		1.1 & Project Management 		& n.v.t. & n.v.t.  \\
+		1.1.1 & SPMP					& n.v.t. & n.v.t.  \\
+		1.1.2 & Meetings				& n.v.t. & n.v.t.  \\
+		1.2	& Configuration Management	& n.v.t. & n.v.t.  \\
+		1.2.1 & SCMP  					& n.v.t. & n.v.t.  \\
+		1.2.2 & Website					& n.v.t. & n.v.t.  \\
+		1.3	& Quality Assurance Management & n.v.t. & n.v.t.  \\
+		1.3.1 & SQAP					& n.v.t. & n.v.t.  \\
+		1.3.2 & Quality Control			& n.v.t. & n.v.t.  \\
 		\hline
-		2 	& Requirements Analysis 	&   & 25 &  \\
-		2.1 & User Requirements 		& 1 & 10 & \\
-		2.2 & System Requirements 		& 2 & 15 & 2.1 \\
+		2 	& Requirements Analysis 	&   & 25   \\
+		2.1 & User Requirements 		& 1 & 10  \\
+		2.2 & System Requirements 		& 2 & 15  \\
 		\hline
-		3 	& Design 					&   & 20 & 2 \\
-		3.1 & Design User Management 	& 1 & 20 & \\
+		3 	& Design 					&   & 20 \\
+		3.1 & Design User Management 	& 1 & 20 \\
 		\hline
-		4 	& Coding 					&   & 60 & \\
-		4.1 & Infrastructure onderzoeken & 1 & 15 & 2\\
-		4.2 & User Management			&   & 45 & 3, 4.1  \\
-		4.2.1 & Frond End 		 		& 2 & 15 & \\
-		4.2.2 & Back End				& 2 & 30 & \\
+		4 	& Coding 					&   & 60 \\
+		4.1 & Infrastructure onderzoeken & 1 & 15\\
+		4.2 & User Management			&   & 45   \\
+		4.2.1 & Frond End 		 		& 2 & 15  \\
+		4.2.2 & Back End				& 2 & 30 \\
 		\hline
-		5 	& Testing 					& 1 & 30 & 4.2 - 7 dagen \\
-		5.1 & STD						&   & 15 & \\
-		5.2 & Test Execution			&   & 15 & \\
+		5 	& Testing 					& 1 & 30  \\
+		5.1 & STD						&   & 15  \\
+		5.2 & Test Execution			&   & 15  \\
 		\hline
-		6 	& User manuals 				& 3 & 8 & 4 \\
+		6 	& User manuals 				& 3 & 8  \\
 		\hline
-		7 	& Installation 				& 1 & 4 & 5,6 \\
+		7 	& Installation 				& 1 & 4  \\
 		\hline
-		8 	& Presentation 				& 3 & 8 & 7	\\
+		8 	& Presentation 				& 3 & 8 	\\
 	\end{tabular}
 	\label{tab:ActivityDependenciesIteratie1}
 \end{table}
-Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt chart voor iteratie 1 weergegeven in figuur \ref{fig:GantChartIT1}. Het kritisch pad is weergegeven in het rood. Hierbij is nog rekening met extra constraints:
+Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt chart voor iteratie 1 weergegeven in figuur \ref{fig:GantChartIT1}. Hierbij is nog rekening met extra constraints:
 \begin{itemize}
 	\item Het project is gestart op 15 oktober 2013.
 	\item De activiteit ``Requirements Analysis'' kan niet vroeger beginnen dan 24 oktober 2013.
 	\item De activiteit ``Installation'' mag niet later eindigen dan 13 december 2013 (zie tabel \ref{tab:kalender}).
 	\item De activiteit ``Presentation'' mag niet later eindigen dan 18 december 2013 (zie tabel \ref{tab:kalender}).
 \end{itemize}
-Op figuur \ref{fig:GantChartIT1} is er te zien dat er nog enkele dagen marge zijn op het einde van iteratie 1. Het kritisch pad mag dus enkele dagen vertraging oplopen.
+Op figuur \ref{fig:GantChartIT1} is er te zien dat er nog enkele dagen marge zijn op het einde van iteratie 1. Er is dus ruimte voor enkele dagen vertraging.
 
 \begin{landscape}
 	\begin{figure} [H]
@@ -104,6 +103,15 @@ Op figuur \ref{fig:GantChartIT1} is er te zien dat er nog enkele dagen marge zij
 		\label{fig:GantChartIT1}
 	\end{figure}
 \end{landscape}
+Op basis van de opgestelde planning kunnen we reeds een kost bepalen voor de eerste iteratie, optelling van de geschatte aantal werkuren weergegeven in tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we:
+\begin{equation*}
+	T_{totaal, eerste iteratie} = 335u
+\end{equation*} 
+Per persoon, in een team van 7 personen wordt dit:
+\begin{equation*}
+	T_{persoon} \approx 47u
+\end{equation*}
+Later zal dit getal vergeleken wordt met de gegevens beschikbaar uit de time tracking (zie sectie \ref{sec:BudgetControle}).
 
 
 %\subsection{Middelen}
@@ -125,7 +133,7 @@ Voor het opvolgen en schatten van de planning wordt gebruik gemaakt van mileston
 	\item Sancties voor de verantwoordelijke indien de actuele vooruitgang lager ligt door nalatigheid. Sancties worden vastgelegd door de rest van het team.
 \end{itemize} 
 
-\subsection{Budget controle}
+\subsection{Budget controle} \label{sec:BudgetControle}
 Op de website van het team \cite{portalWebsite} wordt er gebruik gemaakt van een time tracking tool die het mogelijk maakt een gedetailleerd logboek bij te houden van de reeds uitgevoerde activiteiten. Op basis hiervan kunnen we dan de ``kost'' berekenen van het project. 
 \\
 \\
@@ -270,7 +278,7 @@ Hiervoor wordt er gekeken naar de programmeertalen die gebruikt worden tijdens d
     \end{tabular}
   	\label{tab:skilllevel}
 \end{table}
-Omdat de implementatie-technologie opgelegd wordt, is het gebruik maken van andere frameworks, programmeertalen, ... geen optie. Hierdoor zullen we gebruik maken van workshops. Hiermee gaan we de ervaringen van de verschillende teamleden op elkaar overbrengen. Een workshop wordt georganiseerd door een teamlid die zijn kennis en ervaringen over een bepaalt framework, programmeertaal, ... uiteenzet gedurende 30 \`{a} 60 minuten. Volgende workshops zijn reeds gepland:
+Omdat de implementatie-technologie opgelegd wordt, is het gebruik maken van andere niet-opensource frameworks, programmeertalen, ... geen optie. Hierdoor zullen we gebruik maken van workshops. Hiermee gaan we de ervaringen van de verschillende teamleden op elkaar overbrengen. Een workshop wordt georganiseerd door een teamlid die zijn kennis en ervaringen over een bepaalt framework, programmeertaal, ... uiteenzet gedurende 30 \`{a} 60 minuten. Volgende workshops zijn reeds gepland:
 \begin{itemize}
 	\item GitHub (door Christophe)
 	\item Java (door Pieter)
