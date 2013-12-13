@@ -9,8 +9,12 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{subfig}
+\usepackage{graphicx}
 
-\restylefloat{table} % om om tabellen niet te laten herpositioneren
+\captionsetup{belowskip=12pt,aboveskip=4pt}
+\floatstyle{plaintop}
+\restylefloat{table}% om tabellen niet te laten herpositioneren
 \raggedbottom
 \let\cleardoublepage\clearpage
 
@@ -19,25 +23,24 @@
 \renewcommand{\familydefault}{\sfdefault}
 \sansmath
 
-\bibliography{build/refs}
+\bibliography{refs}
 
 \begin{document}
 
 \frontmatter
-\include{tex/title}
-\include{tex/ChangeHistory}
-
-\tableofcontents
-\listoffigures
-\listoftables
+	\include{tex/title}
+	\include{tex/ChangeHistory}
+	\tableofcontents
+	\listoffigures
+	\listoftables
 
 \mainmatter
-\include{tex/Introduction}
-\include{tex/SystemArchitecture}
-\include{tex/Modules}
+	\include{tex/Introduction} % identification of the SDD
+	\include{tex/SystemArchitecture}
+	\include{tex/Viewpoints}
 
 \backmatter
-\nocite{*}
-\printbibliography
+	\nocite{*}
+	\printbibliography
 
 \end{document}

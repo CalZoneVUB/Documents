@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_ThUasGK3EeOaBIKsl8M9Vg" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ThUasWK3EeOaBIKsl8M9Vg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_YQqesGK3EeOaBIKsl8M9Vg" name="Log in"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Zf1nkGK3EeOaBIKsl8M9Vg" name="Log out"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_azOiEGK3EeOaBIKsl8M9Vg" name="View profile"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6qf1oGK3EeOaBIKsl8M9Vg" name="Register"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_MzQx0GK4EeOaBIKsl8M9Vg" name="Activate profile"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_jz-UYGK4EeOaBIKsl8M9Vg" name="User"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zVT7UGK4EeOaBIKsl8M9Vg" name="A_user_register" memberEnd="_zVT7UWK4EeOaBIKsl8M9Vg _zVT7VGK4EeOaBIKsl8M9Vg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zVT7UWK4EeOaBIKsl8M9Vg" name="user" type="_jz-UYGK4EeOaBIKsl8M9Vg" association="_zVT7UGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zVT7UmK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zVT7U2K4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zVT7VGK4EeOaBIKsl8M9Vg" name="register" type="_6qf1oGK3EeOaBIKsl8M9Vg" association="_zVT7UGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zVT7VWK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zVT7VmK4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1Ig-UGK4EeOaBIKsl8M9Vg" name="A_user_log in" memberEnd="_1Ig-UWK4EeOaBIKsl8M9Vg _1Ig-VGK4EeOaBIKsl8M9Vg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1Ig-UWK4EeOaBIKsl8M9Vg" name="user" type="_jz-UYGK4EeOaBIKsl8M9Vg" association="_1Ig-UGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Ig-UmK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Ig-U2K4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1Ig-VGK4EeOaBIKsl8M9Vg" name="log in" type="_YQqesGK3EeOaBIKsl8M9Vg" association="_1Ig-UGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Ig-VWK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Ig-VmK4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1rGG8GK4EeOaBIKsl8M9Vg" name="A_user_log out" memberEnd="_1rGG8WK4EeOaBIKsl8M9Vg _1rGG9GK4EeOaBIKsl8M9Vg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1rGG8WK4EeOaBIKsl8M9Vg" name="user" type="_jz-UYGK4EeOaBIKsl8M9Vg" association="_1rGG8GK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1rGG8mK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1rGG82K4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1rGG9GK4EeOaBIKsl8M9Vg" name="log out" type="_Zf1nkGK3EeOaBIKsl8M9Vg" association="_1rGG8GK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1rGG9WK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1rGG9mK4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2QFqYGK4EeOaBIKsl8M9Vg" name="A_user_view profile" memberEnd="_2QGRcGK4EeOaBIKsl8M9Vg _2QGRc2K4EeOaBIKsl8M9Vg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2QGRcGK4EeOaBIKsl8M9Vg" name="user" type="_jz-UYGK4EeOaBIKsl8M9Vg" association="_2QFqYGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2QGRcWK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2QGRcmK4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2QGRc2K4EeOaBIKsl8M9Vg" name="view profile" type="_azOiEGK3EeOaBIKsl8M9Vg" association="_2QFqYGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2QGRdGK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2QGRdWK4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_26QBsGK4EeOaBIKsl8M9Vg" name="A_user_activate profile" memberEnd="_26QBsWK4EeOaBIKsl8M9Vg _26QBtGK4EeOaBIKsl8M9Vg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_26QBsWK4EeOaBIKsl8M9Vg" name="user" type="_jz-UYGK4EeOaBIKsl8M9Vg" association="_26QBsGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_26QBsmK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_26QBs2K4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_26QBtGK4EeOaBIKsl8M9Vg" name="activate profile" type="_MzQx0GK4EeOaBIKsl8M9Vg" association="_26QBsGK4EeOaBIKsl8M9Vg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_26QBtWK4EeOaBIKsl8M9Vg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_26QBtmK4EeOaBIKsl8M9Vg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

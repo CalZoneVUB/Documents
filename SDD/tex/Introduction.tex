@@ -1,42 +1,51 @@
 \chapter{Introductie}
 
-\section{Doel}
-Dit document beschrijft de software architectuur en het design van de CalZone webapplicatie.
-\section{Scope}
+\section{Doel en scope}
+Dit document beschrijft de softwarearchitectuur en het design van de CalZone webapplicatie.
+Het zal gebruikt worden door de programmeurs, de designers en de testers van dit project als naslagwerk en documentatie om de werking van het systeem te vatten. 
+Hierdoor kan dit document gebruikt worden voor uitbreidingen en aanpassingen van het systeem mogelijk te maken.
 
-\section{Woordenlijst}
-Deze sectie bevat een lijst van afkortingen, samen met hun uitgeschreven vorm en definitie.
 
-\newcommand{\APIdef}{
-Een verzameling definities op basis waarvan een computerprogramma kan communiceren met een ander programma of onderdeel}
-
-\newcommand{\DBdef}{Een digitaal opgeslagen archief}
-\newcommand{\GUIdef}{Een manier van interactie met een computer waarbij grafische beelden, widgets en tekst gebruikt worden. In computerjargon wordt ook wel gesproken van een frontend.}
-\newcommand{\SDDdef}{ }
-\newcommand{\SDKdef} { }
-\newcommand{\SRSdef}{ }
+\section{Acroniemen}
 
 \begin{table}[H]
-	\begin{tabular}{|l|c|p{7cm}|}
-	\hline
-	API	& Application Programming Interface	&  \APIdef \\
-	\hline
-	DB	& Database	& \DBdef \\
-	\hline
-	GUI	& Graphical User Interface	& \GUIdef \\
-	\hline
-	SDD	& Software Design Description	& \SDDdef \\
-	\hline
-	SDK	& Software Development Kit	& \SDKdef \\
-	\hline
-	SRS	& Software Requirements Specification	& \SRSdef \\
-	\hline
+	\centering
+	\caption{Acroniemen}
+	\label{tab:Acroniemen}
+	\begin{tabular}{l | l}
+	
+	API	& Application Programming Interface\\
+	
+	DAO	& Data Access Object\\
+
+	DB	& Database\\
+	
+	EE	& Enterprise Edition\\
+
+	GUI	& Graphical User Interface\\
+	
+	HTML	& HyperText Markup Language\\
+
+	JSP & Java Server Page\\
+	
+	IDE	& Integrated Development Environment\\
+
+	MVC & Model View Controller\\ 
+
+	SDD	& Software Design Description\\
+
+	SDK	& Software Development Kit\\
+
+	SRS	& Software Requirements Specification\\
+	
+	XML & Extensible Markup Language\\
+	
 	\end{tabular}
-	\caption{Woordenlijst}
-	\label{tab:Woordenlijst}
 \end{table}
+
 
 \section{Overzicht}
 Dit document volgt de IEEE Std 1016-2006\texttrademark \space standaard voor het opstellen van Software Design Descriptions. 
-Dit document is opgebouwd op basis van de requirements beschreven in de Software Requirements Specification van dit project.\\
-\noindent In hoofdstuk 2 wordt 
+Dit document is be\"{i}nvloed door de requirements beschreven in de Software Requirements Specification van dit project.\cite{SRS}\\ 
+In de huidige fase van dit document wordt het design van het systeem in de eerste iteratie beschreven. 
+In hoofdstuk~\ref{chap:architectuur} wordt de gebruikte systeemarchitectuur toegelicht en in hoofdstuk~\ref{chap:viewpoints} worden verschillende 'design viewpoints' besproken die relevant zijn voor het systeem.
