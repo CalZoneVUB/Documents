@@ -42,11 +42,14 @@ Voor de eerste iteratie is de work breakdown structure weergegeven in figuur \re
 \end{figure}
 In de volgende versies van de SPMP zullen de work breakdown structures van de volgende iteraties worden weergegeven.
 \subsection{Planning}
-In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven van de verschillende activiteiten gedurende iteratie 1. Op basis van deze tabel kunnen we een Gantt chart opstellen.
-\begin{table} [H]
+In de volgende tabellen zijn alle activiteiten weergegeven, hierbij bepalen we de werklast en in welke iteratie deze activiteiten uitgevoerd moeten worden. Voor de planning maken we onderscheid tussen activiteiten die gedurende het totale project voorkomen, en activiteiten die slechts gedurende enkele iteraties voorkomen. Op basis van deze tabellen zullen we een Gantt chart opstellen.
+\\
+\\
+De activiteiten die gedurende alle iteraties moeten uitgevoerd worden zijn weergegeven in tabel \ref{tab:ActivitiesTotal}.
+\begin{table}[H]
 	\centering
-	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
-	\begin{tabular} {l|l|c|c}
+	\caption{Activiteiten die tijdens elke iteratie uitgevoerd moeten worden.}
+	\begin{tabular}{l|l|c|c}
 		Activiteit & Activiteit & Tijdsduur & Geschatte aantal  \\
 		ID & Naam & (in weken) & werkuren (in u) \\
 		\hline
@@ -60,29 +63,40 @@ In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven va
 		1.3	& Quality Assurance Management & n.v.t. & n.v.t.  \\
 		1.3.1 & SQAP					& n.v.t. & n.v.t.  \\
 		1.3.2 & Quality Control			& n.v.t. & n.v.t.  \\
+	\end{tabular}
+	\label{tab:ActivitiesTotal}
+\end{table}
+\subsubsection{Eerste iteratie.}
+In tabel \ref{tab:ActivityDependenciesIteratie1} is een overzicht weergegeven van de verschillende activiteiten gedurende iteratie 1.
+\begin{table} [H]
+	\centering
+	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
+	\begin{tabular} {l|l|c|c}
+		Activiteit & Activiteit & Tijdsduur & Geschatte aantal  \\
+		ID & Naam & (in weken) & werkuren (in u) \\
 		\hline
-		2 	& Requirements Analysis 	&   & 25   \\
-		2.1 & User Requirements 		& 1 & 10  \\
-		2.2 & System Requirements 		& 2 & 15  \\
+		2 	& Requirements Analysis 		&   & 25   	\\
+		2.1 & User Requirements 			& 1 & 10  	\\
+		2.2 & System Requirements 		& 2 & 15  	\\
 		\hline
-		3 	& Design 					&   & 20 \\
-		3.1 & Design User Management 	& 1 & 20 \\
+		3 	& Design 					&   & 20 	\\
+		3.1 & Design User Management 	& 1 & 20 	\\
 		\hline
-		4 	& Coding 					&   & 60 \\
-		4.1 & Infrastructure onderzoeken & 1 & 15\\
-		4.2 & User Management			&   & 45   \\
-		4.2.1 & Frond End 		 		& 2 & 15  \\
-		4.2.2 & Back End				& 2 & 30 \\
+		4 	& Coding 					&   & 60 	\\
+		4.1 & Infrastructure onderzoeken & 1 & 15	\\
+		4.2 & User Management			&   & 45   	\\
+		4.2.1 & Frond End 		 		& 2 & 15  	\\
+		4.2.2 & Back End					& 2 & 30 	\\
 		\hline
-		5 	& Testing 					& 1 & 30  \\
-		5.1 & STD						&   & 15  \\
-		5.2 & Test Execution			&   & 15  \\
+		5 	& Testing 					& 1 & 30  	\\
+		5.1 & STD						&   & 15  	\\
+		5.2 & Test Execution				&   & 15  	\\
 		\hline
-		6 	& User manuals 				& 3 & 8  \\
+		6 	& User manuals 				& 3 & 8  	\\
 		\hline
-		7 	& Installation 				& 1 & 4  \\
+		7 	& Installation 				& 1 & 4  	\\
 		\hline
-		8 	& Presentation 				& 3 & 8 	\\
+		8 	& Presentation 				& 3 & 8 		\\
 	\end{tabular}
 	\label{tab:ActivityDependenciesIteratie1}
 \end{table}
@@ -112,6 +126,11 @@ Per persoon, in een team van 7 personen wordt dit:
 	T_{persoon} \approx 47u
 \end{equation*}
 Later zal dit getal vergeleken wordt met de gegevens beschikbaar uit de time tracking (zie sectie \ref{sec:BudgetControle}).
+\subsubsection{Tweede iteratie.}
+
+\subsubsection{Derde iteratie.}
+
+\subsubsection{Vierde iteratie.}
 
 
 %\subsection{Middelen}
