@@ -24,7 +24,14 @@ Lokaal: EX.XX
 \subsubsection{Kritiekpunten op verslag vorige vergadering}
 
 \subsection{Vooruitgang sinds vorige vergadering}
-
+	\begin{itemize}
+		\item Nog steeds verlagen zetten op website.
+		\item Fernando: SRS uitschrijven nieuwe mobiele FR's. Issues op github hierbij gesloten. Feeback vorige itteratie is ook van plan. 
+		\item Sam: test document en extra test voorbeeld. Dit zal later nog worden uitgebreid voor verwarring en goed verloop van het testen te genereren.
+		\item Nicolas: Analyse van  de datadump is ongeveer gedaan.
+		\item Pieter: SPMP aanpassingen en analsyse van vorige itteratie. Extra activiteiten zijn ook toegevoegd voor gen-chart en maken van gen-chart voor komende itteraties. 
+	\end{itemize}
+	
 \subsection{Vergaderingspunten}
 Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 \begin{table} [H]
@@ -35,18 +42,50 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 		Bespreking documenten & 30min & Middelmatig &  \\
 		Coding Implementatie verdelen & 30min & Hoog & \\
 	\end{tabular}
+	
+	\begin{itemize}
+		\item Vakken gebruik van de datadump.
+		\item Localen opgehaald via een scraper om deze data niet manueel moeten in te geven.
+		\item SDD aanpassingen zijn gebeurd en zal opgevolgd worden als hier veranderingen aan gebeuren.
+		\item Activation keys mogen maar 1 bezitten per email. Moeten ook vervallen en via cronejobs moeten oude keys verwijderd worden uit de database.
+		\item Professors moet de mogelijkheid krijgen om bij het vak een assistent toe te voegen. Als dit over een niet assistent gaat, dan krijgt de programmabeheerder deze informatie op een speciale pagina voorgeschoteld. Hierbij kan hij dit automatisch promoveren van de student. Dit moet nog toegevoegd worden aan SRS.
+		\item Admin moet Admin moeten kunne toevoegen.
+	\end{itemize}
 \end{table}
+
+Codering die gebeurd moet zijn tegen volgende vergadering
+\begin{enumerate}
+	\item Localen
+	\item Vakken HOC / WPO
+	\item Entry (Vak op bepaald uur in bepaald lokaal)
+	\item Entry tonen op webpagina
+	\item Profielpagina webpagina
+	\item Beveiliging (/public and /private /private/edit)
+\end{enumerate}
 
 \subsection{Volgende vergadering}
 De volgende vergadering vindt plaats op Dinsdag 25/02/2014 12u - 14u, verzamelen aan IG.
+Coding sessie zal plaats vinden op Maandag 24/02/2014 - 14u
 \subsubsection{Activiteiten tegen volgende vergadering} \label{sec:TODOActiviteiten}
 \begin{table} [H]
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
+		SRS volledig afwerken & Fernando & geen \\
+		STD afwerken en voorbeeld testen schrijven & Sam & geen \\
+		Lokalen,vakken,entry & Pieter & geen \\
+		Beveiliging en user paginas & Tim & geen \\
+		Profielpagina en kalender & Christophe & geen \\
+		Scraper lokaal scraper & Youri & geen \\
+		User keys herzenden + deleten oude activation key & Nikolas & geen \\
 		\hline
-
 	\end{tabular}
 \end{table}
 
 \subsubsection{Agenda Punten volgende vergadering}
+
+\begin{itemize}
+	\item Nikolas: Alle data opslaan in database
+	\item Nikolas: Datadump parsen
+	\item Christophe: 
+\end{itemize}
