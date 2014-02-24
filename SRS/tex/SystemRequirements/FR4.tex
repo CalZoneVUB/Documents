@@ -18,24 +18,44 @@
 \textbf{Stappenplan:}
 	\begin{enumerate}
 	\item Programmabeheerder beslist om schedular te laten runnen en een voorstel te doen voor een mogelijk schema.
-	\item Schedular word uitgevoerd rekening houdend met: Beschikbaarheid localen/professoren/assistenten, Aantal uren per vak, voorrang voor vaste vakken in het lessenrooster en eventueel andere contraints.
+	\item Schedular word uitgevoerd rekening houdend met: Beschikbaarheid lokalen/professoren/assistenten, Aantal uren per vak, voorrang voor vaste vakken in het lessenrooster en eventueel andere contraints.
 	\item Er word een mogelijk schema gepresenteerd aan de programmabeheerder. Deze krijgt de keuze om het schema te accepteren of te weigeren.
-	\item Na het accepteren van een schema moet het mogelijk zijn om het programma te bekijken als elke type gebruiker van het systeem. Dit kan via het selecteren uit een lijst.
+	\end{enumerate}
+	
+%Goedkeuren van een scheduling
+\subsubsection{Goedkeuren van een scheduling}
+\noindent\begin{table}[H]
+            \begin{tabular}{l | p{10cm}}
+                \textbf{ID:} & FR4.2 \\ \hline
+                \textbf{TITEL:} & Goedkeuren van een scheduling\\ \hline
+                \textbf{PRIORITEIT:} &  Hoog \\ \hline
+                \textbf{PREREQUISITIES:} & \\ \hline
+                \textbf{TOEGANG:} & Programmabeheerder \\ \hline
+                \textbf{BESCHRIJVING:} & Een opgesteld lesrooster moet goedgekeurd worden door de programmabeheerder.\\
+            \end{tabular}\\
+            \caption{FR4.2 - Goedkeuren van een scheduling}
+            \label{tab:FR4.2 - Goedkeuren van een scheduling}
+        \end{table}
+      
+\textbf{Stappenplan:}
+	\begin{enumerate}
+	\item De scheduler stelt een lesrooster voor aan de programmabeheerder.
+	\item De programmabeheerder beslist dan of dit een goed voorstel is.
 	\end{enumerate}
 
 %Semi-scheduling uitvoeren
 \subsubsection{Semi-scheduling uitvoeren}
 \noindent\begin{table}[H]
 	\begin{tabular}{l | p{10cm}}
-    \textbf{ID:} & FR4.2 \\ \hline
+    \textbf{ID:} & FR4.3 \\ \hline
     \textbf{TITEL:} & Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)\\ \hline
     \textbf{PRIORITEIT:} &  Medium \\ \hline
     \textbf{PREREQUISITIES:} & \\ \hline
     \textbf{TOEGANG:} & Assistent, Professor, Programmabeheerder \\ \hline
     \textbf{BESCHRIJVING:} & Gebruiker (van type toegang) kunnen bekijken hoe haalbaar hun schema is. Dit zal een score zijn die afhankelijk is van het aantal beschikbare uren van de persoon en het aantal uren dat deze persoon les zal moeten geven. (Vb: 12uur les te geven en 18u vrij zal een goede haalbaarheidsscore krijgen. 16u les en 10u vrij zal een score geven die overeenkomt met onmogelijk)\\
     \end{tabular}
-    \caption{FR4.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
-    \label{tab:FR4.2 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+    \caption{FR4.3 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
+    \label{tab:FR4.3 - Professor, assistent en programmabeheerder moeten semi-scheduling laten uitvoeren (Haalbaarheid)}
 \end{table}
 
 \textbf{Stappenplan:}
@@ -49,30 +69,30 @@
 \subsubsection{Rooster inhoud}        
 \noindent\begin{table}[H]
 	\begin{tabular}{l | p{10cm}}
-	\textbf{ID:} & FR4.3 \\ \hline
+	\textbf{ID:} & FR4.4 \\ \hline
 	\textbf{TITEL:} & Rooster bevat data, tijdstippen en lokalen voor bepaalde vakken\\ \hline
 	\textbf{PRIORITEIT:} &  Hoog \\ \hline
 	\textbf{PREREQUISITIES:} & \\ \hline
 	\textbf{TOEGANG:} &  \\ \hline
 	\textbf{BESCHRIJVING:} & Het rooster dat is opgesteld bevat alle informatie over elk vak dat nodig is om het vak te kunnen volgen.\\
 	\end{tabular}\\
-	\caption{FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
-	\label{tab:FR4.3 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+	\caption{FR4.4 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
+	\label{tab:FR4.4 - Schedule bevat data, tijdstippen en lokalen voor bepaalde vakken}
 \end{table}
        
 %Aanpassen berekend rooster       
 \subsubsection{Aanpassen berekend rooster}         
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.4 \\ \hline
+                \textbf{ID:} & FR4.5 \\ \hline
                 \textbf{TITEL:} & Aanpassen berekend rooster \\ \hline
                 \textbf{PRIORITEIT:} &  Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & Er moet een lesrooster berekend zijn door de scheduler of ingedient zijn\\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & Het moet mogelijk zijn om een berekend lessenrooster aan te passen.\\
             \end{tabular}\\
-            \caption{FR4.4 - Aanpassen berekend rooster}
-            \label{tab:FR4.4 - Aanpassen berekend rooster}
+            \caption{FR4.5 - Aanpassen berekend rooster}
+            \label{tab:FR4.5 - Aanpassen berekend rooster}
         \end{table}
         
 \textbf{Stappenplan:}
@@ -103,15 +123,15 @@
 \subsubsection{Roostergoedkeuring}
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.5 \\ \hline
+                \textbf{ID:} & FR4.6 \\ \hline
                 \textbf{TITEL:} & Roostergoedkeuring\\ \hline
                 \textbf{PRIORITEIT:} & Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & Er moet een rooster voorstel ingedient zijn\\ \hline
                 \textbf{TOEGANG:} & Programmabeheerder \\ \hline
                 \textbf{BESCHRIJVING:} & Als er een rooster voorstel is ingedient moet de programma die goedkeuren. Het ingediende voorstel bevat geen conflicten, daar word voor het inzenden al rekening mee gehouden.
             \end{tabular}\\
-            \caption{FR4.5 - Roostergoedkeuring}
-            \label{tab:FR4.5 - Roostergoedkeuring}
+            \caption{FR4.6 - Roostergoedkeuring}
+            \label{tab:FR4.6 - Roostergoedkeuring}
         \end{table}
 
 \textbf{Stappenplan:}
@@ -128,7 +148,7 @@
 \subsubsection{Conflictdetectie}        
 \noindent\begin{table}[H]
             \begin{tabular}{l | p{10cm}}
-                \textbf{ID:} & FR4.6 \\ \hline
+                \textbf{ID:} & FR4.7 \\ \hline
                 \textbf{TITEL:} & Conflictdetectie\\ \hline
                 \textbf{PRIORITEIT:} & Hoog \\ \hline
                 \textbf{PREREQUISITIES:} & \\ \hline
@@ -141,8 +161,8 @@
                 \end{enumerate}
                 Puntje 1 en 2 zijn harde conflicten die altijd opgelost moeten worden. Ook verplichte vakken voor studenten van een bepaalde richting mogen nooit samenvallen. Bij keuzevakken is dit wel toegelaten maar niet gewenst.\\
             \end{tabular}\\
-            \caption{FR4.6 - Conflictdetectie}
-            \label{tab:FR4.6 - Conflictdetectie}
+            \caption{FR4.7 - Conflictdetectie}
+            \label{tab:FR4.7 - Conflictdetectie}
         \end{table}
         
 \textbf{Stappenplan:}
