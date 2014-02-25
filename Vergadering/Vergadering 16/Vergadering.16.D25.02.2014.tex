@@ -23,8 +23,16 @@ Lokaal: EX.XX
 
 \subsubsection{Kritiekpunten op verslag vorige vergadering}
 
-\subsection{Vooruitgang sinds vorige vergadering}
-
+\subsection{Vooruitgang sinds vorige vergadering} \label{sec:vooruitgangSindsVorigeVergadering}
+Op volgende punten is er progressie geboekt:
+\begin{itemize}
+	\item Spring Security: inloggen \& Session Management
+	\item Hashing van wachtwoorden
+	\item Design Kalender
+	\item Database design voor courses en update bij users tabellen.
+	\item Gevraagde aanpassingen aan SRS zijn gebeurd.
+	\item STD is verder uitgebreid.
+\end{itemize}
 \subsection{Vergaderingspunten}
 Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 \begin{table} [H]
@@ -38,24 +46,63 @@ Tijdens deze vergadering dienen volgende vergaderingspunten besproken te worden.
 	\end{tabular}
 \end{table}
 \subsubsection{Progressie}
-Op volgende punten is er progressie geboekt:
+Zie sectie \ref{sec:vooruitgangSindsVorigeVergadering}.
+\\
+\\
+De kalender-weergave kan ook gebruikt worden om constraints in te geven (Uren voorstellen voor scheduling). Dit is een meer visuele weergave in plaats van datums in tekstvorm in te geven.
+\\
+\\
+
+
+\subsubsection{SRS Aanpassingen}
+Gevraagde aanpassingen zijn gebeurd.
+\\
+\\
+Betreffende FR 7.2: voor de oplevering moet niet alle GPS data van alle lokalen gebruikt worden, voor enkele lokalen is voldoende.
+
+\subsubsection{STD \& Unit Tests}
+Unit tests moeten ontkoppeld zijn van de database. Unit tests van wegschrijven en ophalen van informatie uit de database zijn niet nuttig. Ook telkens fake data initializeren om de testen op uit te voeren.
+
+\subsubsection{Andere zaken}
 \begin{itemize}
-	\item Spring Security: inloggen \& session management.
-	\item Hashing van wachtwoorden
-	\item Design Kalender
-	\item Database design voor courses en update bij users tabellen.
+	\item De hoofdpagina van de profielpagina wordt de "messages" tab in plaats van de profielgegevens.
+	\item TitaniumStudio mag gebruikt worden voor het inbouwen van push notificaties. Er mag dus een native applicatie gemaakt worden.
+	\item Requirement dashboard moet up to date gehouden worden 
+	\item Schedular functionaliteit stap voor stap opbouwen. Beginnen met een dummy-schedular die bijv. zegt dat er geen oplossing gevonden is. Hiervoor moeten we kijken naar Dependency injection aangeboden door het Spring Framework.
+	\item Voor iteratie 2 eerst deels-afgewerkte requirements volledig afwerken. Zodanig dat we iets degelijk hebben voor op de demo (zie requirements dashboard).
 \end{itemize}
 
 \subsection{Volgende vergadering}
-De volgende vergadering vindt plaats op DAG XX/XX/XXXX XXu, verzamelen aan IG.
+De volgende vergadering vindt plaats op vrijdag 28/02/2014 15u, verzamelen aan IG. Hierop aangesloten volgt een codingsessie.
 \subsubsection{Activiteiten tegen volgende vergadering} \label{sec:TODOActiviteiten}
 \begin{table} [H]
 	\centering
 	\begin{tabular} {l|l|l}
 		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
 		\hline
-
+		Layout FR 1.4 en FR 2.1: Ingeschreven vakken aanpassen/bekijken & Christophe & Naar analogie Time \\
+		& & Tracking\\
+		Layout FR 3.1, FR 3.2 en FR 3.3: Lokalen & Christophe & Naar analogie Time \\
+		& & Tracking (met filter voor zoekoptie) \\
+		Layout FR 2.5, FR 2.6 en FR 2.7: Alle vakken op VUB bekijken & Christophe & Naar analogie Time \\
+		& & Tracking (met filter voor zoekoptie) \\
+		Layout FR 1.7: Profielgegevens aanpassen & Christophe & \\
+		Scraap implementereren & Youri & \\
+		Backend FR 1.4 en FR 2.1: Ingeschreven vakken & Youri & \\
+		Database-tabellen voor vakken aanmaken & Nicola & Inclusief tabel detailformulier \\
+		& & (zie attributen FR 2.6) \\
+		Back-end: Profiel weergeven & Pieter & M.b.v. model.addObject() \\
+		Back-end FR 1.7: Profiel aanpassen & Pieter & \\
+		FR 1.5: Taal aanpassen & Pieter & \\
+		FR 1.6: Afmelden & Pieter & \\
+		Acces denied Pagina & Pieter & \\
+		Vakken-objecten aanmaken  en excel inlezen in deze objecten & Tim & \\
+		FR 1.3: Wachtwoord vergeten & Tim & \\
+		Role bij account activeren & Tim & \\
+		Password hashen bij aanmelden & Tim & \\
+		Back-end FR 2.5, FR 2.6 en FR 2.7: Vakken & Sam, Fernando & \\
 	\end{tabular}
 \end{table}
 
 \subsubsection{Agenda Punten volgende vergadering}
+Dit zal nog bepaald worden.
