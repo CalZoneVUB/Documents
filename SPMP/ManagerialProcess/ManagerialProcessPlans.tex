@@ -126,12 +126,108 @@ Per persoon, in een team van 7 personen wordt dit:
 	T_{persoon} \approx 47u
 \end{equation*}
 Later zal dit getal vergeleken wordt met de gegevens beschikbaar uit de time tracking (zie sectie \ref{sec:BudgetControle}).
+
 \subsubsection{Tweede iteratie.}
+In tabel \ref{tab:ActivityDependenciesIteratie2} is een overzicht weergegeven van de verschillende activiteiten gedurende iteratie 1.
+\begin{table} [H]
+	\centering
+	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
+	\begin{tabular} {l|l|c|c}
+		Activiteit & Activiteit & Tijdsduur & Geschatte aantal  \\
+		ID & Naam & (in weken) & werkuren (in u) \\
+		\hline
+		2 	& Requirements Analysis 		&   & 4   	\\
+		2.1 & User Requirements 			& 1 & 2  	\\
+		2.2 & System Requirements 		& 1 & 2  	\\
+		\hline
+		3 	& Design 					&   & 4 	\\
+		3.1 & Design User Management 	& 1 & 4 	\\
+		\hline
+		4 	& Coding 					&   & 40 	\\
+		4.2 & User Management			&   & 10   	\\
+		4.2.1 & Frond End 		 		& 1 & 5  	\\
+		4.2.2 & Back End					& 1 & 5 	\\
+		4.3 & Vakken 					& 1	& 10		\\
+		4.4 & Lokalen					& 1	& 10		\\
+		4.5 & Beveiliging				& 1	& 10		\\
+		\hline
+		5 	& Testing 					& 1 & 30  	\\
+		5.1 & STD						&   & 15  	\\
+		5.2 & Test Execution				&   & 15  	\\
+		\hline
+		6 	& User manuals 				& 3 & 8  	\\
+		\hline
+		7 	& Installation 				& 0 & 1  	\\
+		\hline
+		8 	& Presentation 				& 0 & 8 		\\
+	\end{tabular}
+	\label{tab:ActivityDependenciesIteratie2}
+\end{table}
+%Op basis van tabel \ref{tab:ActivityDependenciesIteratie1} bekomen we de Gantt chart voor iteratie 2 weergegeven in figuur \ref{fig:GantChartIT1}. Hierbij is nog rekening met extra constraints:
+%\begin{itemize}
+%	\item Het project is gestart op 15 oktober 2013.
+%	\item De activiteit ``Requirements Analysis'' kan niet vroeger beginnen dan 24 oktober 2013.
+%	\item De activiteit ``Installation'' mag niet later eindigen dan 13 december 2013 (zie tabel \ref{tab:kalender}).
+%	\item De activiteit ``Presentation'' mag niet later eindigen dan 18 december 2013 (zie tabel \ref{tab:kalender}).
+%\end{itemize}
+%Op figuur \ref{fig:GantChartIT1} is er te zien dat er nog enkele dagen marge zijn op het einde van iteratie 1. Er is dus ruimte voor enkele dagen vertraging.
+
+%\begin{landscape}
+%	\begin{figure} [H]
+%		\centering
+%		\includegraphics[width = 1.35\textwidth]{ManagerialProcess/GanttChartIT1.png}	
+%		\caption{Gantt chart voor iteratie 1.}
+%		\label{fig:GantChartIT1}
+%	\end{figure}
+%\end{landscape}
+Op basis van de opgestelde planning kunnen we opnieuw een kost bepalen voor de tweede iteratie, optelling van de geschatte aantal werkuren weergegeven in tabel \ref{tab:ActivityDependenciesIteratie2} bekomen we:
+\begin{equation*}
+	T_{totaal, eerste iteratie} = 335u
+\end{equation*} 
+Per persoon, in een team van 7 personen wordt dit:
+\begin{equation*}
+	T_{persoon} \approx 47u
+\end{equation*}
+Later zal dit getal vergeleken wordt met de gegevens beschikbaar uit de time tracking (zie sectie \ref{sec:BudgetControle}).
+
 
 \subsubsection{Derde iteratie.}
+In tabel \ref{tab:ActivityDependenciesIteratie3} is een overzicht weergegeven van de verschillende activiteiten gedurende iteratie 1.
+\begin{table} [H]
+	\centering
+	\caption{Activiteiten van de eerste iteratie en afhankelijkheden.}
+	\begin{tabular} {l|l|c|c}
+		Activiteit & Activiteit & Tijdsduur & Geschatte aantal  \\
+		ID & Naam & (in weken) & werkuren (in u) \\
+		\hline
+		2 	& Requirements Analysis 		&   & 25   	\\
+		2.1 & User Requirements 			& 1 & 10  	\\
+		2.2 & System Requirements 		& 1 & 15  	\\
+		\hline
+		3 	& Design 					&   & 20 	\\
+		3.1 & Design User Management 	& 1 & 20 	\\
+		\hline
+		4 	& Coding 					&   & 60 	\\
+		4.6 & Schedular					&	&		\\
+		4.7 & Lessenroosters Bekijken	&	&		\\
+		4.8 & Func. programmabeheerder	&	&		\\
+		4.9 & Mobiele functionaliteit	&	&		\\
+		\hline
+		5 	& Testing 					& 1 & 30  	\\
+		5.1 & STD						&   & 15  	\\
+		5.2 & Test Execution				&   & 15  	\\
+		\hline
+		6 	& User manuals 				& 3 & 8  	\\
+		\hline
+		7 	& Installation 				& 1 & 4  	\\
+		\hline
+		8 	& Presentation 				& 3 & 8 		\\
+	\end{tabular}
+	\label{tab:ActivityDependenciesIteratie3}
+\end{table}
 
 \subsubsection{Vierde iteratie.}
-
+Under construction.
 
 %\subsection{Middelen}
 %This subclause of the SPMP shall provide a detailed itemization of the resources allocated to each major work activity in the project work breakdown structure. Resources shall include the numbers and required skill levels of personnel for each work activity. Resource allocation may include, as appropriate, personnel by skill level and factors such as computing resources, software tools, special testing and simulation facilities, and administrative support. A separate line item should be provided for each type of resource for each work activity. A summary of resource requirements for the various work activities should be collected from the work packages of the work breakdown structure and presented in tabular form.
