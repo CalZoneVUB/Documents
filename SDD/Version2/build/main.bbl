@@ -16,6 +16,31 @@
   {}
 \endgroup
 
+\entry{spring-security}{manual}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Alex}{A.}%
+     {Ben}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Taylor}{T.}%
+     {Luke}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ABTL1}
+  \strng{fullhash}{ABTL1}
+  \field{sortinit}{A}
+  \field{title}{Spring Security Reference Documentation}
+  \verb{url}
+  \verb http://docs.spring.io/spring-security/site/docs/3.0.x/reference/springs
+  \verb ecurity.html
+  \endverb
+  \field{version}{3.0.8}
+  \field{year}{2013}
+\endentry
+
 \entry{Maven}{manual}{}
   \name{author}{1}{}{%
     {{}%
