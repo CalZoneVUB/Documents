@@ -16,10 +16,12 @@
 \sansmath
 
 % Configure meeting information
-\newcommand{\MeetingDate}{XX/XX/2013}
-\newcommand{\MeetingNumber}{XX}
+\newcommand{\DayOfMonth}{03}
+\newcommand{\Month}{03}
+\newcommand{\MeetingDate}{\DayOfMonth/\Month/\the\year}
+\newcommand{\MeetingNumber}{17}
 
 \begin{document}
 \include{title}
-\include{Vergadering.\MeetingNumber.DXX.XX.2013}
+\include{Vergadering.\MeetingNumber.D\DayOfMonth.\Month.\the\year}
 \end{document}
