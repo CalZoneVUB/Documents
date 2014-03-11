@@ -10,12 +10,24 @@
     <availablePage>
       <emfPageIdentifier href="model.notation#_mSQfkKNBEeOphb7GCqH5ow"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="model.notation#_bl4H0KlUEeOkiadFfU-g1g"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="model.notation#_Aekt4KlVEeOkiadFfU-g1g"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
       <children xsi:type="di:TabFolder">
         <children>
           <emfPageIdentifier href="model.notation#_mSQfkKNBEeOphb7GCqH5ow"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_bl4H0KlUEeOkiadFfU-g1g"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="model.notation#_Aekt4KlVEeOkiadFfU-g1g"/>
         </children>
       </children>
     </windows>
