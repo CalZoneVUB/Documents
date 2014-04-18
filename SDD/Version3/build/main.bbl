@@ -17,7 +17,7 @@
 \endgroup
 
 \entry{spring-security}{manual}{}
-  \name{author}{2}{}{%
+  \name{author}{3}{}{%
     {{}%
      {Alex}{A.}%
      {Ben}{B.}%
@@ -28,16 +28,40 @@
      {Luke}{L.}%
      {}{}%
      {}{}}%
+    {{}%
+     {Winch}{W.}%
+     {Rob}{R.}%
+     {}{}%
+     {}{}}%
   }
-  \strng{namehash}{ABTL1}
-  \strng{fullhash}{ABTL1}
+  \strng{namehash}{ABTLWR1}
+  \strng{fullhash}{ABTLWR1}
   \field{sortinit}{A}
   \field{title}{Spring Security Reference Documentation}
   \verb{url}
-  \verb http://docs.spring.io/spring-security/site/docs/3.0.x/reference/springs
-  \verb ecurity.html
+  \verb http://docs.spring.io/spring-security/site/docs/3.2.2.RELEASE/reference
+  \verb /htmlsingle/
   \endverb
-  \field{version}{3.0.8}
+  \field{version}{3.2.2.RELEASE}
+  \field{year}{2013}
+\endentry
+
+\entry{logback}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ceki~G\"{u}lc\"{u}}{C.~G.}%
+     {Carl~Harris}{C.~H.}%
+     {}{}%
+     {S\'{e}bastien~Pennec}{S.~P.}}%
+  }
+  \strng{namehash}{CGSPCH1}
+  \strng{fullhash}{CGSPCH1}
+  \field{sortinit}{C}
+  \field{title}{The logback manual}
+  \verb{url}
+  \verb http://logback.qos.ch/manual/index.html
+  \endverb
+  \field{version}{1.1.2}
   \field{year}{2013}
 \endentry
 
@@ -105,8 +129,27 @@
   \field{year}{2013}
 \endentry
 
+\entry{slf4j}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {G\"{u}lc\"{u}}{G.}%
+     {Ceki}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GC1}
+  \strng{fullhash}{GC1}
+  \field{sortinit}{G}
+  \field{title}{SLF4J user manual}
+  \verb{url}
+  \verb http://www.slf4j.org/manual.html
+  \endverb
+  \field{version}{1.7.6}
+  \field{year}{2013}
+\endentry
+
 \entry{spring-mvc}{manual}{}
-  \name{author}{28}{}{%
+  \name{author}{30}{}{%
     {{}%
      {Johnson}{J.}%
      {Rod}{R.}%
@@ -247,16 +290,26 @@
      {Phillip}{P.}%
      {}{}%
      {}{}}%
+    {{}%
+     {Winch}{W.}%
+     {Rob}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Clozel}{C.}%
+     {Brian}{B.}%
+     {}{}%
+     {}{}}%
   }
   \strng{namehash}{JR+1}
-  \strng{fullhash}{JRHJDKSCHRRTAADDKDPMTTVETPHBCALJLCFMBSLRPABCATCASDGOSRWP1}
+  \strng{fullhash}{JRHJDKSCHRRTAADDKDPMTTVETPHBCALJLCFMBSLRPABCATCASDGOSRWPWRCB1}
   \field{sortinit}{J}
   \field{title}{Spring Framework Reference Documentation}
   \verb{url}
-  \verb http://docs.spring.io/spring/docs/3.2.5.RELEASE/spring-framework-refere
+  \verb http://docs.spring.io/spring/docs/4.0.2.RELEASE/spring-framework-refere
   \verb nce/htmlsingle/
   \endverb
-  \field{version}{3.2.5}
+  \field{version}{4.0.2.RELEASE}
   \field{year}{2013}
 \endentry
 
@@ -278,6 +331,50 @@
   \field{year}{2013}
 \endentry
 
+\entry{hibernate}{manual}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Team}{T.}%
+     {The~Hibernate}{T.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Team}{T.}%
+     {The JBoss Visual~Design}{T.~J. V.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TTHTTJVD1}
+  \strng{fullhash}{TTHTTJVD1}
+  \field{sortinit}{T}
+  \field{title}{Hibernate Reference Documentation}
+  \verb{url}
+  \verb https://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/
+  \endverb
+  \field{version}{4.3.5.Final}
+  \field{year}{2014}
+\endentry
+
+\entry{optaplanner}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Team}{T.}%
+     {The~OptaPlanner}{T.~O.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TTO1}
+  \strng{fullhash}{TTO1}
+  \field{sortinit}{T}
+  \field{title}{OptaPlanner User Guide}
+  \verb{url}
+  \verb https://docs.jboss.org/drools/release/6.0.1.Final/optaplanner-docs/html
+  \verb _single/index.html
+  \endverb
+  \field{version}{6.0.1.Final}
+  \field{year}{2013}
+\endentry
+
 \entry{mvc}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -293,6 +390,26 @@
   \verb{url}
   \verb https://en.wikipedia.org/wiki/Model–view–controller
   \endverb
+  \field{year}{2013}
+\endentry
+
+\entry{drools}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {team}{t.}%
+     {The JBoss~Drools}{T.~J.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{tTJD1}
+  \strng{fullhash}{tTJD1}
+  \field{sortinit}{T}
+  \field{title}{Drools Documentation}
+  \verb{url}
+  \verb https://docs.jboss.org/drools/release/6.0.1.Final/drools-docs/html_sing
+  \verb le/index.html
+  \endverb
+  \field{version}{6.0.1.Final}
   \field{year}{2013}
 \endentry
 
