@@ -1,0 +1,76 @@
+\section{Logica}
+\label{sec:logica}
+
+In deze sectie worden de verschillende modules en packages behandeld die tesamen het huidige logische niveau van het systeem vormen.
+
+\subsection{Controllers}
+\label{subsec:controllers}
+
+Deze klassen zijn verantwoordelijk om de HTTP-requests te verwerken. 
+Deze klassen zorgen dus voor een propagatie van (functionaliteits)verzoeken van de front-end naar de back-end. 
+Eveneens zorgen deze klassen ook voor een propagatie van data van de back-end naar de front-end. 
+Dit laatste uit zich in het voorzien van webpagina's.
+Met andere woorden zorgen de controllers dus voor de mogelijke views en voorzien dus de mogelijkheid om de functionaliteiten opgesomd in het use case diagram van sectie~\ref{sec:context} uit te voeren. 
+Voor volgende concepten zijn er nu controllers voorzien:
+
+\begin{itemize}
+	\item Login
+	\item Profieloverzicht
+	\item Registratie
+	\item Accountactivatie
+	\item Lokalen
+	\item Vakken toevoegpagina
+	\item Ingeschreven vakken pagina
+	\item Email
+\end{itemize}
+
+\subsection{Databaseklassen}
+\label{subsec:databaseklassen}
+
+CalZone maakt gebruik van een relationele databank, MySQL, als back-end voor dataopslag. 
+Om informatie vanuit deze databank te lezen en er naartoe te schrijven zijn er enkele klassen voorzien die een abstractie bieden voor het openen en sluiten van de connectie met de databank en het sturen van queries naar de databank. 
+Volgende klassen zijn hiervoor voorzien:
+
+\begin{itemize}
+	\item DbConfig: Deze klasse voorziet de mogelijkheid om gegevens op te halen om toegang te kunnen krijgen tot een bepaalde databank. 
+	Deze gegevens de gebruikersnaam, het wachtwoord en de locatie van de databank. 
+	\item DbLink: Het openen en sluiten van de databankconnecties samen met het sturen van queries en het ontvangen van resultaten.
+	\item DbTranslate: Een collectie van methodes die gemapt worden op queries naar de onderliggende databank
+\end{itemize} 
+
+\subsection{Data Access Objects}
+\label{subsec:dao}
+
+Het ophalen van data uit de MySQL databank gebeurt via \emph{Data Access Objects} of kortweg DAO's. 
+Deze objecten gebruiken de algemene databasemethoden voorzien door de databaseklassen aangehaald in subsectie~\ref{subsec:databaseklassen} om specifieke data op te halen uit de databank en in te laden in de beschikbare klasses in het systeem. 
+Ook wordt specifieke informatie via deze DAO's weggeschreven naar de databank. 
+Volgende DAO's zijn aangemaakt in deze iteratie:
+
+\begin{itemize}
+	\item ActivationKeyDao: de activatiesleutels gebonden aan een geregisteerd account. 
+	\item UserDao: gebruikergegevens
+	\item SessionDao: gebruikerssessies met het systeem.
+	\item PasswordDao: de gehashte wachtwoorden van gebruiker oproepen
+	\item StudentDao: studenten ophalen uit de databank en inladen in de bestaande studentenklasse
+	\item RoomDao: lokalen ophalen uit de databank en inladen in de bestaande lokalenklassen
+\end{itemize}
+
+\subsection{Validators}
+\label{subsec:validators}
+
+Binnenin het systeem dient sommige data gecontroleerd te worden op geldigheid. 
+Deze validatorklassen zijn verantwoordelijk om geldigheid van bepaalde informatie te controleren en aan te geven indien deze info niet geldig is. 
+Volgende validators zijn in het huidige systeem aanwezig:
+
+\begin{itemize}
+	\item Email: controle op het emailadres
+	\item Gebruikers: controle op de gebruikersnaam om profiel
+	\item Lokalen
+\end{itemize}
+
+\subsection{Service}
+\label{subsec:controllers}
+\subsection{Scheduler}
+\label{subsec:controllers}\\
+\subsection{Controllers}
+\label{subsec:controllers}
