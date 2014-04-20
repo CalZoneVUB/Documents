@@ -36,7 +36,7 @@ Een assertion test of een echte waarde (verkregen door het uitvoeren van een met
 \section{Criteria voor succesvolle tests}
 Wanneer er geen fouten gevonden worden in een klasse d.m.v. de bijhorende tests zeggen we dat deze slaagt. 
 Indien er zich wel fouten voordoen moeten deze worden opgelost alvorens de code mag worden opgenomen in de hoofdrepository.
-De programmeur die een fout omerkt maakt steeds een issue aan op GitHub indien hij zelf niet verantwoordelijk is voor de falende code.
+De programmeur die een fout opmerkt maakt steeds een issue aan op GitHub indien hij zelf niet verantwoordelijk is voor de falende code.
 Deze bug reports worden toegewezen aan de verantwoordelijke voor de falende code, welke de code zo snel mogelijk moet verbeteren. 
 Wanneer een test faalt in onverwachte omstandigheden, m.a.w. in code die de programmeur niet heeft aangepast maar eventueel wel gebruikt, moet hiervoor ook een issue geplaatst worden op GitHub.
 
@@ -58,14 +58,42 @@ De programmeur is verantwoordelijk voor het schrijven van tests voor zijn afgewe
 \section{Indeling}
 Alle tests worden bijgehouden in een aparte source folder in het project, genaamd \emph{src/main/tests}.
 De directorystructuur in deze folder is dezelfde als die van de source code van het project.
-Bronbestanden zijn georganiseerd in packages, en dat is met tests exact hetzelfde, maar met een \emph{.tests} suffix.
-De java-klasse bronbestanden krijgen het \emph{Tests} suffix.
+Bronbestanden zijn georganiseerd in packages, en dat is met tests exact hetzelfde.
+De java bronbestanden krijgen het \emph{Tests} suffix.
 
 \noindent
-Hier is één groep tests beschikbaar, nl. de tests die horen bij het bronbestand \emph{User.java} in het package \emph{com.vub.model}. 
-De eigenlijke tests op dit bestand staan in de directory \emph{src/main/tests}. 
-De bijhorende package noemt \emph{com.vub.model.tests}, met bestandsnaam \emph{UserTests.java} voor de tests.
-
+Het project is op deze manier ingedeeld voor source folder \emph{src/main/java}
+\begin{itemize}
+	\item \textbf{com.vub.controller}: Hierin zitten alle Spring controllers, m.a.w. de klassen die alle requests van de front-end webpagina's verwerken.
+	\item \textbf{com.vub.datadump}: Bevat alle klassen die nodig zijn om de gegeven datadump in te laden in onze database.
+	\item \textbf{com.vub.exception}: Bevat alle custom exceptions die gethrowed worden in onze code. 
+	In plaats van \emph{null} values terug te geven uit methoden geven wij de voorkeur aan een exception, vermits een exception nooit ambigu kan zijn, terwijl de betekenis van een \emph{null}-waarde het gevolg kan zijn van veel factoren.
+	\item \textbf{com.vub.model}: In het \emph{model-view-controller} patroon bevat het model alle data.
+	In dit project bevat het model alle data uit de database, vermits deze modellen rechtstreeks op de database worden gemapt. 
+	In de modellen zit geen business logic, d.w.z. dat hierin geen methoden staan die ingewikkelder zijn dat standaard getters en setters. 
+	\item \textbf{com.vub.repository}: Zoals hierboven vermeld worden alle modellen rechtstreeks op de database gemapt.
+	Om de link te vormen tussen de database en de modellen is een \emph{repository} nodig.
+	Deze repository biedt standaard methoden voor alle CRUD operaties en zoeken van data in de database.
+	
+	\item \textbf{com.vub.scheduler}: Deze package bevat alles m.b.t. de scheduler
+	\item \textbf{com.vub.service}: De modellen bevatten geen business logic, en de repositories verzorgen alleen de directe link naar de database. 
+	De services vormen een abstractielaag boven de repositories en bevatten alle business logic m.b.t. de modellen.
+	Dit zijn de klassen waarmee ontwikkelaars rechtstreeks mee in contact komen, terwijl de repositories voor hen volledig verborgen zijn.
+	\item \textbf{com.vub.springconfig}: Deze package bevat eventuele klassen die aangemaakt zijn om Spring te configureren. 
+	\item \textbf{com.vub.validators}: Op gebied van validatie in de user interface kunnen \emph{validators} aangemaakt worden. 
+	Hiermee gaat input van gebruikers geldig of ongeldig verklaard worden. 
+\end{itemize}
+	
+\section{Testing van onderdelen}
+Niet alle onderdelen zijn even belangrijk om te testen. Neem bijvoorbeeld de modellen in \emph{com.vub.model}, deze bevatten alleen getters/setters, en zijn daarom oninteressant om tests op uit te voeren. De meest belangrijke onderdelen om te testen zijn de volgende:
+\begin{itemize}
+	\item \textbf{com.vub.scheduler}: De scheduler houdt zich aan bepaalde regels waaraan een planning moet voldoen. 
+	Om te garanderen dat deze regels (constraints) correct werken kunnen deze onderworpen worden aan unittests.
+	\item \textbf{com.vub.service}: De service-laag kan complexe operaties bevatten die werken op de modellen, dus deze operaties moeten uitvoerig getest worden.
+	\item \textbf{com.vub.validators}: Input van gebruikers in de user-interface wordt gevalideerd d.m.v. deze validators, dus daarom is het belangrijk dat deze correct werken.
+	Daarom moeten validators ook uitvoerig getest worden.
+\end{itemize}
+	
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/dir.png}
@@ -73,7 +101,40 @@ De bijhorende package noemt \emph{com.vub.model.tests}, met bestandsnaam \emph{U
 \label{dirstruct}
 \end{figure}
 
+\section{Uitgevoerde tests}
+In de applicatie worden verschillende tests uitgevoerd. In onderstaande tabel staan alle uitgevoerde tests. Testklasse duidt de klasse aan (.java bestand) in het project waarin de test wordt uitgevoerd, en testnaam is de naam van de test. In een testklasse kunnen meerdere tests bestaan. Onderdeel slaat op het onderdeel van de applicatie waar de test   zich mee bezig houdt. Dit wil zeggen opslag van data in de database, testen van regels in de scheduler, enz...
+
+
+\begin{table}[htbp]
+	\centering
+	\caption{Tests in de applicatie}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+	    \hline
+		\textbf{Testklasse} & \textbf{Testnaam} & \textbf{Onderdeel} & \textbf{Beschrijving} \\ \hline
+		CourseServiceTest	& testCourseCreation & Database & Test het aanmaken van een Course in de database (correcte opslag van velden) \\ \hline
+		KeyServicetest & testKeyCreation & Database & Tests m.b.t. aanmaken van keys in de database \\ \hline
+		RoomServiceTest & testRoomCreation & Database & Test of een lokaal kan aangemaakt worden in de database \\ \hline
+		UserServiceTest & testUserCreation & Database & Test of een user kan aangemaakt worden in de database \\ \hline
+		UserServiceTest & testUserActivation & Activatie & Test of users successvol geactiveerd kunnen worden (alleen met een activatie-key) \\ \hline
+		EmailValidatorTest & notRealEmail & Validatie & Test of foute e-mailadressen niet geaccepteerd worden \\ \hline
+		EmailValidatorTest & notRealEmail2 & Validatie & Andere test op foute-email adressen \\ \hline
+		EmailValidatorTest & realEmail & Validatie & Test of een echt e-mail wordt geaccepteerd \\ \hline
+		SchedularTest & overlappingTeacherAgenda- Explicit & Schedular & Test of 4 vakken gescheduled kunnen worden zonder overlap (met dezelfde prof, in één lokaal) \\ \hline
+		SchedularTest & overlappingTeacherAgenda- Implicit & Schedular & Test of 4 vakken gescheduled kunnen worden zonder overlap (in één lokaal) \\ \hline
+		SchedularTest & simpleSchedulingWith- Teachers & Schedular & 4 vakken moeten gescheduled worden in 2 tijdslots met maar 2 lokalen \\ \hline
+		SchedularTest & schedulingRangeTest & Schedular & 4 vakken moeten gescheduled worden in veel tijdslots met één lokaal \\ \hline
+		SchedularTest & roomAllocationByCapacity & Schedular & Scheduling van vakken, rekeninghoudend met capaciteit van lokalen \\ \hline
+		SchedularTest & preventAdjacentLectures- OfSameCourseComponent & Schedular & Zorg dat HOC en WPO voor één vak niet overlapt \\ \hline
+		SchedularTest & noonBreak & Schedular & Zorg dat er altijd een uur middagpauze is \\ \hline
+		SchedularTest & correctRoomType & Schedular & Test of een vak altijd in een correct lokaal gepland wordt (leslokaal/computer lokaal) \\ \hline
+		SchedularTest & advancedScheduling & Schedular & Probeer een volledige week te schedulen \\ \hline
+		
+	\end{tabularx}
+\end{table}
+
 \section{Belangrijkste Java code conventies}
+Ook bij het testen van de applicatie moeten de Java conventies gehanteerd worden. 
+Hieronder staan de belangrijkste.
 \subsection{Naming conventions}
 	\subsubsection{Klassen \& interfaces}
 		Gebruik simpele, maar beschrijvende namen (zelfstandige naamwoorden) die iets zeggen over de klasse. Elk zelfstandig woord in de klassenaam begint met een hoofdletter. Vermijd acroniemen, tenzij deze algemeen gebruikt worden (zoals URL en HTTP).
