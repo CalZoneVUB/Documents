@@ -2,4 +2,39 @@
 \label{sec:algorithms}
 \subsection{Scheduling}
 \label{subsec:scheduling}
-Het huidige plan is om gebruik te maken van de Java Library 'Optaplanner'
+Voor het maken van lessenroosters wordt er gebruik gemaakt van de library OptaPlanner\cite{optaplanner}. 
+Dit is een AI library met focus op het oplossen van planningen.
+Om gebruik te maken van OptaPlanner dien je eerst je planningsprobleem te modelleren.
+Dit werd besproken in \ref{subsec:scheduleclass}.\\
+
+De klasse SchedulerSolver representeert de agent die een lessenrooster zal construeren vanuit een lijst van lokalen, datums en vakonderdelen.
+Dit doet het door middel van local search algoritmes en construction heuristics die door de programmeur geconfigureerd dienen te worden.
+Initieel begint men de agent met een na\"{i}eve opstelling van een Schedule.
+De agent berekent dan de score van deze opstelling.
+Deze score wordt berekend door na te trekken welke constraints er geschonden werden.
+Deze constraints dienen door de programmeur ontwikkeld te worden.
+Indien deze score nog niet optimaal is, zal de agent een verschuiving toepassen in het rooster.
+Hiermee wordt getracht de score te verbeteren, met andere woorden minder constraints te schenden.
+De agent kiest de 'beste' verschuiving en het algoritme herhaalt zich.\\
+
+De exacte manier van het maken van deze verschuivingen en het selecteren van de beste verschuiving in het rooster hangt af van local search algoritmes die gebruikt worden voor het schedulen.
+Om de configuratie zo optimaal mogelijk te maken bezit OptaPlanner een benchmarking systeem waarvoor de configuratie terug te vinden is in de package 'Scheduler'.\\
+
+Voorlopig maakt de huidige configuratie van SchedulerSolver gebruik van een construction heuristic, first fit decreasing, gevolgd door een local search algoritme, tabu search. 
+Als scoresysteem wordt er gebruik gemaakt van een 2-laagse score, beter gekend als HardSoft score.
+Men kan de constraints dus opdelen in 2 groepen.
+Elke constraint bezorgt zijn score en de scores van constraint in dezelfde groep wordt bij mekaar opgeteld.
+Dit laat toe om constraints een soort prioriteit toe te kennen.\\
+
+Volgende constraints zijn reeds ontwikkeld en werden verspreid over de Hard en Soft groep:
+\begin{itemize}
+\item Leraren mogen/kunnen geen 2 verschillende lessen op eenzelfde tijdstip geven.
+\item Een les dient door te gaan in een lokaal met voldoende ruimte.
+\item Er kunnen niet meerdere lessen tegelijk doorgaan in eenzelfde lokaal
+\item Lessen worden gegeven in de daarvoor voorziene periode/weken.
+\item Een les wordt gehouden in een lokaal me de juiste accomodaties voor die les (projectoren, computers...)
+\item Er worden geen 2 lessen/sessies van hetzelfde vak achter elkaar geboekt.
+\item Een student heeft maximaal 9 uur les op een dag.
+\item Springuren worden vermeden, maar men tracht toch een middagpauze te behouden.
+\end{itemize}
+Deze constraints werden geschreven in de declaratieve taal Drools\cite{Drools}.
