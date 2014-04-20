@@ -1,0 +1,85 @@
+\section{Vergadering \MeetingDate}
+\subsection{Praktische informatie}
+\subsubsection{Tijd \& Plaats}
+Uur: 18:00 - 19:00
+\\
+Lokaal: Zitplaatsen aan het kampvuur op de campus.
+\subsubsection{Aanwezigheidslijst}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{c|c}
+		\textbf{Aanwezig} & Tim Witters, Pieter Meiresone, Sam van den Vonder \\
+		\hline
+		\textbf{Afwezig} & Youri Coppens, Nicolas Carraggi, Christophe Gaethofs, Fernando Suarez \\
+	\end{tabular}
+\end{table}
+
+\subsubsection{Verantwoordelijkheden}
+\begin{itemize}
+	\item Voorzitter: Pieter Meiresone
+	\item Secretaris: Tim Witters
+\end{itemize}
+
+\subsubsection{Kritiekpunten op verslag vorige vergadering}
+Geen kritiekpunten.
+
+\subsection{Vooruitgang sinds vorige vergadering}
+Iteratie 2 is afgewerkt en opgeleverd (inclusief presentatie).
+
+\subsection{Vergaderingspunten}
+Tijdens deze vergadering wordt een reflectie gehouden over de tweede iteratie. Hierin worden alle kritieke en zwakke punten in ons project besproken.
+\subsubsection{Implementatie DB}
+Vanaf nu zal Sam Nico helpen met de implementatie van de database en DAO's. Verbeteringspunten: 
+\begin{itemize}
+	\item DbTranslate opsplisten in verscheidene files.
+	\item Er moet meer gebruik gemaakt worden van Spring.
+	\item SQL-injecties vermijden!
+\end{itemize}
+\subsubsection{Documentatie}
+Vanaf nu worden pull requests enkel geaccepteerd indien deze gedocumenteerd zijn met Javadoc.
+
+\subsubsection{URL}
+Alle url's moeten in kleine letters (dus ook zonder camelcasing). Streepjes ("-") zijn toegelaten. Volgende issues met de url's moeten nog gefixed worden:
+\begin{itemize}
+	\item Url's eindigend met ``\textbackslash " moeten automatisch gemapt worden naar de overeenkomstige url's zonder ``\textbackslash ".
+	\item Url's met hoofdletters moeten automatisch geredirect worden naar url's zonder hoofdletters.
+\end{itemize}
+
+\subsubsection{Validators}
+Validators worden nu enkel en alleen geimplementeerd met behulp van annotaties.
+
+\subsubsection{Logging} \label{sec:logging}
+Voor logging willen we bij voorkeur een API van Spring gebruiken. Indien deze niet aanwezig is, maken we gebruik van een externe library. De logger moet onderscheid kunnen maken tussen zaken die enkel van belong zijn bij development en zaken die enkel van belang zijn in productie.
+
+\subsubsection{Testen}
+Unit Tests zullen voor het eerst worden uitgevoerd op de validators. De werkwijze wordt dan ook opgenomen in het testplan.
+
+\subsubsection{Teamverdeling}
+Tijdens de derde iteratie onderscheiden we grofweg volgende teams:
+\begin{itemize}
+	\item Front End: Christophe, Tim en Fernando
+	\item Schedular: Pieter en Youri
+	\item Database: Sam en Nico
+\end{itemize}
+
+\subsection{Volgende vergadering}
+Volgende codeersessie eventueel op dinsdagmiddag. Hierin moet alles afzien wat kritiek is.
+De volgende vergadering en codingsessie vindt (onder voorbehoud) plaats op dinsdag 18/03/2014 13u, verzamelen aan IG.
+\subsubsection{Activiteiten tegen volgende vergadering} \label{sec:TODOActiviteiten}
+Afgewerkt tegen na het weekend van 15 maart 2014:
+\begin{table} [H]
+	\centering
+	\begin{tabular} {l|l|l}
+		\textbf{Activiteit} & \textbf{Team} & \textbf{Opmerkingen} \\
+		\hline
+		Design Document Reviseren & Youri & Design Document is out-of-date (zie GitHub) \\
+		Requirements Dashboard + SRS & Fernando & Zie issues GitHub \\
+		Database & Sam & Verbeterde implementatie database \\
+		Issues met de url-mapping & Pieter & \\
+		Logging & Youri & Zie sectie \ref{sec:logging} \\
+		Unit Tests voor Validators & Sam & Indien je nog tijd hebt \\
+	\end{tabular}
+\end{table}
+
+\subsubsection{Agenda Punten volgende vergadering}
+Nog te bepalen.
