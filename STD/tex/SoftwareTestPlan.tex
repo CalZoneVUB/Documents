@@ -2,10 +2,10 @@
 \section{Inleiding}
 Het systeem kan op verschilende manieren getest worden. 
 Langs de ene kant zijn er tests voor onafhankelijke stukken code (Unittests), en langs de andere kant wordt de samenwerking van deze componenten getest (Integratietests). 
-Daarnaast moet op vlak van GUI getest worden of de applicatie stabiel blijft in bepaalde scenario's, of bij foute input. 
+Daarnaast moet op vlak van GUI getest worden of de applicatie stabiel blijft in bepaalde scenario's, of bij foute input van gebruikers. 
 Door middel van tests moet gegarandeerd worden dat het systeem werkt en voldoet aan de specificaties beschreven in het SRS\cite{srs}. 
-Wanneer de programmeur code wenst te pushen naar de hoofdrepository moet deze eerst alle tests successvol uitvoeren. 
-Wanneer voldoende tests zijn geschreven garandeert dit dat het systeem werkt zoals verwacht.
+Programmeurs mogen slechts code pushen naar de hoofdrepository wanneer alle aanwezige tests nog steeds correct uitgevoerd worden.
+Wanneer voldoende tests zijn geschreven voor alle relevante onderdelen garandeert dit dat het systeem werkt zoals men verwacht.
 
 \section{Soorten tests}
 
@@ -14,24 +14,30 @@ Unittests zijn tests die kleine, onafhankelijke stukken code testen. Code die do
 Wanneer een klasse wordt afgewerkt (of een subset van zijn methoden) moet hiervoor reeks unittests worden geschreven. 
 Deze tests moeten correctheid van een individueel component nagaan. 
 Wanneer de klasse wordt aangepast kunnen deze tests opnieuw gerunt worden. Hierdoor kunnen mogelijke problemen vroeg gedetecteerd worden.
-Deze tests bevatten o.a. ook tests over de database, die vaak als een aparte categorie worden beschouwd. 
+Bovendien kan 
+Unittests testen ook het correct opslaan van data in de database, hoewel dit vaak als een aparte categorie wordt beschouwd. 
 
 \subsection{Integratietests}
-Bij unittests werd vermeld dat de klassen geen gebruik mogen maken van externe bronnen. Wanneer dit wel zo is, en dus de samenwerking tussen de twee componenten wordt getest, zijn dit integratietests, m.a.w. hoe twee of meer componenten met elkaar integreren. 
+Bij unittests werd vermeld dat de klassen geen gebruik mogen maken van externe bronnen. Wanneer dit wel zo is, en dus de samenwerking tussen de twee componenten wordt getest, zijn dit integratietests.
+Integratietests testen dus de samenwerking tussen verschillende componenten, in plaats van de werking van slechts 1 component.
 Gewoonlijk vangen integratietests meer bugs en regressies dan unittests, daarom moet de programmeur extra aandacht besteden aan het schrijven van dit soort tests.
 
 \subsection{Verificatietests}
 Verificatietests testen en garanderen dat het systeem voldoet aan de requirements beschreven in het SRS\cite{srs}. 
-Deze tests zijn niet mutueel exclusief met unittests en integratietests, maar zijn in sommige gevallen wel expliciet nodig.
+Deze tests kunnen omvat worden in unittests en integratietests, maar in sommige gevallen is verificatie van bepaalde functionaliteit expliciet nodig.
 
 \subsection{GUI tests}
-De GUI wordt ook uitvoerig getest. Deze moet blijven werken zoals verwacht met arbitraire input. Deze tests worden eveneens geautomatiseerd.
+De GUI wordt ook uitvoerig getest.
+Deze moet blijven werken zoals verwacht met arbitraire input. De automatisering van deze tests wordt vaak uitgevoerd door middel van software zoals Selenium, maar vaak is dit niet nodig vanwege het onderliggende framework waarmee de webapplicatie is opgebouwd.
 
 \section{Tools}
 Door middel van JUnit 4\cite{junit} worden tests opgesteld voor het project. 
-JUnit is een standaard Java library en overigens geïntegreerd in de user interface van Eclipse, waardoor het uitvoeren van tests makkelijk wordt en zodat men makkelijk conclusies kan trekken nadat alle tests gerunt zijn. 
+JUnit is een standaard Java library en overigens geïntegreerd in de user interface van Eclipse.
+Hierdoor wordt het uitvoeren van tests makkelijk, en kan men men makkelijk conclusies kan trekken uit de resultaten die voortvloeien uit de tests.
 Met JUnit kunnen makkelijk tests geschreven worden d.m.v. ``assertions''. 
-Een assertion test of een echte waarde (verkregen door het uitvoeren van een methode) gelijk is aan de verwachte waarde opgegeven door de programmeur. Wanneer dit het geval is faalt de test. 	
+Een assertion test of een verkregen waarde (door het uitvoeren van een methode) gelijk is aan de verwachte waarde opgegeven door de programmeur. 
+Wanneer deze waarden verschillen faalt deze specifieke test.
+In de applicatie worden uiteraard veel tests geschreven, waardoor al deze tests tezamen de werking van het systeem garanderen. 
 
 \section{Criteria voor succesvolle tests}
 Wanneer er geen fouten gevonden worden in een klasse d.m.v. de bijhorende tests zeggen we dat deze slaagt. 
@@ -43,7 +49,6 @@ Wanneer een test faalt in onverwachte omstandigheden, m.a.w. in code die de prog
 \noindent
 Deze issue bevat de volgende informatie:
 \begin{itemize}
-	\item Het requirement ID, zoals gespecifieerd in het SRS\cite{srs}
 	\item Een beschrijving van het probleem
 	\item Input die het probleem veroorzaakt
 	\item De verwachte output
@@ -55,26 +60,25 @@ Deze issue kan daarna opgelost worden door de programmeur verantwoordelijk voor 
 \section{Verantwoordelijkheden}
 De programmeur is verantwoordelijk voor het schrijven van tests voor zijn afgewerkte onderdelen. Code waar geen tests voor geschreven zijn mag niet worden opgenomen in de hoofdrepository op GitHub. Zonder tests kan de werking van deze code eenmaal niet worden bevestigd. De Software Quality Assurance Manager is verantwoordelijk voor het controleren dat de programmeurs deze tests volledig en correct schrijven.
 
-\section{Indeling}
+\section{Indeling van het project}
 Alle tests worden bijgehouden in een aparte source folder in het project, genaamd \emph{src/main/tests}.
 De directorystructuur in deze folder is dezelfde als die van de source code van het project.
-Bronbestanden zijn georganiseerd in packages, en dat is met tests exact hetzelfde.
-De java bronbestanden krijgen het \emph{Tests} suffix.
+De source code van het project is in packages, en dat is met tests exact hetzelfde.
+De bronbestanden voor tests krijgen dezelfde naam als het bestand waar deze tests over gaan, maar zij krijgen ook het \emph{Test} suffix.
 
 \noindent
 Het project is op deze manier ingedeeld voor source folder \emph{src/main/java}
 \begin{itemize}
 	\item \textbf{com.vub.controller}: Hierin zitten alle Spring controllers, m.a.w. de klassen die alle requests van de front-end webpagina's verwerken.
-	\item \textbf{com.vub.datadump}: Bevat alle klassen die nodig zijn om de gegeven datadump in te laden in onze database.
-	\item \textbf{com.vub.exception}: Bevat alle custom exceptions die gethrowed worden in onze code. 
-	In plaats van \emph{null} values terug te geven uit methoden geven wij de voorkeur aan een exception, vermits een exception nooit ambigu kan zijn, terwijl de betekenis van een \emph{null}-waarde het gevolg kan zijn van veel factoren.
-	\item \textbf{com.vub.model}: In het \emph{model-view-controller} patroon bevat het model alle data.
-	In dit project bevat het model alle data uit de database, vermits deze modellen rechtstreeks op de database worden gemapt. 
+	\item \textbf{com.vub.datadump}: Bevat alle klassen die nodig zijn om de gegeven datadump in te laden in de database.
+	\item \textbf{com.vub.exception}: Bevat alle custom exceptions die gethrowed worden in de code. 
+	In plaats van \emph{null} values terug te geven uit methoden geven wordt de voorkeur gegeven aan een exception, vermits een exception nooit ambigu kan zijn. De betekenis van een \emph{null}-waarde kan het gevolg kan zijn van veel factoren, en kan dus ook verschillend ge\"{i}nterpreteerd worden.
+	\item \textbf{com.vub.model}: In het \emph{model-view-controller} patroon bevat het model alle data van de applicatie.
+	Vermits de modellen rechtstreeks op de database worden gemapt kan gesteld worden dat deze modellen de database 'in geheugen' bevatten. 
 	In de modellen zit geen business logic, d.w.z. dat hierin geen methoden staan die ingewikkelder zijn dat standaard getters en setters. 
 	\item \textbf{com.vub.repository}: Zoals hierboven vermeld worden alle modellen rechtstreeks op de database gemapt.
 	Om de link te vormen tussen de database en de modellen is een \emph{repository} nodig.
-	Deze repository biedt standaard methoden voor alle CRUD operaties en zoeken van data in de database.
-	
+	Deze repository biedt standaard methoden voor alle CRUD operaties en een beperkte selectie methoden voor het zoeken van data in de database.
 	\item \textbf{com.vub.scheduler}: Deze package bevat alles m.b.t. de scheduler
 	\item \textbf{com.vub.service}: De modellen bevatten geen business logic, en de repositories verzorgen alleen de directe link naar de database. 
 	De services vormen een abstractielaag boven de repositories en bevatten alle business logic m.b.t. de modellen.
@@ -90,8 +94,11 @@ Niet alle onderdelen zijn even belangrijk om te testen. Neem bijvoorbeeld de mod
 	\item \textbf{com.vub.scheduler}: De scheduler houdt zich aan bepaalde regels waaraan een planning moet voldoen. 
 	Om te garanderen dat deze regels (constraints) correct werken kunnen deze onderworpen worden aan unittests.
 	\item \textbf{com.vub.service}: De service-laag kan complexe operaties bevatten die werken op de modellen, dus deze operaties moeten uitvoerig getest worden.
+	Bovendien moet ook getest worden of de modellen en alle bijhorende relaties correct opgeslagen worden in de database. 
+	Dit hoort ook bij het testen van services.
 	\item \textbf{com.vub.validators}: Input van gebruikers in de user-interface wordt gevalideerd d.m.v. deze validators, dus daarom is het belangrijk dat deze correct werken.
-	Daarom moeten validators ook uitvoerig getest worden.
+	Het is niet nodig om de user-interface te testen d.m.v. een ander framework of softwarepakket, vermits alle user-input gevalideerd kan worden d.m.v. validators. 
+	Daarom moet ervoor gezorgd worden dat deze validators correct werken.
 \end{itemize}
 	
 \begin{figure}[ht!]
@@ -102,8 +109,7 @@ Niet alle onderdelen zijn even belangrijk om te testen. Neem bijvoorbeeld de mod
 \end{figure}
 
 \section{Uitgevoerde tests}
-In de applicatie worden verschillende tests uitgevoerd. In onderstaande tabel staan alle uitgevoerde tests. Testklasse duidt de klasse aan (.java bestand) in het project waarin de test wordt uitgevoerd, en testnaam is de naam van de test. In een testklasse kunnen meerdere tests bestaan. Onderdeel slaat op het onderdeel van de applicatie waar de test   zich mee bezig houdt. Dit wil zeggen opslag van data in de database, testen van regels in de scheduler, enz...
-
+In de applicatie worden verschillende tests uitgevoerd. In onderstaande tabel staan alle uitgevoerde tests. Testklasse duidt de klasse aan (.java bestand) in het project waarin de test wordt uitgevoerd, en testnaam is de naam van de test. In een testklasse kunnen meerdere tests bestaan. Onderdeel slaat op het onderdeel van de applicatie waar de test   zich mee bezig houdt - dit wil zeggen opslag van data in de database, testen van regels in de scheduler, enz...
 
 \begin{table}[htbp]
 	\centering
@@ -132,6 +138,7 @@ In de applicatie worden verschillende tests uitgevoerd. In onderstaande tabel st
 	\end{tabularx}
 \end{table}
 
+\newpage
 \section{Belangrijkste Java code conventies}
 Ook bij het testen van de applicatie moeten de Java conventies gehanteerd worden. 
 Hieronder staan de belangrijkste.
