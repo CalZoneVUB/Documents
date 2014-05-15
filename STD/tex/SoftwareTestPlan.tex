@@ -13,22 +13,26 @@ Wanneer voldoende tests zijn geschreven voor alle relevante onderdelen garandeer
 Unittests zijn tests die kleine, onafhankelijke stukken code testen. Code die door unittests getest wordt mag geen gebruik maken van externe bronnen, anders kan men niet nagaan of de fout in de te testen klasse/methode zit, of in de externe code.
 Wanneer een klasse wordt afgewerkt (of een subset van zijn methoden) moet hiervoor reeks unittests worden geschreven. 
 Deze tests moeten correctheid van een individueel component nagaan. 
-Wanneer de klasse wordt aangepast kunnen deze tests opnieuw gerunt worden. Hierdoor kunnen mogelijke problemen vroeg gedetecteerd worden.
-Bovendien kan 
-Unittests testen ook het correct opslaan van data in de database, hoewel dit vaak als een aparte categorie wordt beschouwd. 
+Wanneer de klasse wordt aangepast kunnen eventuele nieuwe problemen worden gedetecteerd door het opnieuw runnen van de gemaakte tests. 
 
 \subsection{Integratietests}
-Bij unittests werd vermeld dat de klassen geen gebruik mogen maken van externe bronnen. Wanneer dit wel zo is, en dus de samenwerking tussen de twee componenten wordt getest, zijn dit integratietests.
-Integratietests testen dus de samenwerking tussen verschillende componenten, in plaats van de werking van slechts 1 component.
-Gewoonlijk vangen integratietests meer bugs en regressies dan unittests, daarom moet de programmeur extra aandacht besteden aan het schrijven van dit soort tests.
-
-\subsection{Verificatietests}
-Verificatietests testen en garanderen dat het systeem voldoet aan de requirements beschreven in het SRS\cite{srs}. 
-Deze tests kunnen omvat worden in unittests en integratietests, maar in sommige gevallen is verificatie van bepaalde functionaliteit expliciet nodig.
+Integratie testing is het onderdeel van testing waar individuele componenten worden samengebracht en hun samenwerking getest.
+Deze tests gebeuren conceptueel na unittesting (het testen van individuele componenten) en voor verificatietesten. 
+De bedoeling van integratietesting is het verifi\"{e}ren van functionele-, performantie- en betrouwbaarheidsrequirements. 
+Test cases zorgen ervoor dat een bepaalde groep van componenten correct interageren met elkaar.
+Een onderdeel van integratietesten is verificatie, en zo gaat er dus geverifi\"{e}erd worden dat dat het systeem voldoet aan de requirements beschreven in het SRS\cite{srs}. 
 
 \subsection{GUI tests}
 De GUI wordt ook uitvoerig getest.
-Deze moet blijven werken zoals verwacht met arbitraire input. De automatisering van deze tests wordt vaak uitgevoerd door middel van software zoals Selenium, maar vaak is dit niet nodig vanwege het onderliggende framework waarmee de webapplicatie is opgebouwd.
+Deze moet blijven werken zoals verwacht met willekeurige input, mogelijk met kwade bedoelingen (denk aan SQL-injecties). 
+De automatisering van deze tests wordt vaak uitgevoerd door middel van software zoals Selenium, maar in deze applicatie is een extern framework niet nodig.
+Er zijn hier twee scenario's die zich kunnen voordoen.
+Ofwel wordt de input van gebruikers door het Spring framework rechtstreeks gebonden aan een bijhorende java-klasse, waardoor ongeldige input niet wordt geaccepteerd.
+Dit is vooral het geval bij formulieren, zoals bijvoorbeeld het registratieproces.
+In het andere scenario wordt data via jQuery verstuurd, waarna het verwerkt wordt door een controller in java.
+Wanneer in dit geval iets mis is met de data wordt eveneens een error weergegeven op de user interface d.m.v. een error-status van de server. 
+Data versturen via jQuery is vooral van toepassing bij het aanpassen van data via X-editable \cite{xeditable}.
+
 
 \section{Tools}
 Door middel van JUnit 4\cite{junit} worden tests opgesteld voor het project. 
