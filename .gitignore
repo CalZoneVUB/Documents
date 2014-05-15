@@ -13,3 +13,6 @@ SRS/main.toc
 *.gz
 *.toc
 Presentatie/~$Iteratie_1.pptx
+*.bbl
+*.blg
+main.run.xml
