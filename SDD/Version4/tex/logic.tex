@@ -1,0 +1,49 @@
+\section{Logica}
+\label{sec:logica}
+In deze sectie worden verschillende modules en packages besproken die deel uitmaken van het huidige logische niveau van het systeem.
+
+\subsection{Lagen}
+\subsubsection{Database Repositories}
+\label{subsubsec:databaseRepo}
+CalZone maakt gebruik van een relationele databank, MySQL, als back-end voor dataopslag. 
+Om informatie vanuit deze databank te lezen en er naartoe te schrijven zijn er enkele packages voorzien die een abstractie bieden voor het openen en sluiten van de connectie met de databank en het sturen van queries naar de databank.
+Dit is de eerste package die bijdraagt tot deze abstractielaag.
+
+\subsubsection{Service}
+\label{subsubsec:service}
+Dit is de tweede package die abstractie biedt tussen de databank en het logische niveau van het systeem. 
+Het abstractieniveau ten opzichte van de data-laag stijgt dankzij deze service-laag.
+De klassen in deze package voorzien dus functies om specifieke data vanuit de databank op te halen.
+Deze klassen voeren queries uit en laden de gevonden data in de daarvoor voorziene objecten.
+
+\subsubsection{Model}
+\label{subsec:model}
+Deze package bevat alle klassen die data vanuit de databank bezitten. De klassen in deze package representeren dus de informatie waarmee het systeem functionaliteiten zal voorzien naar de gebruiker toe.
+
+\subsection{Componenten}
+\subsubsection{Controllers}
+\label{subsubsec:controllers}
+Deze klassen zijn verantwoordelijk om de HTTP-requests te verwerken. 
+Deze klassen zorgen dus voor een propagatie van (functionaliteits)verzoeken van de front-end naar de back-end. 
+Eveneens zorgen deze klassen ook voor een propagatie van data van de back-end naar de front-end. 
+Dit laatste uit zich in content op de webpagina's.
+Met andere woorden zorgen de controllers dus voor de mogelijke views en voorzien dus de mogelijkheid om de functionaliteiten opgesomd in de use case diagrammen van sectie~\ref{sec:context} uit te voeren. 
+
+\subsubsection{Validators}
+\label{subsec:validators}
+Binnenin het systeem dient sommige data gecontroleerd te worden op geldigheid. 
+Deze validatorklassen zijn verantwoordelijk om geldigheid van bepaalde informatie te controleren en aan te geven indien deze info niet geldig is.
+
+\subsubsection{Scheduler}
+\label{subsec:scheduler}
+In deze package zitten de klassen die bijdragen tot het maken en formuleren van lessenroosters.
+Ook vind je hier de configuraties voor OptaPlanner.
+Er is een configuratiebestand voor de uiteindelijke AI agent die lessenroosters zal trachten te maken op basis van verschillende constraints.
+OptaPlanner bezit een benchmarking systeem opdat men verschillende configuraties kan testen op verscheidene datasets.
+Meer hierover is te vinden in het Test Document van dit project.
+Deze package bezit ook een file met constraint regels.
+Deze file bevat code in de programmeertaal Drools\cite{Drools}.
+
+\subsubsection{Exception}
+\label{subsec:exception}
+Zelfgemaakte Exceptions worden verzameld in deze package.
