@@ -30,11 +30,11 @@
 \begin{enumerate}
 \item De niet-aangemelde gebruiker (voortaan gebruiker geheten) ziet het beginvenster (zie figuur \ref{fig:CalZone Home}) van de applicatie in zijn webbrowser.
 \item De gebruiker klikt op de aanwezige knop om een profiel aan te maken.
-\item De gebruiker krijgt een formulier te zien (zie figuur \ref{fig:CalZone Program Sign Up 1}) met invulbare velden voor zijn naam, voornaam, gebruikersnaam, wachtwoord, geboortedatum, email. Tevens vindt hij in het formulier 2 lijsten (zie figuur \ref{fig:CalZone Program Sign Up 2}), respectievelijk voor zijn richting en gewenste taal te selecteren.
+\item De gebruiker krijgt een formulier te zien (zie figuur \ref{fig:CalZone Register}) met invulbare velden voor zijn naam, voornaam, gebruikersnaam, wachtwoord, geboortedatum, email. 
 \item De gebruiker vult al de gegevens en selecteert de juiste optie in elke lijst.
 \item Nadat de gebruiker deze gegevens volledig heeft ingevuld, klikt hij op de knop om de aanmaak van het profiel te beëindigen.
 \item De gebruiker krijgt een melding op het scherm te zien dat het aanmaken van het profiel voltooid is.
-\item Het systeem stuurt een email naar het opgegeven emailadres ter bevestiging.
+\item Het systeem stuurt een email naar het opgegeven emailadres ter bevestiging (zie figuur \ref{fig:CalZone Activation}).
 \end{enumerate}
 
 %TODO
@@ -46,22 +46,21 @@
 \begin{center}
 \begin{figure}[H]
 \caption{CalZone Home}
-\centerline{\includegraphics[scale=0.4]{img/Calzonemain}}
+\centerline{\includegraphics[scale=0.4]{img/CalzoneHome}}
 \label{fig:CalZone Home}
 \end{figure}
 
 \begin{figure}[H]
-\caption{CalZone Program Sign Up 1}
-\centerline{\includegraphics[scale=0.4]{img/Calzonesignup1}}
-\label{fig:CalZone Program Sign Up}
+\caption{CalZone Register}
+\centerline{\includegraphics[scale=0.4]{img/CalzoneRegister}}
+\label{fig:CalZone Register}
 \end{figure}
 
 \begin{figure}[H]
-\caption{CalZone Program Sign Up 2}
-\centerline{\includegraphics[scale=0.4]{img/Calzonesignup2}}
-\label{fig:CalZone Program Sign Up 2}
+\caption{CalZone Activation}
+\centerline{\includegraphics[scale=0.4]{img/CalzoneActivation}}
+\label{fig:CalZone Activation}
 \end{figure}
-
 \end{center}
 
 %Aanmelden
@@ -140,12 +139,6 @@
 
 \begin{center}
 \begin{figure}[H]
-\caption{CalZone Profile}
-\centerline{\includegraphics[scale=0.4]{img/Calzoneprofile}}
-\label{fig:CalZone Profile}
-\end{figure}
-
-\begin{figure}[H]
 \caption{CalZone Lost Password 2}
 \centerline{\includegraphics[scale=0.4]{img/Calzonelostpassword2}}
 \label{fig:CalZone Lost Password 2}
@@ -173,8 +166,8 @@
 \item Voor het inschrijven:
 	\begin{enumerate}
 	\item De aangemelde student (voortaan student geheten) ziet zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}). Bovenaan ziet hij de optie om zich in te schrijven voor vakken.
-	\item De student klikt op deze optie en wordt doorverwezen naar een nieuw venster waar hij een veld ziet om een zoekterm in te vullen en 2 lijsten, respectievelijk met faculteiten en richtingen.
-	\item De student vult een zoekterm in. Deze zoekterm verwijst naar het vak waarvoor hij zich wil inschrijven. Vervolgens selecteert de student in de 2 lijsten in welke faculteit en richting hij het vak wil zoeken.
+	\item De student klikt op deze optie en wordt doorverwezen naar een nieuw venster waar zich kan in schrijven voor vakken (zie figuur \ref{fig:CalZone Enroll}).
+	\item De student vult een zoekterm in. Deze zoekterm verwijst naar het vak waarvoor hij zich wil inschrijven. 
 	\item De student klikt op de knop met de naam "Zoek vak". Er verschijnt in hetzelfde venster een tabel met gevonden vakken die voldoen aan de zoekterm voor de faculteit en richting. In die tabel kan je minstens de naam en de titularis van het vak bezichtigen.
 	\item De student selecteert in de tabel het gewenste vak. Hierdoor verschijnt er een melding met de vraag of de student zeker is dat hij voor dit vak wil inschrijven.
 	\item De student klikt op "ja" en is nu ingeschreven voor het vak. Vanaf nu verschijnt het vak in zijn persoonlijk lesrooster en in de lijst van ingeschreven vakken.
@@ -183,7 +176,7 @@
 \item Voor het uitschrijven:
 	\begin{enumerate}
 	\item De aangemelde student (voortaan student geheten) ziet zijn persoonlijke hoofdpagina (zie figuur \ref{fig:CalZone Profile}) in zijn browser. Bovenaan ziet hij de optie om zich uit te schrijven voor vakken.
-	\item De student klikt op deze optie en wordt doorverwezen naar een nieuw venster waar hij een lijst van al zijn vakken ziet. Naast elk vak bevindt er zich een knop met de naam "Uitschrijven".
+	\item De student klikt op deze optie en wordt doorverwezen naar een nieuw venster waar hij een lijst van al zijn vakken ziet (zie figuur \ref{fig:CalZone Enrolled}). Naast elk vak bevindt er zich een knop met de naam "Uitschrijven".
 	\item De student klikt op de knop naast het gewenste vak waarvoor hij wilt uitschrijven. Vervolgens verschijnt er een melding op het scherm met de vraag of hij zeker is of hij zich wilt uitschrijven voor dit vak.
 	\item De student klikt op \"ja\" en is nu uitgeschreven voor dit vak en wordt teruggestuurd naar zijn persoonlijk lesrooster. Voortaan verschijnt het betreffende vak niet meer in zijn persoonlijk lesrooster noch in zijn lijst van ingeschreven vakken. en dan kan de gebruiker in de lijst van vakken zoeken op naam en vaknummer en wordt dan naar een pagina doorgestuurd waarop deze in lijstvorm te zien zijn.
 	\end{enumerate}
@@ -196,7 +189,15 @@
 \item De zoekopdracht van de student vindt geen vakken.
 
 \end{itemize}
-\
+
+\begin{center}
+\begin{figure}[H]
+\caption{CalZone Enroll}
+\centerline{\includegraphics[scale=0.4]{img/CalzoneEnroll}}
+\label{fig:CalZone Enroll}
+\end{figure}
+\end{center}
+
 %Taal aanpassen
 \subsubsection{Taal aanpassen}
 \noindent\begin{table}[H]
