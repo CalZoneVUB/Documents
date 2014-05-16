@@ -1,0 +1,47 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage[backend=bibtex8]{biblatex}
+\usepackage[autostyle]{csquotes}
+\usepackage[dutch]{babel}
+\usepackage{vub}
+\usepackage{sansmath}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+
+\captionsetup{belowskip=12pt,aboveskip=4pt}
+\floatstyle{plaintop}
+\restylefloat{table}% om tabellen niet te laten herpositioneren
+\raggedbottom
+\let\cleardoublepage\clearpage
+
+% VUB huisstijl voor font en kleur
+\color{pantone418}
+\renewcommand{\familydefault}{\sfdefault}
+\sansmath
+
+\bibliography{refs}
+
+\begin{document}
+
+\frontmatter
+	\include{tex/title}
+	\include{tex/ChangeHistory}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+
+\mainmatter
+	\include{tex/Introduction} % identification of the SDD
+	\include{tex/SystemArchitecture}
+	\include{tex/Viewpoints}
+
+\backmatter
+	\nocite{*}
+	\printbibliography
+
+\end{document}
